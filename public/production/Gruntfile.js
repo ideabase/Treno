@@ -1,12 +1,12 @@
 
 module.exports = function(grunt) {
 
-  // Configuration 
+  // Configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
       shell: {
         patternlab: {
-          command: "php lab/core/builder.php -gp"
+          command: "php lab/core/console -gp"
       }
     },
     watch: {

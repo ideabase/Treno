@@ -2,7 +2,7 @@
   "name": "treno",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-shell": "^2.1.0"
