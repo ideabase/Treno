@@ -14,9 +14,17 @@ return array(
          'enableCsrfProtection' => true,
          'omitScriptNameInUrls' => true,
          'cpTrigger' => 'admin',
+         'environmentVariables' => array(
+           'basePath' => '',
+           'baseUrl'  => 'https://trenokent.com/production',
+        )
 	),
 	'treno.web' => array(
 	    'devMode' => true,
       'siteUrl' => 'http://treno.web/production',
+      'environmentVariables' => array(
+        'basePath' => '',
+        'baseUrl'  => 'http://treno.web/production',
+      )
 	)
 );
