@@ -5,7 +5,7 @@
 * Type "sudo npm install -g grunt-cli" and enter
 * Type "sudo npm install" and enter
 * Navigate to the directory where your project is located (the public or html folder)
-* Type "grunt" and hit enter.
+* Type "grunt" and hit enter. (If criticalcss task gets stuck, MAMP probably isn't running)
 
 
 Grunt will do the following:
