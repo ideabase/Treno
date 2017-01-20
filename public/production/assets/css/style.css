@@ -1,2 +1,1 @@
-body{font-family:Arial, Helvetica, sans-serif}h1{color:blue}p{color:blue}
-/*# sourceMappingURL=style.css.map */
+body{font-family:Arial, Helvetica, sans-serif;box-sizing:border-box;border-radius:5px}h1{color:blue;display:-webkit-box;display:-ms-flexbox;display:flex}p{color:red}footer{color:blue}
