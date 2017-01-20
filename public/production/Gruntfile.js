@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           url: "http://treno.web/production",
                 width: 1200,
                 height: 900,
-                outputfile: "assets/css/critical.css",
+                outputfile: "../../templates/_includes/critical.css",
                 filename: "assets/css/style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                 buffer: 800*1024,
                 ignoreConsole: false
