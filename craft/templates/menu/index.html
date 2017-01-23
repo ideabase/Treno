@@ -1,0 +1,13 @@
+{% extends "_layout" %}
+{% block content %}
+	{% for category in craft.categories.group('foodCategory') %}
+	<h1>{{ category.title }}</h1>
+		{% for entry in craft.entries.section('menu').relatedTo(category).find() %}
+			<h2>{{ entry.title }}</h2>
+				<ul>
+					<li>{{ entry.foodDescription }}</li>
+					<li>{{ entry.foodPrice }}</li>	
+				</ul>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}
