@@ -1,3 +1,5 @@
 .DS_Store
 /public_html/production/node_modules
 /public_html/production/.sass-cache
+/public/node_modules
+/public/.sass-cache
