@@ -1,0 +1,8 @@
+{% extends "_layout" %}
+{% block content %}
+	{{entry.basicText}}<br>
+	{% for asset in entry.featureImage %}
+		<img src="{{ asset.url }}" alt="asset.title" />
+	{% endfor %} 
+	
+{% endblock %}

@@ -22,11 +22,15 @@
 	<div id="container">
 		<header id="header">
 			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+			{% for asset in header.logo %}
+		<img src="{{ asset.url('food') }}" alt="asset.title" />
+			{% endfor %}
 
 			<nav>
 				<ul>
 					<li><a href="{{ url('menu') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Menu</a></li>
 					<li><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>About</a></li>
+					<li><a href="{{ url('directions') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Directions/location/Parking</a></li>
 				</ul>
 			</nav>
 		</header>
