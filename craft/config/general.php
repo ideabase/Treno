@@ -10,13 +10,13 @@
 return array(
   '*' => array(
 	       'extraAllowedFileExtensions' => 'eps',
-         'siteUrl' => 'https://trenokent.com/production',
+         'siteUrl' => 'http://trenokent.com/production',
          'enableCsrfProtection' => true,
          'omitScriptNameInUrls' => true,
          'cpTrigger' => 'admin',
          'environmentVariables' => array(
            'basePath' => '',
-           'baseUrl'  => 'https://trenokent.com/production',
+           'baseUrl'  => 'http://trenokent.com/production',
         )
 	),
 	'treno.web' => array(
