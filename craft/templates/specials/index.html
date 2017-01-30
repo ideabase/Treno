@@ -1,0 +1,12 @@
+{% extends "_layout" %}
+{% block content %}
+		{% for entry in craft.entries.section('specials')%}
+			{{ entry.specialDescription }}
+				<ul>
+					<li>{{ entry.title }}</li>	
+					<li>{{ entry.foodDescription }}</li>
+					<li>{{ entry.foodPrice }}</li>	
+				</ul>
+		
+	{% endfor %}
+{% endblock %}
