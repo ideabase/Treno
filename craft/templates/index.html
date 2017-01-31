@@ -32,11 +32,13 @@
 	</ul>
 	<h2>Recent Specials</h2>
 	<ul>
-		{% for entry in craft.entries.section('specials').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-				<ul>
-					<li>{{ entry.foodDescription }}</li>
-				</ul>
+		{% for category in craft.categories.group('specialCategory') %}
+			{% for entry in craft.entries.section('menu').relatedTo(category).limit(5).find() %}
+				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+			{% endfor %}
 		{% endfor %}
 	</ul>
 {% endblock %}
