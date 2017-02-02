@@ -1,8 +1,20 @@
 {% extends "_layout" %}
 {% block content %}
-	{% for asset in entry.featureImage %}
-		<img src="{{ asset.url }}" alt="asset.title" />
+	{% for entry in craft.entries.section('aboutTreno') %}
+		<h2>{{ entry.title }}</h2>
+		{% for asset in entry.featureImage %}
+			<img src="{{ asset.url }}" alt="asset.title" />
+		{% endfor %}
+		{{ entry.body }}
+	
+		{% for group in entry.contentBlocks %}
+			{% if group.type == "text" %}
+				{{ group.text }}
+			{% elseif group.type == "image" %}
+				{% for image in block.contentBlocks %}
+					<img src="{{ image.url }}" alt="image.title"/>
+				{% endfor %}
+			{% endif %}
+		{% endfor %}	
 	{% endfor %}
-	{{ entry.body }}
-	{{ entry.title }}
 {% endblock %}
