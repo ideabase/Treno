@@ -1,0 +1,8 @@
+{% extends "_layout" %}
+
+{% block content %}
+  <h1>Menu Landing Page</h1>
+  {% for category in craft.categories.group('menuType') %}
+    <a href="{{category.url}}">{{ category.title }}</a>
+  {% endfor %}
+{% endblock %}

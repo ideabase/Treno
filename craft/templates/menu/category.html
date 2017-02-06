@@ -23,6 +23,10 @@
       {% for food in foods %}
           {% if food.title | length %}
           <li>{{ food.title }}</li>
+          <ul>
+            <li>{{ food.foodDescription }}</li>
+            <li>{{ food.foodPrice }}</li>
+          </ul>
           {% endif %}
       {% endfor %}
       </ul>
@@ -47,6 +51,10 @@
     {% for beverage in beverages %}
         {% if beverage.title | length %}
         <li>{{ beverage.title }}</li>
+        <ul>
+          <li>{{ beverage.foodDescription }}</li>
+          <li>{{ beverage.foodPrice }}</li>
+        </ul>
         {% endif %}
     {% endfor %}
   </ul>
