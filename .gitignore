@@ -3,3 +3,4 @@
 /public_html/production/.sass-cache
 /public/node_modules
 /public/.sass-cache
+/public_html/production/node_modules/grunt-critical-css/node_modules/critical-css/node_modules/phantomjs/phantomjs/phantomjs-1.9.7-macosx.zip

@@ -1,0 +1,54 @@
+{# Category Layout Template for Menu Items.  Note - these provide access to the "category" variable of the currently active page.  If reusing this code elsewhere, you must manually get the menuCategory using craft.categories.group('menuType')} #}
+
+{% extends "_layout" %}
+{% block content %}
+
+{# Food Menu #}
+  {# Get the entries in the food section #}
+  {% set entries = craft.entries.section('menu') %}
+  <h1>{{ category.title}} Menu</h1>
+  <h2>Food</h2>
+  {# Loop first through the food categories and print the cat title #}
+  {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
+    {% set foods = entries.relatedTo([
+      'and',
+      { targetElement: category },
+      { targetElement: foodcat }
+    ]) %}
+      {% if foods | length %}
+      <h3>{{ foodcat.title }}</h3>
+      {% endif %}
+      <ul>
+      {# Loop through each entry belong to the current category and also related to the food category #}
+      {% for food in foods %}
+          {% if food.title | length %}
+          <li>{{ food.title }}</li>
+          {% endif %}
+      {% endfor %}
+      </ul>
+  {% endfor %}
+
+<hr>
+
+{# Drink Menu - same as Food Menu with different sections #}
+{% set entries = craft.entries.section('drinks') %}
+<h2>Drinks</h2>
+{% for drinkcat in craft.categories.group('drinkCategory') %}
+{% set beverages = entries.relatedTo([
+  'and',
+  { targetElement: category },
+  { targetElement: drinkcat }
+]) %}
+
+  {% if beverages | length %}
+  <h3>{{ drinkcat.title }}</h3>
+  {% endif %}
+  <ul>
+    {% for beverage in beverages %}
+        {% if beverage.title | length %}
+        <li>{{ beverage.title }}</li>
+        {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
+{% endblock %}
