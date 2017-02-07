@@ -23,22 +23,22 @@
 	<h1>{{ entry.title }}</h1>
 
 	{{ entry.body }}
-
+ 
 	<h2>Recent Menu Items</h2>
 	<ul>
 		{% for entry in craft.entries.section('menu').limit(5).find() %}
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
 	</ul>
-	<h2>Recent Specials</h2>
+	<h2>Today's Specials</h2>
 	<ul>
-		{% for category in craft.categories.group('specialCategory') %}
-			{% for entry in craft.entries.section('menu').relatedTo(category).limit(5).find() %}
+			{% for entry in craft.entries.section('specials').limit(5) %}
+				{#{% if entry.specialDate == now %}#}
 				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 					<ul>
 						<li>{{ entry.foodDescription }}</li>
 					</ul>
-			{% endfor %}
+				{#{% endif %}#}
 		{% endfor %}
 	</ul>
 {% endblock %}

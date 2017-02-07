@@ -5,7 +5,7 @@
 			{% for entry in craft.entries.section('specialDescription').relatedTo(category).find() %}
 				{{ entry.specialDescription }}
 			{% endfor %}	
-		{% for entry in craft.entries.section('food').relatedTo(category).find() %}
+		{% for entry in craft.entries.section('specials') %}
 				<ul>
 					<li>{{ entry.title }}</li>	
 						<ul>

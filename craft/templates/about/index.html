@@ -1,6 +1,5 @@
 {% extends "_layout" %}
 {% block content %}
-	{% for entry in craft.entries.section('aboutTreno') %}
 		<h2>{{ entry.title }}</h2>
 		{{ entry.body }}
 		{% for asset in entry.featureImage %}
@@ -8,22 +7,13 @@
 		{% endfor %}
 		
 
-			{#{% switch contentBlocks.type %}
-				{% case "text" %}
-					{{ contentBlocks.textBlock }}
-				{% case "image" %}
-					{{ contentBlocks.image[0].getImg() }}
-				{% default %}
-					<p>test content</p>
-				{% endswitch %}
 		{% for block in entry.contentBlocks %}
 			{% if block.type == "text" %}
-				{{ block.text| markdown }}
+				{{ block.textBlock| markdown }}
 			{% elseif block.type == "image" %}
-				{% for image in block.contentBlocks %}
-					<img src="{{ image.url }}" alt="image.title"/>
+				{% for image in block.imageFile %}
+					<img src="{{ image.url('food') }}" alt="image.title"/>
 				{% endfor %}
 			{% endif %}
-		{% endfor %}#}	
-	{% endfor %}
+		{% endfor %}	
 {% endblock %}
