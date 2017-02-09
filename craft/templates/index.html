@@ -30,15 +30,64 @@
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
 	</ul>
-	<h2>Today's Specials</h2>
+	<h2>{{ "now"|date("l") }}'s Specials</h2>
 	<ul>
-			{% for entry in craft.entries.section('specials').limit(5) %}
-				{#{% if entry.specialDate == now %}#}
-				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+			{#{% set light = craft.entries.section('specials') %}
+				{% if light.specialLightSwitch %}#}
+			{% switch "now" | date("l") %}
+	
+			{% case "Monday" %}
+				{% for entry in craft.entries.section('specials').specialLightSwitch('1').search('specialDate:Monday').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 					<ul>
 						<li>{{ entry.foodDescription }}</li>
 					</ul>
-				{#{% endif %}#}
-		{% endfor %}
+				{% endfor %}
+			{% case "Tuesday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Tuesday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+			{% case "Wednesday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Wednesday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+			{% case "Thursday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Thursday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+			{% case "Friday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Friday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+			{% case "Saturday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Saturday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+			{% case "Sunday" %}
+				{% for entry in craft.entries.section('specials').search('specialDate:Sunday').specialLightSwitch('1').limit(5) %}
+					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+					<ul>
+						<li>{{ entry.foodDescription }}</li>
+					</ul>
+				{% endfor %}
+
+			{% endswitch %}
+		{#{% endif %}#}
+		
 	</ul>
 {% endblock %}
