@@ -5,4 +5,5 @@
   {% for category in craft.categories.group('menuType') %}
     <a href="{{category.url}}">{{ category.title }}</a>
   {% endfor %}
+  <a href="{{ url('specials')}}">Specials</a>
 {% endblock %}

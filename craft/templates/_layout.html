@@ -26,13 +26,14 @@
 			<nav>
 				<table>
 					<tr>
+						<th><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>About</a></th>
+
 						<th><a href="{{ url('menu') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Menu</a></th>
 
-						<th><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>About</a></th>
+						<th><a href="{{ url('reservations') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Reservations/Contact</a></th>
 
 						<th><a href="{{ url('directions') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Directions/location/Parking</a></th>
 
-						<th><a href="{{ url('specials') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Specials</a></th>
 					</tr>
 				</table>
 			</nav>
@@ -49,7 +50,13 @@
 		</main>
 
 		<footer id="footer">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
+			{{ footer.phoneNumber }} <br>
+			{{ footer.email }}<br>
+			{% if footer.hours | length %}
+				{% for row in footer.hours %}
+					{{ row.dayOfWeek }} - {{ row.hours }} |
+				{% endfor %}
+			{% endif %}
 		</footer>
 	</div>
   <link href="{{ siteUrl }}assets/css/style.css" type="text/css" rel="stylesheet" media="screen"/>

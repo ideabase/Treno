@@ -1,0 +1,10 @@
+{% extends "_layout" %}
+{% block content %}
+
+{% for entry in craft.entries.section('reservations') %}
+	{{ entry.reservationInfo }}<br>
+	{{ entry.phoneNumber }}
+	{{ entry.privateParty }}
+{% endfor %}
+
+{% endblock %}
