@@ -15,5 +15,50 @@
 					<img src="{{ image.url('food') }}" alt="image.title"/>
 				{% endfor %}
 			{% endif %}
-		{% endfor %}	
+		{% endfor %}
+		<h1>Team Profiles</h1>
+		{#{% for entry in craft.entries.section('profiles') %}
+			{{ entry.title }}
+			{{ entry.teamMemberPhoto }}
+			{{ entry.teamMemberBio }}
+		{% endfor %}
+		{#{% set vertParams = {
+  			height: 800,
+  			mode: 'crop',
+  			position: 'center-center',
+		}
+		%}
+		{% set horzParams = {
+  			width: 800,
+  			mode: 'crop',
+  			position: 'center-center',
+		}
+		%}
+		{% set thumbParams = {
+  			width: 120,
+ 			 height: 120,
+  			mode: 'crop',
+  			position: 'center-center',
+  		}
+  		%}
+  		{% set images = photoMatrix.imageField %}
+  		{% if images | length %}
+  			{% if photoMatrix.image | length %}
+  				<h3>{{ photoMatrix.image }}</h3>
+  			{% endif %}
+  			<ul class="gallery">
+  				{% for image in images %}
+  				<li>
+  					{% if image.getHeight() > image.getWidth %}
+  						<a href="{{ image.getUrl(vertParams) }}"><img src="{{ image.getUrl(thumbParams) }}" alt="image"></a>
+  					{% else %}
+  						<a href="{{ image.getUrl(horzParams) }}"><img src="{{ image.getUrl(thumbParams) }}" alt="image"></a>
+  					{% endif %}
+  				</li>
+  			{% endfor %}
+  		</ul>
+  	{% endif %}#}
+		{% for asset in entry.photoGallery %}
+			<img src="{{ asset.getUrl('crop') }}"/>
+		{% endfor %}
 {% endblock %}
