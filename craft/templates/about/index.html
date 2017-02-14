@@ -17,9 +17,11 @@
 			{% endif %}
 		{% endfor %}
 		<h1>Team Profiles</h1>
-		{#{% for entry in craft.entries.section('profiles') %}
+		{% for entry in craft.entries.section('profiles') %}
 			{{ entry.title }}
-			{{ entry.teamMemberPhoto }}
+			{% for image in entry.teamMemberPhoto %}
+				<img src="{{ image.url }}">
+			{% endfor %}		
 			{{ entry.teamMemberBio }}
 		{% endfor %}
 		{#{% set vertParams = {
@@ -36,29 +38,56 @@
 		%}
 		{% set thumbParams = {
   			width: 120,
- 			 height: 120,
+ 			height: 120,
   			mode: 'crop',
   			position: 'center-center',
   		}
   		%}
-  		{% set images = photoMatrix.imageField %}
-  		{% if images | length %}
+  		{% set block = entry.photoMatrix %}
+  		{% if block | length %}
   			{% if photoMatrix.image | length %}
   				<h3>{{ photoMatrix.image }}</h3>
   			{% endif %}
   			<ul class="gallery">
-  				{% for image in images %}
+  				{% for asset in block %}
   				<li>
-  					{% if image.getHeight() > image.getWidth %}
-  						<a href="{{ image.getUrl(vertParams) }}"><img src="{{ image.getUrl(thumbParams) }}" alt="image"></a>
+  					{% if asset.getHeight() > asset.getWidth %}
+  						<a href="{{ asset.getURL(vertParams) }}"><img src="{{ asset.getURL(thumbParams) }}" alt="asset"></a>
   					{% else %}
-  						<a href="{{ image.getUrl(horzParams) }}"><img src="{{ image.getUrl(thumbParams) }}" alt="image"></a>
+  						<a href="{{ asset.getURL(horzParams) }}"><img src="{{ asset.getURL(thumbParams) }}" alt="asset"></a>
   					{% endif %}
   				</li>
   			{% endfor %}
   		</ul>
   	{% endif %}#}
-		{% for asset in entry.photoGallery %}
+		{% for asset in entry.photoGallery.limit(1) %}
 			<img src="{{ asset.getUrl('crop') }}"/>
 		{% endfor %}
+		{#{% set prevType = null %}
+		{% set nextType = null %}
+
+		{% for block in entry.photoMartix %}
+
+  		{% set type = (nextType ?: block.type.handle) %}
+  		{% set nextType = (not loop.last ? block.next().type.handle) %}
+
+  		{% switch type %}
+  			{% case 'imageField' %}
+  				{% if prevType != 'imageField' %}
+  					<div class="bxslider">
+  				{% endif %}
+  			{% set asset = block.image.first() %}
+  			{% if asset %}
+  				<figure class="bxslider-item">
+  					<img src="{{ asset.url }}">
+  				</figure>
+  			{% endif %}
+  			{% if nextType != 'imageField' %}
+  				</div>
+  			{% endif %}
+  			{% endswitch %}
+
+  			{% set prevType = type %}
+  			{% endfor %}#}
+
 {% endblock %}

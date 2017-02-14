@@ -4,5 +4,12 @@
 	{% for asset in entry.featureImage %}
 		<img src="{{ asset.url }}" alt="asset.title" />
 	{% endfor %} 
+	<hr>
+		<h2>Where To Find Us</h2>
+		{% for entry in craft.entries.section('mapSection') %}
+			{% for asset in entry.map %}
+				<img src="{{ asset.url }}"/>
+			{% endfor %}
+		{% endfor %}
 	
 {% endblock %}

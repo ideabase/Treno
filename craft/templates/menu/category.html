@@ -25,7 +25,7 @@
           <li>{{ food.title }}</li>
           <ul>
             <li>{{ food.foodDescription }}</li>
-            <li>{{ food.foodPrice }}</li>
+            <li>${{ food.foodPrice }}</li>
           </ul>
           {% endif %}
       {% endfor %}
@@ -53,7 +53,7 @@
         <li>{{ beverage.title }}</li>
         <ul>
           <li>{{ beverage.foodDescription }}</li>
-          <li>{{ beverage.foodPrice }}</li>
+          <li>${{ beverage.foodPrice }}</li>
         </ul>
         {% endif %}
     {% endfor %}

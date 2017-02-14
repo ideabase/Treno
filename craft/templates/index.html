@@ -31,9 +31,9 @@
 		{% endfor %}
 	</ul>
 	<h2>{{ "now"|date("l") }}'s Specials</h2>
+	
 	<ul>
-			{#{% set light = craft.entries.section('specials') %}
-				{% if light.specialLightSwitch %}#}
+			
 			{% switch "now" | date("l") %}
 	
 			{% case "Monday" %}
@@ -87,7 +87,12 @@
 				{% endfor %}
 
 			{% endswitch %}
-		{#{% endif %}#}
-		
-	</ul>
+		</ul>
+		<hr>
+		<h2>Where To Find Us</h2>
+		{% for entry in craft.entries.section('mapSection') %}
+			{% for asset in entry.map %}
+				<img src="{{ asset.url }}"/>
+			{% endfor %}
+		{% endfor %}
 {% endblock %}
