@@ -20,10 +20,10 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-
-	{{ entry.body }}
- 
+	{% for entry in craft.entries.section('news').limit(1) %}
+		<a href="{{ entry.url }}"><h1>{{ entry.title }}</h1></a>
+		{{ entry.body }}
+ 	{% endfor %}
 	<h2>Recent Menu Items</h2>
 	<ul>
 		{% for entry in craft.entries.section('menu').limit(5).find() %}
