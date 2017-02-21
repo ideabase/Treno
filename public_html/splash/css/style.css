@@ -100,11 +100,11 @@ main structure
 */
 #logo {
     position: absolute;
-    top: 1.3em;
-    left: 1.3em;
+    top: 4em;
+    left: 4em;
     z-index: 10;
-    width: 8em;
-    cursor: pointer; 
+    width: 10em;
+/*    cursor: pointer; */
 }
 /*
 #logo:hover {
@@ -114,7 +114,7 @@ main structure
 .welcome {
     position: absolute;
     top: 1.6em;
-    left: 1em;
+    left: 30%;
     z-index: 5;
     color: white;
     
@@ -122,7 +122,7 @@ main structure
 .welcome1 {
     position: absolute;
     top: 3em;
-    left: 1em;
+    left: 30%;
     z-index: 5;
     color: white;    
 }
@@ -131,8 +131,9 @@ main structure
     font-style: normal;
     position: absolute;
     top: 11.5em;
-    left: 8em;
+    left: 40%;
     z-index: 5;
+    color: white;
 }
 .top {
     height: 41.5em;
@@ -166,7 +167,8 @@ main structure
     z-index: 2;
     position: absolute;
     top: 5em;
-    left: 8em
+    left: 23%;
+ 
 }
 .wrap1{
     margin: 5em auto;
@@ -251,7 +253,7 @@ h4 {
     font-size: 1em;
     font-weight: 400;
     margin: 0 0 .5em 0;
-    color: #888888;
+    color: #af8417;
     text-transform: uppercase;
 }
 h5 {
@@ -259,7 +261,7 @@ h5 {
     text-rendering: optimizeLegibility;
     font-size: 1em;
     font-weight: 400;
-    color: #888888;
+    color: #bcbcbc;
 }
 .footer {
     width: 100%;
@@ -273,7 +275,7 @@ h5 {
 }
 .footerinfo1{
     max-width: 15em;
-    margin: 1.5em 3em 0 0em;
+    margin: 3em 7em 0 0em;
     float: left;
 }
 .footerinfo2{
@@ -291,6 +293,25 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .center {
     margin: auto;
+}
+@media only screen and (min-width: 1400px) {
+    .welcome, .welcome1 {
+        left: 40%;
+    }
+    .tokent {
+        left: 50%;
+    } 
+}
+@media only screen and (min-width: 1200px) {
+    .welcome, .welcome1 {
+        left: 35%;
+    }
+    .tokent {
+        left: 45%;
+    } 
+    .tomato {
+        
+    }
 }
 @media only screen and (max-width: 800px) {
     h2 {
@@ -317,14 +338,21 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     }
 
     .tomato {
-        width: 25em;
+        width: 22em;
         height: auto;
         position: absolute;
-        top: 8em;
+        top: 12em;
         left: 2em;
     }
     .footerinfo {
     margin: 0 5em;
+    }
+    .footerinfo2 {
+        max-width: 100%;
+        text-align: left;
+    }
+    .rights{
+        margin: 0 0 0 14em;
     }
 }
 @media only screen and (max-width: 700px) { 
@@ -338,23 +366,45 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
        font-size:  1.1em;
     }
     h4, h5{
-        font-size: .8em;
+        font-size: 1em;
     }
 
      .tomato {
-        width: 22em;
+        width: 20em;
         height: auto;
         position: absolute;
-        top: 8em;
+        top: 12em;
         left: 2em;
     }
      .footerinfo {
-    margin: 2em;
+    margin: 1em;
+    }
+    .footer {
+        height: 14em;
+    }
+    .footerinfo1{
+    max-width: 15em;
+    margin: 2em 2em 0 0em;
+    float: left;
+    }
+    .footerinfo2 {
+    margin: 2em 2em 0 0em;  
+    text-align: left;
+    }
+    .rights{
+        margin: 0 0 0 0;
     }
 }
 @media only screen and (max-width: 500px) { 
-    .footerinfo2 {
-    margin: 2em 0 0 8.6em;
+   .footerinfo {
+    margin: 1em;
+    max-width: 30em;
+    }
+    .rights{
+        margin: 0 0 0 9em;
+    }
+    #logo {
+        left: 7.2em;
     }
 }
 /*
@@ -365,12 +415,12 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }
 */
 
-/**
-
-fade on hover, add this to css style
-
+/*
+*
+fade in on load
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 *
+*/
 .fade {
 -webkit-transition: all .25s ease;
 -moz-transition: all .25s ease;
@@ -380,7 +430,7 @@ transition: all .25s ease;
 }
 
 .fadein {
-    /* fadein style on load or toggle */
+    /* fadein style on load or toggle 
    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
         -ms-animation: fadein 1s; /* Internet Explorer */
