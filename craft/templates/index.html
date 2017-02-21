@@ -20,19 +20,46 @@
 {% extends "_layout" %}
 
 {% block content %}
-	{% for entry in craft.entries.section('news').limit(1) %}
-		<a href="{{ entry.url }}"><h1>{{ entry.title }}</h1></a>
-		{{ entry.body }}
- 	{% endfor %}
-	<h2>Recent Menu Items</h2>
+	
+	{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
+	{% for entry in craft.entries.section('aboutTreno') %}
+		{% for asset in entry.featureImage %}
+			<img src="{{ asset.url }}" alt="asset.title" />
+		{% endfor %}
+		<h2>About Treno</h2>
+		{{entry.aboutForHomepage}}
+		{% for asset in entry.photoGallery %}
+			<a href="{{ asset.getUrl }}"><img src="{{ asset.getUrl('crop') }}"/></a>
+		{% endfor %}
+	{% endfor %}
+
+	{# might have to change where this loop is pulling info from. just setting up the homepage to be similar to the wireframe.  #}
+	
+	{#<h2>Recent Menu Items</h2>
 	<ul>
 		{% for entry in craft.entries.section('menu').limit(5).find() %}
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
-	</ul>
-	<h2>{{ "now"|date("l") }}'s Specials</h2>
+	</ul>#}
+	{# putting the envents (which is news as of right now) and the daily specials into a table #}	
+	<table>
+		<tr width="400">
+			<th><h2>Events</h2></th>
+			<th><h2>{{ "now"|date("l") }}'s Specials</h2></th>
+		</tr>
+		<tr width="400">
+			<th> {{ entry.title }} </th>
+		</tr>
+		<tr width="400" height="200">
+			<td>{% for entry in craft.entries.section('news').limit(1) %}
+			
+			{{ entry.body }}<br>
+			<a href="{{ entry.url }}">more</a>
+ 		{% endfor %}</td>
 	
-	<ul>
+	
+	
+	<td width="400" height="200"><ul>
 			
 			{% switch "now" | date("l") %}
 	
@@ -88,8 +115,13 @@
 
 			{% endswitch %}
 		</ul>
+		<a href="{{ url('specials') }}">more</a>
+	</td>
+	</tr>
+</table>
 		<hr>
-		<h2>Where To Find Us</h2>
+		{#<h2>Where To Find Us</h2>#}
+		{# this is for the map #}
 		{% for entry in craft.entries.section('directions') %}
 			{% for asset in entry.map %}
 				<img src="{{ asset.url }}"/>
