@@ -13,7 +13,6 @@
 
 body {
     background-color: transparent;
-
 }
 
 ::-moz-selection { 
@@ -40,10 +39,11 @@ type
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i|Pinyon+Script');
 
 
 /*
+font-family: 'Pinyon Script', cursive;
 font-family: 'Proza Libre', sans-serif;
 font-family: 'Crimson Text', serif;
 font-family: 'Alegreya Sans', sans-serif;
@@ -74,7 +74,7 @@ h3 {
     font-family: 'Crimson Text', serif;
     text-rendering: optimizeLegibility;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.4;
      color: #3e3e3e;
 }
@@ -99,23 +99,40 @@ main structure
 
 */
 #logo {
-    position: fixed;
+    position: absolute;
     top: 1.3em;
     left: 1.3em;
     z-index: 10;
-    width: 5em;
+    width: 8em;
     cursor: pointer; 
 }
+/*
 #logo:hover {
     opacity: .9;
 }
+*/
 .welcome {
     position: absolute;
-    top: 1.5em;
+    top: 1.6em;
     left: 1em;
     z-index: 5;
     color: white;
     
+}
+.welcome1 {
+    position: absolute;
+    top: 3em;
+    left: 1em;
+    z-index: 5;
+    color: white;    
+}
+.tokent {
+    font-size: 1.7em;
+    font-style: normal;
+    position: absolute;
+    top: 11.5em;
+    left: 8em;
+    z-index: 5;
 }
 .top {
     height: 41.5em;
@@ -123,13 +140,24 @@ main structure
     margin: -.5em 0 0 0;
     background-color: #bab9b9;
     z-index: -10;
+    position: relative;
+}
+.top:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    background-color: rgba(0,0,0,.1);
+    height: 100%;
+    z-index: 2;
 }
 .img1 {
     height: 40em;
     margin: auto;
     z-index: 1;
     position: absolute;
-    top: 1em;
+    top: 1.5em;
     right: 0em
     
 }
@@ -137,11 +165,11 @@ main structure
     height: 35em;
     z-index: 2;
     position: absolute;
-    top: 0em;
+    top: 5em;
     left: 8em
 }
 .wrap1{
-    margin: 10em auto;
+    margin: 5em auto;
 }
 .rule {
     margin: 1.2em auto 3em auto;
@@ -153,6 +181,31 @@ main structure
 }
 .comingsoon{
     margin-top: 5em;
+
+    
+}
+.pasta {
+    width: 100%;
+    position:relative;
+    margin: 5em 0 0 0;
+}
+.pasta:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    background-color: rgba(0,0,0,1);
+    height: 100%;
+    z-index: 2;
+}
+.dots {
+    width: 80%;
+    padding: 10%;
+    z-index: -50;
+    position: relative;
+    top: -27em;
+    left: 0;
 }
 /*
 
@@ -169,6 +222,24 @@ about  ++++++++++++++++++++++++++++++++++++
     text-align: center;
     color: #af8417; 
 }
+
+.btn1 {
+    margin: 2.2em auto 0;
+}
+.btn {
+    cursor: pointer;
+    border: solid;
+    border-width: .15em;
+    padding: .3em; 
+    color: #3e3e3e;
+    border-color: #3e3e3e;
+}
+.btn:hover {
+    border-color: #af8417;
+    background-color: #af8417;
+    color: white;
+}
+
 /*
 
 footer  ++++++++++++++++++++++++++++++++++++
@@ -192,8 +263,8 @@ h5 {
 }
 .footer {
     width: 100%;
-    height: 11em;
-    margin: 0 0 0 0;
+    height: 12em;
+    margin: -5.3em 0 0 0;
     background-color: #343434;
 }
 .footerinfo {
@@ -202,12 +273,12 @@ h5 {
 }
 .footerinfo1{
     max-width: 15em;
-    margin: 1.5em 1em 0;
+    margin: 1.5em 3em 0 0em;
     float: left;
 }
 .footerinfo2{
     max-width: 18em;
-    margin: 0 1em 0;
+    margin: 0 0em 0;
 }
 .rights {
     margin: 3em 0 0 0;
@@ -218,7 +289,9 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 *
 */
 
-
+.center {
+    margin: auto;
+}
 @media only screen and (max-width: 800px) {
     h2 {
         font-size: 1.5em;
@@ -230,18 +303,31 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         font-size: 5em;
     }
     .welcome {
-        position: absolute;
-        top: 1.5em;
-        left: .2em;
+        top: 3em;
+        left: .75em;
     }
+    .welcome1 {
+        top: 4.5em;
+        left: .75em;
+    }
+    .tokent {
+        top: 14em;
+        left: 5em;
+        font-size: 1.5em;
+    }
+
     .tomato {
-        height: 30em;
+        width: 25em;
+        height: auto;
         position: absolute;
-        top: 1.5em;
+        top: 8em;
         left: 2em;
     }
+    .footerinfo {
+    margin: 0 5em;
+    }
 }
-@media only screen and (max-width: 750px) { 
+@media only screen and (max-width: 700px) { 
      .storycopy{
         padding: 10px;
     }
@@ -254,14 +340,30 @@ responsive +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     h4, h5{
         font-size: .8em;
     }
+
      .tomato {
-        height: 26em;
+        width: 22em;
+        height: auto;
         position: absolute;
-        top: 1.5em;
-        left: 2em; 
+        top: 8em;
+        left: 2em;
+    }
+     .footerinfo {
+    margin: 2em;
     }
 }
-
+@media only screen and (max-width: 500px) { 
+    .footerinfo2 {
+    margin: 2em 0 0 8.6em;
+    }
+}
+/*
+@media only screen and (max-width: 650px) { 
+    .welcome {
+        padding-right: 0em;
+    }
+}
+*/
 
 /**
 
