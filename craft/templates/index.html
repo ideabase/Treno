@@ -43,20 +43,23 @@
 	</ul>#}
 	{# putting the envents (which is news as of right now) and the daily specials into a table #}	
 	<table>
-		<tr style="width:300;height:200">
+		<tr width="400">
 			<th><h2>Events</h2></th>
 			<th><h2>{{ "now"|date("l") }}'s Specials</h2></th>
 		</tr>
-		<tr style="width:300;height:200">
-			<th>{% for entry in craft.entries.section('news').limit(1) %}
+		<tr width="400">
+			<th> {{ entry.title }} </th>
+		</tr>
+		<tr width="400" height="200">
+			<td>{% for entry in craft.entries.section('news').limit(1) %}
 			
 			{{ entry.body }}<br>
 			<a href="{{ entry.url }}">more</a>
- 		{% endfor %}</th>
+ 		{% endfor %}</td>
 	
 	
 	
-	<th><ul>
+	<td width="400" height="200"><ul>
 			
 			{% switch "now" | date("l") %}
 	
@@ -113,7 +116,7 @@
 			{% endswitch %}
 		</ul>
 		<a href="{{ url('specials') }}">more</a>
-	</th>
+	</td>
 	</tr>
 </table>
 		<hr>

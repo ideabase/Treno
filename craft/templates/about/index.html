@@ -1,33 +1,58 @@
 {% extends "_layout" %}
 {% block content %}
-		<h2>{{ entry.title }}</h2>
-		{{ entry.body }}
 		{% for asset in entry.featureImage %}
 			<img src="{{ asset.url }}" alt="asset.title" />
 		{% endfor %}
+		<h2>{{ entry.title }}</h2>
+		{{ entry.body }}
+		
+		
+	{# matrix field #}	
+	{#{% for block in entry.contentBlocks %}
+		{% if block.type == "image" %}
+			{% for image in block.imageFile %}
+				<img src="{{ image.url('headshots') }}" alt="image.title"/>
+			{% endfor %}
+		{% elseif block.type == "text" %}
+			{{ block.textBlock| markdown }}
+			
+		{% endif %}
+	{% endfor %}#}
 		
 
-		{% for block in entry.contentBlocks %}
-			{% if block.type == "text" %}
-				{{ block.textBlock| markdown }}
-			{% elseif block.type == "image" %}
-				{% for image in block.imageFile %}
-					<img src="{{ image.url('food') }}" alt="image.title"/>
-				{% endfor %}
-			{% endif %}
-		{% endfor %}
-		<h1>Team Profiles</h1>
-		{% for entry in craft.entries.section('profiles') %}
-			<h3>{{ entry.title }}</h3>
-			{% for image in entry.teamMemberPhoto %}
-				<img src="{{ image.url }}">
-			{% endfor %}		
-			{{ entry.teamMemberBio }}
-		{% endfor %}
+		{# having trouble looping items while putting them in a table #}
+		<h1>Owners</h1>
+		<table>	
+			{% for entry in craft.entries.section('profiles') %}
+				<tr>{% for image in entry.teamMemberPhoto %}
+					<img src="{{ image.url('headshots') }}">
+				{% endfor %}</tr>
+				<tr><h3>{{ entry.title }}</h3></tr>
+				<tr>{{ entry.teamMemberBio }}</tr>
+			{% endfor %}
+		</table>
+
+<table>
+		<tr>
+			<th><h2>Events</h2></th>
+		</tr>
 		
-		{% for asset in entry.photoGallery %}
+			{% for entry in craft.entries.section('news').limit(3) %}
+			<tr>
+				<th> <a href="entry.url }}">{{ entry.title }}</a> </th>
+			</tr>
+			<tr>
+			<th width="300">{{ entry.body }}<th>
+ 			{% endfor %}
+ 			</tr>
+ </table>
+
+
+
+		{# photo gallery #}
+		{#{% for asset in entry.photoGallery %}
 			<a href="{{ asset.getUrl }}"><img src="{{ asset.getUrl('crop') }}"/></a>
-		{% endfor %}
+		{% endfor %}#}
 		
 
 {% endblock %}
