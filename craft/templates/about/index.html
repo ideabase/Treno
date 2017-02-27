@@ -3,8 +3,11 @@
 		{% for asset in entry.featureImage %}
 			<img src="{{ asset.url }}" alt="asset.title" />
 		{% endfor %}
-		<h2>{{ entry.title }}</h2>
+
+		{% for entry in craft.entries.section('aboutTreno') %}
+		<h2>{{ entry.basicText }}</h2>
 		{{ entry.body }}
+		{% endfor %}
 		
 		
 	{# matrix field #}	

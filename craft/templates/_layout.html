@@ -25,22 +25,20 @@
 			{#<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>#}
 
 			<nav>
-				{#<style>
-				a.one:link {size:20;}
-				a.one:hover {text-decoration:underline;}		
-				</style>#}
 				<table>
 					<tr>
 						<th>
-							<a href="{{ siteUrl }}">{% for asset in header.logo %}
-								<img src="{{ asset.url('crop') }}" alt="asset.title" />
-							{% endfor %}</a>	
+								
 						</th>
 						<th><a class="one" href="{{ siteUrl }}" style="font-size:20; {% if craft.request.firstSegment == 'news' %}class="active"{% endif %} ">Home</a> </th>
 
 						<th><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>About</a> </th>
 
 						<th><a href="{{ url('menu') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Menu</a> </th>
+
+						<th><a href="{{ siteUrl }}">{% for asset in header.logo %}
+								<img src="{{ asset.url('crop') }}" alt="asset.title" />
+						{% endfor %}</a></th>
 
 						<th><a href="{{ url('reservations') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Reservations</a> </th>
 
@@ -66,8 +64,8 @@
 					<th><h4>Hours</h4></th>	
 				</tr>
 				<tr>
-					<th>{{ footer.phoneNumber }} |</th>
-					<th>{{ footer.basicText }} |</th>
+					<th>{{ footer.phoneNumber }} </th>
+					<th>{{ footer.basicText }} </th>
 					<th>{% if footer.hours | length %}
 				{% for row in footer.hours %}
 					
