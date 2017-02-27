@@ -1,10 +1,28 @@
-h2 {
-	color:$medium-gray;
+h1 {
+	color:$gold;
 	font-family:$serif;
+	font-style: italic;
+	font-size: 3em;
+	font-weight: normal;
+	text-align: center;
+	@media screen and (min-width: $medium) {
+		font-size: 5em;
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 5%;
+		height: 3px;
+		background-color: $gold;
+		margin: 0 auto;
+		margin-top: .10em;
+	}
 }
+
 p {
 	color:$dark-gray;
 }
+
 body {
 	font-family:$sans;
 }
