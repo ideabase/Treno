@@ -7,9 +7,7 @@
 	<hr>
 		<h2>Where To Find Us</h2>
 		{% for entry in craft.entries.section('directions') %}
-			{% for asset in entry.map %}
-				<img src="{{ asset.url }}"/>
-			{% endfor %}
+			{{ entry.interactiveMap | raw }}
 		{% endfor %}
 	
 {% endblock %}

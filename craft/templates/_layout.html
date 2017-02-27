@@ -25,27 +25,10 @@
 			{#<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>#}
 
 			<nav>
-				<table>
-					<tr>
-						<th>
-								
-						</th>
-						<th><a class="one" href="{{ siteUrl }}" style="font-size:20; {% if craft.request.firstSegment == 'news' %}class="active"{% endif %} ">Home</a> </th>
-
-						<th><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>About</a> </th>
-
-						<th><a href="{{ url('menu') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Menu</a> </th>
-
-						<th><a href="{{ siteUrl }}">{% for asset in header.logo %}
+				{{ craft.amNav.getNav("mainMenu") }}
+						<a href="{{ siteUrl }}">{% for asset in header.logo %}
 								<img src="{{ asset.url('crop') }}" alt="asset.title" />
-						{% endfor %}</a></th>
-
-						<th><a href="{{ url('reservations') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Reservations</a> </th>
-
-						<th><a href="{{ url('directions') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>Directions</a></th>
-
-					</tr>
-				</table>
+						{% endfor %}</a>
 			</nav>
 		</header>
 

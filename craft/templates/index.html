@@ -118,8 +118,6 @@
 		<hr>
 		{# this is for the map #}
 		{% for entry in craft.entries.section('directions') %}
-			{% for asset in entry.map %}
-				<img src="{{ asset.url }}"/>
-			{% endfor %}
+			{{ entry.interactiveMap | raw }}
 		{% endfor %}
 {% endblock %}
