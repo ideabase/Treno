@@ -1,11 +1,9 @@
 {% extends "_layout" %}
 {% block content %}
-		{% for asset in entry.featureImage %}
-			<img src="{{ asset.url }}" alt="asset.title" />
-		{% endfor %}
+		{% include '_includes/_feature.html' %}
 
 		{% for entry in craft.entries.section('aboutTreno') %}
-		<h2>{{ entry.basicText }}</h2>
+		<h1>{{ entry.basicText }}</h1>
 		{{ entry.body }}
 		{% endfor %}
 		
@@ -24,13 +22,15 @@
 		
 
 		{# having trouble looping items while putting them in a table #}
-		<h1>Owners</h1>
+		{% include '_includes/_gallery.html' %}
+
+		<h2>Owners</h2>
 		<table>	
 			{% for entry in craft.entries.section('profiles') %}
 				<tr>{% for image in entry.teamMemberPhoto %}
-					<img src="{{ image.url('headshots') }}">
+					<img src="{{ image.url('investorProfile') }}">
 				{% endfor %}</tr>
-				<tr><h3>{{ entry.title }}</h3></tr>
+				<tr><h4>{{ entry.title }}</h4></tr>
 				<tr>{{ entry.teamMemberBio }}</tr>
 			{% endfor %}
 		</table>

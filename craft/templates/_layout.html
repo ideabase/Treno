@@ -25,10 +25,11 @@
 			{#<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>#}
 
 			<nav>
+				
+				<a href="{{ siteUrl }}">{% for asset in header.logo %}
+						<img src="{{ asset.url('crop') }}" alt="asset.title" />
+				{% endfor %}</a>
 				{{ craft.amNav.getNav("mainMenu") }}
-						<a href="{{ siteUrl }}">{% for asset in header.logo %}
-								<img src="{{ asset.url('crop') }}" alt="asset.title" />
-						{% endfor %}</a>
 			</nav>
 		</header>
 
@@ -40,6 +41,7 @@
 		</main>
 
 		<footer id="footer">
+			<hr>
 			<table>
 				<tr>
 					<th><h4>Phone</h4></th>
@@ -58,6 +60,8 @@
 			
 		</footer>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i" rel="stylesheet">
   <link href="{{ siteUrl }}assets/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
   <script src="//localhost:35729/livereload.js"></script>

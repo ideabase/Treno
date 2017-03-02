@@ -22,28 +22,14 @@
 {% block content %}
 	
 	{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
-	{% for entry in craft.entries.section('aboutTreno') %}
-		{% for asset in entry.featureImage %}
-			<img src="{{ asset.url }}" alt="asset.title" />
-		{% endfor %}
+	
+		{% include '_includes/_feature.html' %}
+	
 		<h2>About Treno</h2>
-		{{entry.aboutForHomepage}}
-		{% for asset in entry.photoGallery %}
-			<a href="{{ asset.getUrl }}"><img src="{{ asset.getUrl('crop') }}"/></a>
-		{% endfor %}
-	{% endfor %}
-
-	{# might have to change where this loop is pulling info from. just setting up the homepage to be similar to the wireframe.  #}
-	
-	{#<h2>Recent Menu Items</h2>
-	<ul>
-		{% for entry in craft.entries.section('menu').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>#}
-	{# putting the events (which is news as of right now) and the daily specials into a table #}	
-	
+		{{ entry.body }}
 		
+	
+	{% include '_includes/_gallery.html' %}	
 				
 	{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
 			<h2>Events</h2>
@@ -112,10 +98,8 @@
 			{% endswitch %}
 		</ul>
 		<a href="{{ url('specials') }}">more</a>
-	</td>
-	</tr>
-</table>
-		<hr>
+	
+		<br>
 		{# this is for the map #}
 		{% for entry in craft.entries.section('directions') %}
 			{{ entry.interactiveMap | raw }}
