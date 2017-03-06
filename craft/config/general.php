@@ -14,6 +14,7 @@ return array(
          'enableCsrfProtection' => true,
          'omitScriptNameInUrls' => true,
          'cpTrigger' => 'admin',
+         'enableCsrfProtection' => true,
          'environmentVariables' => array(
            'basePath' => '',
            'baseUrl'  => 'https://trenokent.com/production',

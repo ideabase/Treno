@@ -1,14 +1,10 @@
 {% extends "_layout" %}
 {% block content %}
-	{{entry.basicText}}<br>
-	{% for asset in entry.featureImage %}
-		<img src="{{ asset.url }}" alt="asset.title" />
-	{% endfor %} 
+	{% include '_includes/_feature.html' %}
+	<h1>{{ entry.title }}</h1>
+	{{entry.basicText}}
 	<hr>
 		<h2>Where To Find Us</h2>
-		{% for entry in craft.entries.section('directions') %}
-			<iframe src="{{ entry.interactiveMap }}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-		{% endfor %}
+		{% include '_includes/_map.html' %}
 	
 {% endblock %}

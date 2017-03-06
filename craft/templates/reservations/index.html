@@ -1,6 +1,7 @@
 {% extends "_layout" %}
 {% block content %}
-
+{% include '_includes/_feature.html' %}
+<h1>{{ entry.title }}</h1>
 {% for entry in craft.entries.section('reservations') %}
 	{{ entry.reservationInfo }}<br><br>
 	Phone Number: {{ entry.phoneNumber }}

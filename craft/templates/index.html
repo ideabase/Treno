@@ -101,7 +101,5 @@
 	
 		<br>
 		{# this is for the map #}
-		{% for entry in craft.entries.section('directions') %}
-			{{ entry.interactiveMap | raw }}
-		{% endfor %}
+		{% include '_includes/_map.html' %}
 {% endblock %}

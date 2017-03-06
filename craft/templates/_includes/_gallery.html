@@ -1,10 +1,12 @@
-{% for asset in entry.photoGallery %}
 <div class="owl-carousel">
+{% for asset in entry.photoGallery %}
+
 	<div class="item">
 		<picture>
 			<source srcset="{{ asset.url('slideShowLarge') }}" media="(min-width: 800px)">
 			<img src="{{ asset.getUrl('slideShowSmall') }}" alt="asset.title"/>
 		</picture>
 	</div>
-</div>
+
 {% endfor %}
+</div>
