@@ -1,3 +1,71 @@
 header {
-  background-color: $gold;
+  background-color: white;
+  background-image: url("/production/assets/img/uploads/_featureImage/Welcome Building.svg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.titleContainer {
+	width: 50%;
+	float: left;
+	margin: 3% 0% 2% 1%;
+	z-index: 102;
+}
+
+
+
+.pageTitle {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	width: 50%;
+	margin-top: 14%;
+}
+
+.tomatoPlant {
+	width: 100%;
+	display: block;
+}
+
+.tomatoPlant img {
+	position: relative;
+	top: 60px;
+	z-index: 99;
+
+}
+
+.pageTitle h3 {
+	color: $medium-gray;
+	text-transform: uppercase;
+
+
+	&:after {
+		content: "";
+		display: block;
+		width: 4%;
+		height: 3px;
+		background-color: $medium-gray;
+		margin: 0 auto;
+		margin-top: .10em;
+	}
+}
+
+
+.pageTitle h1 {
+  color: white;
+  padding: 0;
+  margin: -4% 0% -4% 0%;
+
+	&:after {
+		content: "";
+		display: block;
+		width: 0%;
+		height: 0px;
+		background-color: inherit;
+		margin: 0 auto;
+		margin-top: 0 auto;
+	}
+}
+
