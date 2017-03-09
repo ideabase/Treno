@@ -22,9 +22,12 @@
 {% block content %}
 	
 	{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
-	
+		{% for asset in entry.illustration %}
+			<img src="{{ asset.Url('illustrationCrop') }}" alt="asset.title" />
+		{% endfor %}
 		{% include '_includes/_feature.html' %}
-	
+
+		
 		<h2>About Treno</h2>
 		{{ entry.body }}
 		
