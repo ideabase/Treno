@@ -1,0 +1,74 @@
+p {
+	text-align: left;
+	margin: 4% 13% 13% 13%;
+
+}
+
+.about-intro {
+	display:inline-block;
+	position: relative;
+	top: -866px;
+}
+
+.about_intro h2 {
+	margin-top: 6%;
+}
+
+.about_events {
+	background-color: $gold;
+	position: relative;
+	width: 50%;
+	float:left;
+}
+
+.about_specials {
+	background-color: #fff;
+	width: 50%;
+	position: relative;
+	float: left;
+}
+
+.half-grid {
+	content:"";
+	display: table;
+	clear: both;
+}
+
+.half-grid p {
+	margin: 10% 25% 10% 30%;
+}
+
+.half-grid h1, h2 {
+	margin-top: 8%;
+}
+
+.about_events h2:after {
+		content: "";
+		display: block;
+		width: 4%;
+		height: 3px;
+		background-color: white;
+		margin: 0 auto;
+		margin-top: .10em;
+	}
+.map-container {
+background-color: white;
+  background-image: url("/production/assets/img/uploads/map.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: visible;
+  height: 30em;
+  background-position: 0 40%;
+  position: relative;
+}
+
+.circle img {
+	width: 18%;
+}
+
+.circle {
+	position: absolute;
+	width: 100%;
+	top: 32%;
+}
+

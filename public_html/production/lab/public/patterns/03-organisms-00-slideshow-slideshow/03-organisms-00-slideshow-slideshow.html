@@ -23,64 +23,60 @@
     <!-- End Pattern Lab -->
 
   </head>
-  <body class="">
-<header>
-  <div class="header-bckg">
-  </div>
-  <div class="titleContainer">
-    <div class="tomatoPlant">
-      <img src="/production/assets/img/uploads/tomatoPlant.svg" alt="Treno"/>
-    </div>
-    <div class="pageTitle">
-      <div class="mainTitle">
-        <h1>Welcome</h1>
-      </div>
-      <div class="subTitle">
-        <h3>To Kents</h3>
-      </div>
-      <div class="mainTitle">
-        <h1>Ristornte</h1>
-      </div>
-    </div>
-  </div>
-</header>
+<body class="">
+
 <main>
-  <div class="about_intro">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</main>
   <!--Image 1-->
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="/production/assets/img/uploads/Pasta.svg">
+      <img src="/production/assets/img/uploads/food/Pasta.svg">
     </div>
     <!--End-->
     <div class="mySlides fade">
-      <img src="/production/assets/img/uploads/Tomatoes.svg">
+      <img src="/production/assets/img/uploads/food/Tomatoes.svg">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-<div class="half-grid">
-<div class="about_events">
-  <h2>Events</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</main>
 
-</div>
-  <div class="about_specials">
-    <h2>Specials</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-  </div>
-</div>
-<footer>
-  This is the footer
-</footer>
+<!--Need to move this into the JS file tomorrow-->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!--End Slideshow-->
+
 
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"cssEnabled":false,"lineage":[{"lineagePattern":"organisms-header","lineagePath":"..\/..\/patterns\/04-templates-00-home-home\/04-templates-00-home-home.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"templates","patternSubtype":"home"},"patternDesc":"","patternExtension":"mustache","patternName":"home","patternPartial":"templates-home","patternState":"","extraOutput":[]}
+  {"cssEnabled":false,"lineage":[{"lineagePattern":"atoms-logo","lineagePath":"..\/..\/patterns\/03-organisms-00-slideshow-slideshow\/03-organisms-00-slideshow-slideshow.html"}],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/04-templates-00-home-home\/04-templates-00-home-home.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"slideshow"},"patternDesc":"","patternExtension":"mustache","patternName":"slideshow","patternPartial":"organisms-slideshow","patternState":"","extraOutput":[]}
 </script>
 
 <script>
