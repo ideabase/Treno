@@ -20,6 +20,11 @@
 	position: relative;
 	width: 50%;
 	float:left;
+	color: $medium-gray;
+}
+
+.event_date p, .event_price p {
+	font-weight: 800;
 }
 
 .about_specials {
@@ -27,6 +32,14 @@
 	width: 50%;
 	position: relative;
 	float: left;
+	color: $medium-gray;
+}
+
+.event_title {
+	font-family: $serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.25em;
 }
 
 .half-grid {
