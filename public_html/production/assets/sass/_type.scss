@@ -8,6 +8,10 @@ h1 {
 	@media screen and (min-width: $medium) {
 		font-size: 5em;
 	}
+	@media screen and (max-width: $xsmall) {
+		font-size: 2em;
+	}
+
 	&:after {
 		content: "";
 		display: block;
@@ -25,7 +29,11 @@ h2 {
 	text-align: center;
 	@media screen and (min-width: $medium) {
 		font-size: 2em;
-}
+	}
+	@media screen and (max-width: $xsmall) {
+		font-size: 1em;
+	}
+
 	&:after {
 		content: "";
 		display: block;
