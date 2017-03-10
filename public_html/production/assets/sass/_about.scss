@@ -1,17 +1,13 @@
-p {
-	text-align: left;
-	margin: 4% 13% 13% 13%;
-
-}
-
 .about-intro {
 	display:inline-block;
 	width: 100%;
 }
 
 
-.about-intro p {
-	line-height: 220%;
+.about-intro, p {
+	text-align: left;
+	margin: 4% 17% 10% 17%;
+	line-height: 200%;
 }
 
 .about_intro h2 {
@@ -40,7 +36,7 @@ p {
 }
 
 .half-grid p {
-	margin: 10% 25% 10% 30%;
+	margin: 7% 25% 10% 30%;
 }
 
 .half-grid h1, h2 {
