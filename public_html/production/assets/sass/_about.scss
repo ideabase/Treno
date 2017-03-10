@@ -6,12 +6,17 @@ p {
 
 .about-intro {
 	display:inline-block;
-	position: relative;
-	top: -866px;
+	width: 100%;
+}
+
+
+.about-intro p {
+	line-height: 220%;
 }
 
 .about_intro h2 {
 	margin-top: 6%;
+	text-transform: uppercase;
 }
 
 .about_events {
@@ -40,6 +45,7 @@ p {
 
 .half-grid h1, h2 {
 	margin-top: 8%;
+	text-transform: uppercase;
 }
 
 .about_events h2:after {
