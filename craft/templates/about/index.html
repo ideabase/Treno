@@ -25,30 +25,28 @@
 		{% include '_includes/_gallery.html' %}
 
 		<h2>Owners</h2>
-		<table>	
 			{% for entry in craft.entries.section('profiles') %}
-				<tr>{% for image in entry.teamMemberPhoto %}
+				{% for image in entry.teamMemberPhoto %}
 					<img src="{{ image.url('investorProfile') }}">
-				{% endfor %}</tr>
-				<tr><h4>{{ entry.title }}</h4></tr>
-				<tr>{{ entry.teamMemberBio }}</tr>
+				{% endfor %}
+				<h4>{{ entry.title }}</h4>
+				{{ entry.teamMemberBio }}
 			{% endfor %}
-		</table>
+		
 
-<table>
-		<tr>
+
 			<th><h2>Events</h2></th>
-		</tr>
+		
 		
 			{% for entry in craft.entries.section('news').limit(3) %}
-			<tr>
-				<th> <a href="entry.url }}">{{ entry.title }}</a> </th>
-			</tr>
-			<tr>
-			<th width="300">{{ entry.body }}<th>
+			
+				<a href="{{ entry.url }}">{{ entry.title }}</a>
+			{% set paragraphs = entry.body|split('</p>') %}
+			{% set firstParagraph = paragraphs|first ~ '</p>' %}
+			<p>{{ firstParagraph|raw }}</p>
+			{{ entry.eventDate.format('F d, Y') }}
+			<a href="{{ entry.url }}">More</a>
  			{% endfor %}
- 			</tr>
- </table>
 
 
 

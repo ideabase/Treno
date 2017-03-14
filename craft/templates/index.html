@@ -18,91 +18,89 @@
  #}
 
 {% extends "_layout" %}
-
+{% block header %}
+{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
+	<style type="text/css">
+		{% for asset in entry.featureImage %}
+		.header-bckg {
+			background-image: url({{ asset.url('featureImageSmall') }}) !important;
+		}
+		@media screen and (min-width: 800px) {
+			.header-bckg {
+				background-image: url({{ asset.url('featureImageLarge') }}) !important;
+			}
+		}
+		{% endfor %}
+	</style>
+	<div class="header-container">
+		<div class="header-bckg"></div>
+		<div class="titleContainer">
+			
+			<div class="tomatoPlant">
+				{% for asset in entry.illustration %}
+					<img src="{{ asset.Url('illustrationCrop') }}" alt="{{asset.title}}" />
+				{% endfor %}
+			</div>
+			<div class="pageTitle">
+				<div class="mainTitle">
+					<h1>{{ entry.headerTitle1 }}</h1>
+				</div>
+				<div class="subTitle">
+					<h3>{{ entry.headerTitle2 }}</h3>
+				</div>
+				<div class="mainTitle">
+					<h1>{{ entry.headerTitle3 }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
 {% block content %}
 	
-	{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
-		{% for asset in entry.illustration %}
-			<img src="{{ asset.Url('illustrationCrop') }}" alt="asset.title" />
-		{% endfor %}
-		{% include '_includes/_feature.html' %}
+	
 
 		
 		<h2>About Treno</h2>
 		{{ entry.body }}
 		
 	
-	{% include '_includes/_gallery.html' %}	
+	{% include '_includes/_gallery.html' %}
+	
+	<div class="half-grid">
 				
-	{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
+		{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
+			<a href="{{ entry.url }}">
+			<div class="about_events">
 			<h2>Events</h2>
-			 {{ entry.title }}
-			 {{ entry.body }}
-			<a href="{{ entry.url }}">more</a>
- 	{% endfor %}
- 		
-	
-	
-	
-		<ul>
-		<h2>{{ "now"|date("l") }}'s Specials</h2>
-			{% switch "now" | date("l") %}
-	
-			{% case "Monday" %}
-				{% for entry in craft.entries.section('specials').specialLightSwitch('1').search('specialDate:Monday').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Tuesday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Tuesday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Wednesday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Wednesday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Thursday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Thursday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Friday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Friday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Saturday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Saturday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
-			{% case "Sunday" %}
-				{% for entry in craft.entries.section('specials').search('specialDate:Sunday').specialLightSwitch('1').limit(1) %}
-					<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-					<ul>
-						<li>{{ entry.foodDescription }}</li>
-					</ul>
-				{% endfor %}
+			<h3>{{ entry.title }}</h3>
+			<h4>{{ entry.eventDate.format('F d, Y') }}</h4>
+			{% set paragraphs = entry.body|split('</p>') %}
+			{% set firstParagraph = paragraphs|first ~ '</p>' %}
+			<p>{{ firstParagraph|raw }}</p>
+			</div>
+			</a>
+ 		{% endfor %}
+ 	
 
-			{% endswitch %}
-		</ul>
-		<a href="{{ url('specials') }}">more</a>
+
 	
-		<br>
-		{# this is for the map #}
+		<a href="{{ url('specials') }}">
+			<div class="about_specials">
+			{% set today = "now"|date("l") %}
+			<h2>{{ today }}'s Specials</h2>
+				{% for entry in craft.entries.section('specials').specialLightSwitch('1') %}
+					{% for date in entry.specialDate %}
+						{% if date == today %}
+							<h4>{{ entry.title }}</h4>
+							<p>{{ entry.foodDescription }}</p>
+							<p>${{ entry.foodPrice }}</p>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			</div>
+		</a>
+		</div>
+
 		{% include '_includes/_map.html' %}
+
 {% endblock %}

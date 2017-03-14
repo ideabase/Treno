@@ -1,4 +1,10 @@
+{% if entry.slideShowLink | length %}
+		{% for link in entry.slideShowLink %}
+		<a href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
+	{% endfor %}	
+{% endif %}
 <div class="owl-carousel">
+
 {% for asset in entry.photoGallery %}
 
 	<div class="item">

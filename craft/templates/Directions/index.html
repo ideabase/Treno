@@ -1,10 +1,10 @@
 {% extends "_layout" %}
 {% block content %}
-	{% include '_includes/_feature.html' %}
+	{% include '_includes/_map.html' %}
 	<h1>{{ entry.title }}</h1>
 	{{entry.basicText}}
+	{% include '_includes/_feature.html' %}
 	<hr>
-		<h2>Where To Find Us</h2>
-		{% include '_includes/_map.html' %}
+		
 	
 {% endblock %}

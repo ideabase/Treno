@@ -1,0 +1,21 @@
+<footer>
+<table>
+	<tr>
+		<th><h4>Phone</h4></th>
+					<th><h4>Location</h4></th>
+					<th><h4>Hours</h4></th>	
+				</tr>
+				<tr>
+					<th>{{ footer.phoneNumber }} </th>
+					<th>{{ footer.basicText }} </th>
+					<th>{% if footer.hours | length %}
+						{% for row in footer.hours %}
+							{{ row.dayOfWeek }} - {{ row.hours }}
+						{% endfor %}
+					{% endif %}</th>
+
+				</tr>
+</table>
+{{ footer.copyRightText }}
+</footer>
+			

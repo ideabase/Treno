@@ -67,6 +67,12 @@ h4 {
 	font-family: $sans;
 
 }
+h5 {
+	color: $medium-gray;
+	font-family: $serif;
+	font-weight: regular;
+	font-size: 22px;
+}
 p {
 	color: $dark-gray;
 	text-align: center;
@@ -75,6 +81,10 @@ p {
 body {
 	font-family: $sans;
 	text-align: center;
+}
+a {
+	color: $gold;
+	text-decoration: none;
 }
 
 

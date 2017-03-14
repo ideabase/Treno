@@ -20,9 +20,7 @@
 </head>
 
 <body>
-	<div id="container">
-		<header id="header">
-			{#<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>#}
+		<header>
 
 			<nav>
 				
@@ -31,32 +29,18 @@
 				{% endfor %}</a>
 				{{ craft.amNav.getNav("mainMenu") }}
 			</nav>
+			{% block header %}
+				You forgot to include Header content 
+			{% endblock %}
 		</header>
 
-		<main id="content" role="main">
+		<main role="main">
 			{% block content %}
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 			{% endblock %}
 		</main>
-		<footer id="footer">
-			<table>
-				<tr>
-					<th><h4>Phone</h4></th>
-					<th><h4>Location</h4></th>
-					<th><h4>Hours</h4></th>	
-				</tr>
-				<tr>
-					<th>{{ footer.phoneNumber }} </th>
-					<th>{{ footer.basicText }} </th>
-					<th>{% if footer.hours | length %}
-				{% for row in footer.hours %}
-					
-					{{ row.dayOfWeek }} - {{ row.hours }}
-				{% endfor %}
-			{% endif %}</th>
-			
-		</footer>
+		{% include '_includes/_footer.html' %}
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="{{ siteUrl }}assets/js/min/scripts-min.js"></script>
