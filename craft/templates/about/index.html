@@ -40,7 +40,7 @@
 		
 			{% for entry in craft.entries.section('news').limit(3) %}
 			
-				<a href="{{ entry.url }}">{{ entry.title }}</a>
+			<a href="{{ entry.url }}">{{ entry.title }}</a>
 			{% set paragraphs = entry.body|split('</p>') %}
 			{% set firstParagraph = paragraphs|first ~ '</p>' %}
 			<p>{{ firstParagraph|raw }}</p>
