@@ -23,7 +23,7 @@
 	color: $medium-gray;
 }
 
-.event_date p, .event_price p {
+.event_date, .event_price {
 	font-weight: 800;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .half-grid p {
-	margin: 7% 25% 10% 30%;
+	margin: 7% 25% 7% 25%;
 }
 
 .half-grid h1, h2 {
