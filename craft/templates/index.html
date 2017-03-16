@@ -72,8 +72,8 @@
 			<a href="{{ entry.url }}">
 			<div class="about_events">
 			<h2>Events</h2>
-			<h3>{{ entry.title }}</h3>
-			<h4>{{ entry.eventDate.format('F d, Y') }}</h4>
+			<p class="event_title">{{ entry.title }}</p>
+			<p class="event_date">{{ entry.eventDate.format('F d, Y') }}</p>
 			{% set paragraphs = entry.body|split('</p>') %}
 			{% set firstParagraph = paragraphs|first ~ '</p>' %}
 			<p>{{ firstParagraph|raw }}</p>
@@ -91,9 +91,9 @@
 				{% for entry in craft.entries.section('specials').specialLightSwitch('1') %}
 					{% for date in entry.specialDate %}
 						{% if date == today %}
-							<h4>{{ entry.title }}</h4>
+							<p class="event_title">{{ entry.title }}</p>
 							<p>{{ entry.foodDescription }}</p>
-							<p>${{ entry.foodPrice }}</p>
+							<p class="event_price">${{ entry.foodPrice }}</p>
 						{% endif %}
 					{% endfor %}
 				{% endfor %}
