@@ -1,0 +1,32 @@
+.nav-container {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgba(255,255,255,.8);
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.nav-alignment {
+	display: inline-block;
+}
+
+.nav-list {
+	float: left;
+	width: 20%;
+}
+
+.nav-list img {
+	width: 40%;
+	position: relative;
+	top: 11px;
+}
+
+.nav-list a {
+	display: block;
+	text-align: center;
+	padding: 15px 25px 15px 25px;
+	text-decoration: none;
+}
