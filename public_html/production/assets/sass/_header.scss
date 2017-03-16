@@ -1,5 +1,5 @@
 .header-container {
-	height: 840px;
+	/*height: 840px;*/
 	display: grid;
 }
 
@@ -12,21 +12,15 @@
   filter: brightness(83%);
   height: 50em;
   z-index: 1;
-  @media screen and (max-width: $xsmall) {
-		height: 14em;
+  @media only screen and (max-width: 354px) {
+		height: 27em;
+		background-position: 7%;
 	}
-
-  @media screen and (min-width: $small) and (max-width: $small) {
-		height: 22em;
+  @media only screen and (max-width: 599px) {
+		height: 27em;
+		filter: brightness(90%);
 	}
-
-	@media screen and (min-width: $medium) and (max-width: $large) {
-		height: 37em;
-	}
-
-	@media screen and (min-height: $xlarge) and (max-width: $xlarge) {
-		height: 46em;
-	}
+  
 }
 
 .titleContainer {
@@ -36,20 +30,10 @@
 	z-index: 102;
 	position: relative;
 	top: -790px;
-	@media screen and (min-width: $xsmall) and (max-width: $xsmall) {
-		top: -216px;
-	}
-	@media screen and (min-width: $small) and (max-width: $small) {
-		top: -330px;
-	}
-	@media screen and (min-width: $medium) and (max-width: $medium) {
-		top: -534px;
-	}
-	@media screen and (min-width: $large) and (max-width: $large) {
-		top: -568px;
-	}
-	@media screen and (min-width: $xlarge) and (max-width: $xlarge) {
-		top: -693px;
+	@media only screen and (max-width: 599px) {
+		width: 100%;
+		top: -414px;
+		margin: 0;
 	}
 }
 
@@ -61,28 +45,26 @@
 	top: 0;
 	margin-top: 31%;
 	width: 100%;
-	@media screen and (max-width: $xsmall) {
-		margin-top: 19%;
-	}
 }
 
 
 .tomatoPlant {
 	width: 100%;
 	display: block;
+	@media only screen and (max-width: 599px) {
+		display: none;
+	}
 }
 
 .tomatoPlant img {
 	position: relative;
 	z-index: 99;
-	@media screen and (max-width: $xsmall) {
-		top: -7px;
-	}
 }
 
 .pageTitle h3 {
 	color: $medium-gray;
 	text-transform: uppercase;
+	margin: 5% 0% 6% 0%;
 
 
 	&:after {
@@ -101,9 +83,6 @@
   color: white;
   padding: 0;
   margin: -4% 0% -4% 0%;
-  @media screen and (max-width: $xsmall) {
-		margin: -7% 0% -7% 0%;
-	}
 
 	&:after {
 		content: "";

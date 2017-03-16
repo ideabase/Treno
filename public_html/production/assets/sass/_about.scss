@@ -1,6 +1,8 @@
 .about_intro {
 	display:inline-block;
-	width: 100%;
+	@media only screen and (max-width: 599px) {
+		padding-top: 10%;
+	}
 }
 
 
@@ -8,6 +10,9 @@
 	text-align: left;
 	margin: 4% 17% 10% 17%;
 	line-height: 200%;
+	@media only screen and (max-width: 599px) {
+		margin: 13%;
+	}
 }
 
 .about_intro h2 {
@@ -18,7 +23,7 @@
 .about_events {
 	background-color: $gold;
 	position: relative;
-	width: 50%;
+/*	width: 50%;*/
 	float:left;
 	color: $medium-gray;
 }
@@ -29,7 +34,7 @@
 
 .about_specials {
 	background-color: #fff;
-	width: 50%;
+	/*width: 50%;*/
 	position: relative;
 	float: left;
 	color: $medium-gray;
@@ -50,6 +55,9 @@
 
 .half-grid p {
 	margin: 7% 25% 7% 25%;
+	@media only screen and (max-width: 599px) {
+		margin: 10% 13% 10% 13%;
+	}
 }
 
 .half-grid h1, h2 {
@@ -75,6 +83,9 @@ background-color: white;
   height: 30em;
   background-position: 0 40%;
   position: relative;
+  @media only screen and (max-width: 599px) {
+		background-position: 50% 0%;
+	}
 }
 
 .circle img {

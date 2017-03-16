@@ -2,13 +2,11 @@ footer {
 	background-color: $medium-gray;
 	font-family: $serif;
 	position: absolute;
-	width: 100%;
 	color: white;
 	padding: 1%;
 }
 
 .footer-container, .copyright {
-	width: 60%;
 	margin: 0 auto;
 }
 
@@ -18,27 +16,33 @@ footer {
 	text-transform: none;
 	line-height: 150%;
 	text-align: left;
+	@media only screen and (max-width: 599px) {
+		text-align: center;
+	}
 }
 
 .location h4, .contact h4, .hours h4 {
 	margin: 3% 0% 5% 0%;
 }
 
+.copyright {
+	float: left;
+}
 
 .copyright p {
 	text-align: center;
 	color: white;
 	margin: 0px auto;
-
-
 }
 
 .location, .contact, .hours {
 	position: relative;
-	width: 33.33%;
 	float: left;
 	text-transform: uppercase;
 	text-align: left;
 	padding: 4% 8% 8% 8%;
+	@media only screen and (max-width: 599px) {
+		text-align: center;
+	}
 }
 

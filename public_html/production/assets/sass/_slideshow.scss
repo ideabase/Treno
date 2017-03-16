@@ -3,12 +3,14 @@
 /* Slideshow container */
 .slideshow-container {
   background-size: cover;
-  width: 100%;
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
   margin: auto;
   height: 35em;
+  @media only screen and (max-width: 599px) {
+    height: 11em;
+  }
  }
 
  .slideshow-menu {
@@ -17,6 +19,9 @@
   padding: 2% 10% 2% 10%;
   left: 37%;
   top: 35%;
+  @media only screen and (max-width: 599px) {
+    display: none;
+  }
  }
 
  .slideshow-menu h2:after {
@@ -36,6 +41,10 @@
   top: 34%;
   width: auto;
   padding: 40px;
+  @media only screen and (max-width: 599px) {
+    padding: 0;
+    top:37%;
+  }
 
 }
 
@@ -43,10 +52,18 @@
 .next {
   right: 0;
   width: 7%;
+  @media only screen and (max-width: 599px) {
+    width: 3%;
+    margin-right: 10px;
+  }
 
 }
 
 .prev {
   left: 0;
   width: 7%;
+  @media only screen and (max-width: 599px) {
+    width: 3%;
+    margin-left: 10px;
+  }
 }
