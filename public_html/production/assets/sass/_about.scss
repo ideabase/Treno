@@ -1,7 +1,7 @@
 .about_intro {
 	display:inline-block;
 	@media only screen and (max-width: 599px) {
-		padding-top: 10%;
+		padding-top: 5%;
 	}
 }
 
@@ -11,7 +11,7 @@
 	margin: 4% 17% 10% 17%;
 	line-height: 200%;
 	@media only screen and (max-width: 599px) {
-		margin: 13%;
+		margin: 10% 13% 10% 13%;
 	}
 }
 
@@ -89,12 +89,29 @@ background-color: white;
 }
 
 .circle img {
-	width: 18%;
+	width: 100px;
+	@media only screen and (min-width: 900px) {
+		width: 150px;
+	}
+
+	@media only screen and (min-width: 1191px) {
+		width: 200px;
+	}
 }
 
 .circle {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	top: 34%;
+	top: -308px;
+	left: 0;
+	display: block;
+	float: left;
+	@media only screen and (min-width: 900px) {
+		top: -323px;
+	}
+	@media only screen and (min-width: 1191px) {
+		top: -346px;
+	}
+	
 }
 

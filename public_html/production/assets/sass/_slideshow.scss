@@ -11,14 +11,25 @@
   @media only screen and (max-width: 599px) {
     height: 11em;
   }
+   @media all and (min-width: 600px) and (max-width: 835px) {
+    height: 21em;
+  }
+  @media all and (min-width: 836px) and (max-width: 1010px) {
+    height: 25em;
+  }
+  @media all and (min-width: 1011px) and (max-width: 1298px) {
+    height: 31em;
+  }
+
  }
 
  .slideshow-menu {
   position: absolute;
   background-color: rgba(255,255,255,.8);
   padding: 2% 10% 2% 10%;
-  left: 37%;
-  top: 35%;
+  left: 33%;
+  top: 33%;
+  width: 35%;
   @media only screen and (max-width: 599px) {
     display: none;
   }
@@ -38,9 +49,8 @@
   width: 100%;
   cursor: pointer;
   position: absolute;
-  top: 34%;
+  top: 33%;
   width: auto;
-  padding: 40px;
   @media only screen and (max-width: 599px) {
     padding: 0;
     top:37%;
@@ -51,9 +61,10 @@
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  width: 7%;
+  width: 20px;
+  margin-right: 2%;
   @media only screen and (max-width: 599px) {
-    width: 3%;
+    width: 10px;
     margin-right: 10px;
   }
 
@@ -61,9 +72,10 @@
 
 .prev {
   left: 0;
-  width: 7%;
+  width: 20px;
+  margin-left: 2%;
   @media only screen and (max-width: 599px) {
-    width: 3%;
+    width: 10px;
     margin-left: 10px;
   }
 }
