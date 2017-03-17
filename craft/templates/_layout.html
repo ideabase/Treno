@@ -22,7 +22,7 @@
 <body>
 		<header>
 
-			<nav>
+			{#<nav>
 				
 				<a href="{{ siteUrl }}">{% for asset in header.logo %}
 						<img src="{{ asset.url('crop') }}" alt="asset.title" />
@@ -31,7 +31,42 @@
 			</nav>
 			{% block header %}
 				You forgot to include Header content 
-			{% endblock %}
+			{% endblock %}#}
+			<ul class="col-12 nav-container" id="nav-container">
+				<div class="col-8 nav-alignment">
+					<li class="nav-list">{{ craft.amNav.getNav("mainMenu") }}</li>
+					{#<li class="nav-list"><a href="{{ 'about' }}">About</a></li>
+					<li class="nav-list"><a href="{{ 'menu' }}">Menu</a></li>
+					<li class="nav-list"><a href="{{ siteUrl }}">Home</a></li>
+					<li class="nav-list"><a href="{{ 'reservations' }}">Reservations</a></li>
+					<li class="nav-list"><a href="{{ 'directions' }}">Directions</a></li>#}
+				</div>
+			</ul>
+
+				<nav class="site-nav">
+					<div class"m-nav-img">
+						{% for asset in header.logo %}
+						<img src="{{ asset.url('crop') }}" alt="asset.title" />
+				{% endfor %}
+					</div>
+					<input id="site-menu-trigger" type="checkbox">
+					<label for="site-menu-trigger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</label>
+
+					<div class="site-menu">
+						<ul>
+							<li><a href="{{ 'about' }}">About</a></li>
+							<li><a href="{{ 'menu' }}">Menu</a></li>
+							<li><a href="{{ 'reservations' }}">Reservations</a></li>
+							<li><a href="{{ 'directions' }}">Directions</a></li>
+						</ul>
+					</div>
+				</nav>
+
+
 		</header>
 
 		<main role="main">

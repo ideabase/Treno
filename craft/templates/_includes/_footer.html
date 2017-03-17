@@ -1,21 +1,24 @@
-<footer>
-<table>
-	<tr>
-		<th><h4>Phone</h4></th>
-					<th><h4>Location</h4></th>
-					<th><h4>Hours</h4></th>	
-				</tr>
-				<tr>
-					<th>{{ footer.phoneNumber }} </th>
-					<th>{{ footer.basicText }} </th>
-					<th>{% if footer.hours | length %}
-						{% for row in footer.hours %}
-							{{ row.dayOfWeek }} - {{ row.hours }}
-						{% endfor %}
-					{% endif %}</th>
-
-				</tr>
-</table>
-{{ footer.copyRightText }}
+<footer class="col-12 col-m-12">
+	<div class="col-6 col-m-12 footer-container">
+		<div class="col-4 col-m-4 location">
+			<h4>Location</h4>
+			<p>{{ footer.basicText }}</p>
+		</div>
+		<div class="col-4 col-m-4 contact">
+			<h4>Contact</h4>
+			<p>{{ footer.phoneNumber }}</p> 
+		</div>
+		<div class="col-4 col-m-4 hours">
+			<h4>Hours</h4>
+			{% if footer.hours | length %}
+				{% for row in footer.hours %}
+					<p>{{ row.dayOfWeek }} - {{ row.hours }}</p>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="col-12 col-m-12 copyright">
+			<p>&copy; {{ footer.copyRightText }}</p>
+		</div>
+	</div>
 </footer>
 			
