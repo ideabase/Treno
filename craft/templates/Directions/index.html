@@ -3,8 +3,16 @@
 	{% include '_includes/_map.html' %}
 	<h1>{{ entry.title }}</h1>
 	<h2>{{entry.basicText}}</h2>
+	<h4>Parking</h4>
+	<p>1.{{ entry.parkingInformation }}</p>
+	<p>2.{{ entry.parkingInformation2 }}</p>
+	<p>3.{{ entry.parkingInformation3 }}</p>
+	<h4>Valet</h4>
+	<h4>{{ entry.valetPrice }}</h4>
+	{{ entry.valetInformation }}
+
+
 	{% include '_includes/_feature.html' %}
-	<hr>
 		
 	
 {% endblock %}
