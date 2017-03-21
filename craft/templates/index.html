@@ -19,7 +19,7 @@
 
 {% extends "_layout" %}
 {% block header %}
-{# pulling the feature image, the about entry for the homepage, and the photo gallery images #}
+
 	<style type="text/css">
 		{% for asset in entry.featureImage %}
 		.header-bckg {
@@ -32,15 +32,15 @@
 		}
 		{% endfor %}
 	</style>
-	<div class="header-container">
+	<div class="col-12 col-m-12 header-container">
 		<div class="header-bckg"></div>
 		<div class="titleContainer">
 			
-			<div class="tomatoPlant">
-				{% for asset in entry.illustration %}
-					<img src="{{ asset.Url('illustrationCrop') }}" alt="{{asset.title}}" />
-				{% endfor %}
-			</div>
+				<div class="tomatoPlant">
+					{% for asset in entry.illustration %}
+						<img src="{{ asset.Url('illustrationCrop') }}" alt="{{asset.title}}" />
+					{% endfor %}
+				</div>
 			<div class="pageTitle">
 				<div class="mainTitle">
 					<h1>{{ entry.headerTitle1 }}</h1>
@@ -57,7 +57,6 @@
 {% endblock %}
 {% block content %}
 	
-	
 
 	<div class="col-12 col-m-12 about_intro">
 		<h2>About</h2>
@@ -71,7 +70,7 @@
 				
 		{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
 			<a href="{{ entry.url }}">
-			<div class="about_events">
+			<div class="col-6 col-m-12 about_events">
 			<h2>Events</h2>
 			<p class="event_title">{{ entry.title }}</p>
 			<p class="event_date">{{ entry.eventDate.format('F d, Y') }}</p>
@@ -86,7 +85,7 @@
 
 	
 		<a href="{{ url('specials') }}">
-			<div class="about_specials">
+			<div class="col-6 col-m-12 about_specials">
 			{% set today = "now"|date("l") %}
 			<h2>{{ today }}'s Specials</h2>
 				{% for entry in craft.entries.section('specials').specialLightSwitch('1') %}

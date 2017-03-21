@@ -1,4 +1,11 @@
+
 {% for entry in craft.entries.section('directions') %}
 	<iframe src="{{ entry.interactiveMap }}" width="2000" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
-
 {% endfor %}
+<div class="circle">
+	{% for asset in craft.entries.section('directions') %}
+		{% for asset in asset.mapCircle %}
+			<img src="{{ asset.url }}" alt="circle" />
+		{% endfor %}
+	{% endfor %}
+</div>
