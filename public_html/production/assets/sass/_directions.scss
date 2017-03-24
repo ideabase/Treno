@@ -1,0 +1,16 @@
+.treno-address, .treno-parking, .treno-valet {
+	position: relative;
+	float: left;
+	margin-bottom: 8%
+}
+
+.directions-half-grid {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.treno-parking li, .treno-valet p, .treno-address p {
+	text-align: left;
+	margin: 5% 12% 5% 8%;
+}
