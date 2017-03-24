@@ -1,11 +1,13 @@
 {% extends "_layout" %}
 {% block content %}
-		{% include '_includes/_feature.html' %}
+	{% include '_includes/_feature.html' %}
 
+	<div class="about-header-bckg">
 		{% for entry in craft.entries.section('aboutTreno') %}
 		<h1>{{ entry.basicText }}</h1>
 		{{ entry.body }}
 		{% endfor %}
+	</div>
 		
 		
 	{# matrix field #}	
@@ -24,14 +26,22 @@
 		{# having trouble looping items while putting them in a table #}
 		{% include '_includes/_gallery.html' %}
 
-		<h2>Owners</h2>
+		<div class="col-12 col-m-12">
+			<h2>chef</h2>
+		</div>
+		<div class="about-half-grid">
+			<div class="col-6 col-m-12 chef-img">
 			{% for entry in craft.entries.section('profiles') %}
 				{% for image in entry.teamMemberPhoto %}
 					<img src="{{ image.url('investorProfile') }}">
 				{% endfor %}
-				<h4>{{ entry.title }}</h4>
+			</div>
+			<div class="col-6 col-m-12 chef-bio">
+				<p class="chef-name">{{ entry.title }}</p>
 				{{ entry.teamMemberBio }}
 			{% endfor %}
+			</div>
+		</div>
 		
 
 
