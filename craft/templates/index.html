@@ -101,6 +101,14 @@
 		</a>
 		</div>
 
-		{% include '_includes/_map.html' %}
+		<div class="col-12 col-m-12 map-container">
+		</div>
+		<div class="circle">
+			{% for asset in craft.entries.section('directions') %}
+				{% for asset in asset.mapCircle %}
+					<img src="{{ asset.url }}" alt="circle" />
+				{% endfor %}
+			{% endfor %}
+		</div>
 
 {% endblock %}
