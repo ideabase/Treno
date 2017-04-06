@@ -10,7 +10,70 @@
 	clear: both;
 }
 
-.treno-parking li, .treno-valet p, .treno-address p {
+.treno-parking p, .treno-valet p {
 	text-align: left;
-	margin: 5% 12% 5% 8%;
+	margin: 10% 12% 5% 12%;
 }
+
+.treno-parking li {
+	text-align: left;
+	margin: 5% 12% 5% 4%;
+}
+
+.treno-address h3 {
+	color: $gold;
+	text-align: left;
+	margin: 0;
+	font-size: 2em;
+}
+
+.treno-address {
+	padding: 3% 0% 0% 8%;
+
+}
+
+.treno-valet {
+	padding-right: 8%;
+}
+
+.treno-parking {
+	border-left: 1px solid #bab9b9;
+}
+
+.treno-parking ol {
+	list-style: none;
+	counter-reset: li;
+}
+
+.treno-parking li::before {
+	content: counter(li);
+	color: $gold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.treno-parking li {
+	counter-increment: li;
+}
+
+.parking-title {
+	color: $gold;
+	text-transform: uppercase;
+}
+
+.btn-primary {
+	border: 2px solid $gold;
+	text-transform: uppercase;
+	margin-top: 10%;
+	width: 40%;
+	text-align: center;
+	padding: 4% 1%;
+}
+
+.valet-price {
+	color: $gold;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+

@@ -1,0 +1,18 @@
+.brunch-btn, .lunch-btn, .dinner-btn, .specials-btn {
+	position: relative;
+	float: left;
+	border: 2px solid $gold;
+	text-transform: uppercase;
+	width: 15%;
+	padding: 2% 11% 2% 5%;
+	margin-left: 7%;
+}
+
+.brunch-btn a, .lunch-btn a, .dinner-btn a, .specials-btn a {
+	color: $dark-gray;
+	font-weight: 600;
+}
+
+.menu-btn {
+	margin: 5% 5% 15% 5%;
+}
