@@ -1,6 +1,6 @@
 .header-container {
-	/*height: 840px;*/
 	display: grid;
+	position: relative;
 }
 
 /* Landing Page Banner Image */
@@ -93,36 +93,14 @@
 
 .titleContainer {
 	width: 50%;
-	float: left;
 	margin: 3% 0% 2% 1%;
 	z-index: 102;
-	position: relative;
-	top: -790px;
+	position: absolute;
+	bottom: -100px;
 	@media only screen and (max-width: 599px) {
 		width: 100%;
-		top: -414px;
+		bottom: 375px;
 		margin: 0;
-	}
-	@media all and (min-width: 600px) and (max-width: 650px) {
-		top: -325px;
-	}
-	@media all and (min-width: 651px) and (max-width: 740px) {
-		top: -371px;
-	}
-	@media all and (min-width: 741px) and (max-width: 826px) {
-		top: -420px;
-	}
-	@media all and (min-width: 827px) and (max-width: 942px) {
-		top: -472px;
-	}
-	@media all and (min-width: 943px) and (max-width: 1037px) {
-		top: -539px;
-	}
-	@media all and (min-width: 1038px) and (max-width: 1154px) {
-		top: -593px;
-	}
-	@media all and (min-width: 1155px) and (max-width: 1295px) {
-		top: -663px;
 	}
 }
 
