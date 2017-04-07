@@ -64,90 +64,103 @@
     </div>
   </header>
 </div>
-<div class="col-12 col-m-12 about_intro">
-    <h1>History</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h1>Menu</h1>
+
+<div class="menu-btn">
+	<div class="col-3 col-m-12 brunch-btn">
+		<a id="brunch">Brunch</a>
+	</div>
+	<div class="col-3 col-m-12 lunch-btn">
+		<a id="lunch">Lunch</a>
+	</div>
+	<div class="col-3 col-m-12 dinner-btn">
+		<a id="dinner">Dinner</a>
+	</div>
+	<div class="col-3 col-m-12 specials-btn">
+		<a id="specials">Specials</a>
+	</div>
 </div>
-<!--Image 1-->
-  <div class="col-12 col-m-12 slideshow-container">
-    <div class="slideshow-menu">
-      <h2>Menu</h2>
-    </div>
-    <div class="mySlides fade">
-      <img src="/production/assets/img/uploads/food/Pasta.svg">
-    </div>
-    <!--End-->
-    <div class="mySlides fade">
-      <img src="/production/assets/img/uploads/food/Tomatoes.svg">
-    </div>
-    <img class="prev" onclick="plusSlides(-1)" src="/production/assets/img/uploads/arrow-left-white.svg" />
+<!-- <div class="directions-half-grid">
+	<button class="col-3 col-m-12 accordion">Section 1</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
 
-    <img class="next" onclick="plusSlides(1)" src="/production/assets/img/uploads/arrow-right-white.svg" />
-  </div>
-</main>
+	<button class="col-3 col-m-12 accordion">Section 2</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
 
-<!--Need to move this into the JS file tomorrow-->
+	<button class="col-3 col-m-12 accordion">Section 3</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
 
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
+	<button class="col-3 col-m-12 accordion">Section 4</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
+</div> -->
+<!-- BRUNCH CONTENT -->
+<!-- -->
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+<!-- LUNCH CONTENT -->
+<div id="lunch" class="lunch-container">
+	<div class="lunch-menu">
+	</div>
+</div>
+<!-- -->
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+<!-- DINNER CONTENT -->
+<div id="dinner-container">
+  <h2>Dinner</h2>
+  	<div class="dinner-nav">
+		<a onclick="myFunction()">Appetizers</a>
+		<a>Sides</a>
+		<a>Entrees</a>
+		<a>Desserts</a>
+	</div>
+	<div class="col-3 col-m-12 dinner-content">
+		<div class="dinner-title">
+			<p class="menu-title">Sides</p>
+			<p class="menu-price">$5</p>
+		</div>
+	</div>
+</div>
+<!-- -->
 
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+<!-- SPECIALS CONTENT -->
+<div id="specials" class="specials-container">
+	<div class="specials-menu">
+	</div>
+</div>
+<!-- -->
+
+<!-- <script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
     }
+}
+</script>  -->
 
-    slides[slideIndex-1].style.display = "block";  
-  }
-  </script>
-<!--End Slideshow--><div class="col-12 col-m-12">
-	<h2>Chef</h2>
-</div>
-<div class="about-half-grid">
-	<div class="col-6 col-m-12 chef-img">
-		<img src="/production/assets/img/uploads/_investorProfile/Face Circles.svg" />
-	</div>
-	<div class="col-6 col-m-12 chef-bio">
-		<p class="chef-name">John Doe</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</div>
-</div>
-<footer class="col-12 col-m-12">
-  <div class="col-6 col-m-12 footer-container">
-    <div class="col-4 col-m-4 location">
-      <h4>Location</h4>
-      <p>152 Franklin Ave,</p>
-      <p>Kent, OH &mdash; 44240</p>
-    </div>
-    <div class="col-4 col-m-4 contact">
-      <h4>Contact</h4>
-      <p>440.555.4848</p>
-    </div>
-    <div class="col-4 col-m-4 hours">
-      <h4>Hours</h4>
-      <p>Mon-Thurs: 5-10</p>
-      <p>Fri-Sun: 5-11</p>
-    </div>
-    <div class="col-12 col-m-12 copyright">
-      <p>&copy; Treno Ristorante All Rights Reserved</p>
-    </div>
-  </div>
-</footer>
+
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"cssEnabled":false,"lineage":[{"lineagePattern":"organisms-nav","lineagePath":"..\/..\/patterns\/04-templates-01-about-about\/04-templates-01-about-about.html"},{"lineagePattern":"atoms-paragraphs","lineagePath":"..\/..\/patterns\/04-templates-01-about-about\/04-templates-01-about-about.html"},{"lineagePattern":"organisms-slideshow","lineagePath":"..\/..\/patterns\/04-templates-01-about-about\/04-templates-01-about-about.html"},{"lineagePattern":"organisms-chef","lineagePath":"..\/..\/patterns\/04-templates-01-about-about\/04-templates-01-about-about.html"},{"lineagePattern":"organisms-footer","lineagePath":"..\/..\/patterns\/04-templates-01-about-about\/04-templates-01-about-about.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"templates","patternSubtype":"about"},"patternDesc":"","patternExtension":"mustache","patternName":"about","patternPartial":"templates-about","patternState":"","extraOutput":[]}
+  {"cssEnabled":false,"lineage":[{"lineagePattern":"organisms-nav","lineagePath":"..\/..\/patterns\/04-templates-03-menu-menu\/04-templates-03-menu-menu.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"templates","patternSubtype":"menu"},"patternDesc":"","patternExtension":"mustache","patternName":"menu","patternPartial":"templates-menu","patternState":"","extraOutput":[]}
 </script>
 
 <script>
