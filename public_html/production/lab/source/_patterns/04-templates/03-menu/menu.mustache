@@ -21,11 +21,28 @@
 		<a id="specials">Specials</a>
 	</div>
 </div>
+<!-- <div class="directions-half-grid">
+	<button class="col-3 col-m-12 accordion">Section 1</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
 
+	<button class="col-3 col-m-12 accordion">Section 2</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
+
+	<button class="col-3 col-m-12 accordion">Section 3</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
+
+	<button class="col-3 col-m-12 accordion">Section 4</button>
+	<div class="panel">
+	  <p>Lorem ipsum...</p>
+	</div>
+</div> -->
 <!-- BRUNCH CONTENT -->
-<div id="brunch" class="brunch-container">
-	<div class="brunch-menu">
-</div>
 <!-- -->
 
 <!-- LUNCH CONTENT -->
@@ -36,9 +53,19 @@
 <!-- -->
 
 <!-- DINNER CONTENT -->
-<div id="dinner" class="dinner-container">
-	<div class="dinner-menu">
-		<h2>Dinner</h2>
+<div id="dinner-container">
+  <h2>Dinner</h2>
+  	<div class="dinner-nav">
+		<a onclick="myFunction()">Appetizers</a>
+		<a>Sides</a>
+		<a>Entrees</a>
+		<a>Desserts</a>
+	</div>
+	<div class="col-3 col-m-12 dinner-content">
+		<div class="dinner-title">
+			<p class="menu-title">Sides</p>
+			<p class="menu-price">$5</p>
+		</div>
 	</div>
 </div>
 <!-- -->
@@ -49,4 +76,25 @@
 	</div>
 </div>
 <!-- -->
+
+<!-- <script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>  -->
 
