@@ -3,8 +3,50 @@
 {% block content %}
   {% include '_includes/_feature.html' %}
   <h1>{{ entry.title }}</h1>
-  {% for category in craft.categories.group('menuType') %}
+  
+  	{#{% for category in craft.categories.group('menuType') %}
     <a href="{{category.url}}">{{ category.title }}</a>
-  {% endfor %}
-  <a href="{{ url('specials')}}">Specials</a>
+  	{% endfor %}
+  	<a href="{{ url('specials')}}">Specials</a>#}
+  <div class="menu-btn">
+  	<div class="col-3 col-m-12 brunch-btn">
+  		{% set category = craft.categories.group('menuType').nth(0) %}
+  			<a id="brunch" href="{{ category.url }}">Brunch</a>
+  	</div>
+  	<div class="col-3 col-m-12 lunch-btn">
+  		{% set category = craft.categories.group('menuType').nth(1) %}
+  		<a id="lunch" href="{{ category.url }}">Lunch</a>
+  	</div>
+  	<div class="col-3 col-m-12 dinner-btn">
+  		{% set category = craft.categories.group('menuType').nth(2) %}
+  		<a id="dinner" href="{{ category.url }}">Dinner</a>
+  	</div>
+  	<div class="col-3 col-m-12 specials-btn">
+  		<a id="specials" href="{{ url('specials') }}">Specials</a>
+  	</div>
+  	{#<div class="col-3 col-m-12 brunch-btn">
+  		<a id="brunch" href="{{ url('brunch') }}">Drinks</a>
+  	</div>#}
+  </div>
+ 
+ <div id="lunch" class="lunch-container">
+ 	<div class="lunch-menu">
+ 	</div>
+ </div>
+
+<div id="dinner-container">
+	<h2>Dinner</h2>
+		<div class="dinner-nav">
+			{% for category in craft.categories.group('foodCategory') %}
+				<a onclick="myFunction()">{{ category.title }}</a>
+			{% endfor %}
+		</div>
+		<div class="col-3 col-m-12 dinner-content">
+			<div class="dinner-title">
+				{% for item in craft.entries.section('food') %}
+							<p class="menu-title">{{ item.title }}</p>
+							<p class="menu-price">{{ item.foodPrice }}</p>
+				{% endfor %}
+			</div>
+		</div>
 {% endblock %}
