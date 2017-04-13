@@ -4,13 +4,13 @@
 {% if entry.slideShowLink | length %}
 		{% for link in entry.slideShowLink %}
 		<a href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
-	{% endfor %}
-	{% else %}	
+	{% endfor %}	
 {% endif %}
 </div>
 
-<div class="owl-carousel">
 
+<div class="owl-carousel">
+<div class="mySlides fade">
 {% for asset in entry.photoGallery %}
 
 	<div class="item">
@@ -22,3 +22,12 @@
 
 {% endfor %}
 </div>
+</div>
+{% for asset in entry.galleryArrow %}
+<img class="prev" onclick="plusSlides(-1)" src="{{ asset.url }}" />
+{% endfor %}
+{% for asset in entry.galleryArrow2 %}
+<img class="next" onclick="plusSlides(1)" src="{{ asset.url }}" />
+{% endfor %}
+</div>
+</main>
