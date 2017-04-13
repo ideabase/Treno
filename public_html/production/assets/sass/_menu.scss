@@ -1,11 +1,18 @@
 .brunch-btn, .lunch-btn, .dinner-btn, .specials-btn {
-	position: relative;
-	float: left;
 	border: 2px solid $gold;
+	display: inline-table;
 	text-transform: uppercase;
 	width: 15%;
-	padding: 2% 11% 2% 5%;
-	margin-left: 7%;
+	padding: 2% 5%;
+	margin: 1%;
+}
+
+.brunch-btn:hover , .lunch-btn:hover , .dinner-btn:hover , .specials-btn:hover  {
+	border: 2px solid $gold;
+	background-color: $gold;
+	a {
+		color: #ffffff;
+	}
 }
 
 .brunch-btn a, .lunch-btn a, .dinner-btn a, .specials-btn a {
@@ -14,7 +21,13 @@
 }
 
 .menu-btn {
-	margin: 5% 5% 15% 5%;
+	margin: 5% 5% 7% 5%;
+}
+
+.dinner-nav {
+	text-align: left;
+	padding-left: 5%;
+	float: left;
 }
 
 
@@ -25,22 +38,59 @@
 	margin: 2%;
 }
 
+.dinner-menu {
+	display: inline-block;
+	float: left;
+}
+
+.dinner-appetizers, .dinner-sides, .dinner-entrees, .dinner-desserts {
+	margin: 0;
+	text-align: left;
+	float: left;
+	content: "";
+	display: table;
+	clear: both;
+	h2 {
+		text-align: left;
+		margin: 0% 0% 2% 0%;
+	}
+	p {
+		text-align: left;
+	}
+}
+
+.left-menu, .right-menu {
+	display: inline-block;
+	padding-bottom: 8%
+}
+
+.right-menu {
+	margin-left: 10%;
+}
+
+
+
 .menu-title {
 	display: inline-block;
 	font-weight: 800;
 	color: $dark-gray;
-	font-size: 1.5em;
+	font-size: 1em;
 	text-transform: uppercase;
 	text-align: left;
+	width: 86%;
 }
 
 .menu-price {
 	display: inline-block;
 	font-weight: 800;
 	color: $dark-gray;
-	font-size: 1.5em;
+	font-size: 1em;
 	text-transform: uppercase;
-	text-align: right;
+	width: 10%;
+}
+
+.brunch-container, .lunch-container, .dinner-container, .specials-container {
+	display: none;
 }
 
 .dinner-content {
@@ -48,27 +98,5 @@
 }
 
 
- /* Style the buttons that are used to open and close the accordion panel */
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    display: inline-block;
-}
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
-}
 
-/* Style the accordion panel. Note: hidden by default */
-div.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-}
