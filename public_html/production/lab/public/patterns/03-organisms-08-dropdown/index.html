@@ -29,38 +29,66 @@
   
   <!-- Patterns -->
   <div id="sg-patterns">
-        <div id="viewall-organisms-map" class="sg-pattern-category">
-          <h2 class="sg-pattern-category-title"><a href="../../patterns/03-organisms-01-map/index.html" class="patternLink" data-patternpartial="viewall-organisms-map">map</a></h2>
+        <div id="viewall-organisms-dropdown" class="sg-pattern-category">
+          <h2 class="sg-pattern-category-title"><a href="../../patterns/03-organisms-08-dropdown/index.html" class="patternLink" data-patternpartial="viewall-organisms-dropdown">dropdown</a></h2>
         
           <div class="sg-pattern-category-body">
             
           </div><!--end sg-pattern-category-body-->
           
         </div><!--end sg-pattern-category-->
-        <div id="organisms-map" class="sg-pattern">
+        <div id="organisms-dropdown" class="sg-pattern">
           <div class="sg-pattern-head">
             <h3 class="sg-pattern-title">
-              <a href="../../patterns/03-organisms-01-map-map/03-organisms-01-map-map.html" class="patternLink" data-patternpartial="organisms-map" title="Link to Pattern">
-                  map
+              <a href="../../patterns/03-organisms-08-dropdown-dropdown/03-organisms-08-dropdown-dropdown.html" class="patternLink" data-patternpartial="organisms-dropdown" title="Link to Pattern">
+                  dropdown
               </a>
             </h3>
             <div class="sg-pattern-breadcrumb"></div>
-            <a href="#" data-patternpartial="organisms-map" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-map" class="sg-pattern-extra-toggle"><span>&#9660;</span></a>
+            <a href="#" data-patternpartial="organisms-dropdown" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-dropdown" class="sg-pattern-extra-toggle"><span>&#9660;</span></a>
           </div>
-          <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-map">
+          <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-dropdown">
             
           </div>
           <div class="sg-pattern-example">
-            
-  <div class="col-12 col-m-12 map-container">
-  </div>
-  <div class="circle">
-    <img src="/production/assets/img/uploads/Location Ring.svg" alt="circle" />
-  </div>
+            <!-- Mobile Dinner Nav -->
+<div class="col-12 m-dinner-nav">
+  <div class="breakline"></div>
+	<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Select</button>
+	  <div id="myDropdown" class="dropdown-content">
+	    <a href="#appetizers">Appetizers</a>
+	    <a href="#sides">Sides</a>
+	    <a href="#entrees">Entrees</a>
+	    <a href="#desserts">Desserts</a>
+	  </div>
+	</div>
+</div>
 
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<!-- End --> 
           </div>
-          <script type="text/json" id="sg-pattern-data-organisms-map" class="sg-pattern-data">
-            {"lineage":[],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/04-templates-00-home-home\/04-templates-00-home-home.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"map"},"patternDesc":"","patternExtension":"mustache","patternName":"map","patternPartial":"organisms-map","patternState":""}
+          <script type="text/json" id="sg-pattern-data-organisms-dropdown" class="sg-pattern-data">
+            {"lineage":[],"lineageR":[{"lineagePattern":"templates-menu","lineagePath":"..\/..\/patterns\/04-templates-03-menu-menu\/04-templates-03-menu-menu.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"dropdown"},"patternDesc":"","patternExtension":"mustache","patternName":"dropdown","patternPartial":"organisms-dropdown","patternState":""}
           </script>
         </div><!--end .sg-pattern-->
   </div> <!--end #sg-patterns-->
@@ -69,7 +97,7 @@
 
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"patternPartial":"viewall-organisms-map"}
+  {"patternPartial":"viewall-organisms-dropdown"}
 </script>
 
 <script>
