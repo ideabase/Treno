@@ -24,6 +24,30 @@
 	margin: 5% 5% 7% 5%;
 }
 
+.dinner-container {
+	@media only screen and (min-width: 330px) {
+		height: 4850px;
+	}
+	@media only screen and (min-width: 404px) {
+		height: 4450px;
+	}
+	@media only screen and (min-width: 579px) {
+		height: 4050px;
+	}
+	@media only screen and (min-width: 768px) {
+		height: 3150px;
+	}
+	@media only screen and (min-width: 879px) {
+		height: 2850px;
+	}
+	@media only screen and (min-width: 1026px) {
+		height: 2650px;
+	}
+	@media only screen and (min-width: 1353px) {
+		height: 2500px;
+	}
+}
+
 .dinner-nav {
 	text-align: left;
 	padding-left: 5%;
@@ -41,6 +65,9 @@
 .dinner-menu {
 	display: inline-block;
 	float: left;
+		@media only screen and (max-width: 767px) {
+		padding: 7%;
+	}
 }
 
 .dinner-appetizers, .dinner-sides, .dinner-entrees, .dinner-desserts {
@@ -61,11 +88,14 @@
 
 .left-menu, .right-menu {
 	display: inline-block;
-	padding-bottom: 8%
+	padding-bottom: 8%;
 }
 
 .right-menu {
 	margin-left: 10%;
+	@media only screen and (max-width: 767px) {
+		margin: 0px auto;
+	}
 }
 
 
