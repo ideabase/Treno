@@ -21,7 +21,22 @@
 		<a href="javascript:showhide('specials')">Specials</a>
 	</div>
 </div>
-
+<div class="scroll-menu">
+	<div class="m-menu-btn">
+		<div class="col-3 col-m-12 brunch-btn">
+			<a href="javascript:showhide('brunch')">Brunch</a>
+		</div>
+		<div class="col-3 col-m-12 lunch-btn">
+			<a href="javascript:showhide('lunch')">Lunch</a>
+		</div>
+		<div class="col-3 col-m-12 dinner-btn">
+			<a href="javascript:showhide('dinner')">Dinner</a>
+		</div>
+		<div class="col-3 col-m-12 specials-btn">
+			<a href="javascript:showhide('specials')">Specials</a>
+		</div>
+	</div>
+</div>
 <!-- BRUNCH CONTENT -->
 <div id="brunch" class="brunch-container">
 	<p>Brunch Container</p>
@@ -50,6 +65,23 @@
 			<a href="#desserts">Desserts</a>
 		</div>
 	</div>
+
+	<!-- Mobile Dinner Nav -->
+
+	<div class="col-12 m-dinner-nav">
+		<div class="dropdown">
+			<div class="btn-primary">Select</div>
+			<div class="dropdown-content">
+				<a href="#appetizers">Appetizers</a>
+				<a href="#sides">Sides</a>
+				<a href="#entrees">Entrees</a>
+				<a href="#desserts">Desserts</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- END -->
+
 	<div class="col-9 dinner-menu">
 		<div id="appetizers"class="dinner-appetizers">
 			<h2>Appetizers</h2>
@@ -182,6 +214,5 @@ function showhide(id) {
 	var e = document.getElementById(id);
 	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 }
-
 </script>
 

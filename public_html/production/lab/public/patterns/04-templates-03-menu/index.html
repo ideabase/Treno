@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../../../assets/css/style.css?1492131543" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1492131543" media="all" />
+    <link rel="stylesheet" href="../../../../assets/css/style.css?1492138249" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1492138249" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
@@ -17,8 +17,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1492131543" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1492131543" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1492138249" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1492138249" media="all" />
 
     <!-- End Pattern Lab -->
 
@@ -107,7 +107,22 @@
 		<a href="javascript:showhide('specials')">Specials</a>
 	</div>
 </div>
-
+<div class="scroll-menu">
+	<div class="m-menu-btn">
+		<div class="col-3 col-m-12 brunch-btn">
+			<a href="javascript:showhide('brunch')">Brunch</a>
+		</div>
+		<div class="col-3 col-m-12 lunch-btn">
+			<a href="javascript:showhide('lunch')">Lunch</a>
+		</div>
+		<div class="col-3 col-m-12 dinner-btn">
+			<a href="javascript:showhide('dinner')">Dinner</a>
+		</div>
+		<div class="col-3 col-m-12 specials-btn">
+			<a href="javascript:showhide('specials')">Specials</a>
+		</div>
+	</div>
+</div>
 <!-- BRUNCH CONTENT -->
 <div id="brunch" class="brunch-container">
 	<p>Brunch Container</p>
@@ -136,6 +151,23 @@
 			<a href="#desserts">Desserts</a>
 		</div>
 	</div>
+
+	<!-- Mobile Dinner Nav -->
+
+	<div class="col-12 m-dinner-nav">
+		<div class="dropdown">
+			<div class="btn-primary">Select</div>
+			<div class="dropdown-content">
+				<a href="#appetizers">Appetizers</a>
+				<a href="#sides">Sides</a>
+				<a href="#entrees">Entrees</a>
+				<a href="#desserts">Desserts</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- END -->
+
 	<div class="col-9 dinner-menu">
 		<div id="appetizers"class="dinner-appetizers">
 			<h2>Appetizers</h2>
@@ -287,7 +319,6 @@ function showhide(id) {
 	var e = document.getElementById(id);
 	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 }
-
 </script>
 
 
@@ -338,10 +369,10 @@ function showhide(id) {
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1492131543">
+<script id="pl-js-polyfill-insert-1492138249">
   (function() {
     if (self != top) {
-      var cb = '1492131543';
+      var cb = '1492138249';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -351,10 +382,10 @@ function showhide(id) {
   })();
 </script>
 
-<script id="pl-js-insert-1492131543">
+<script id="pl-js-insert-1492138249">
   (function() {
     if (self != top) {
-      var cb = '1492131543';
+      var cb = '1492138249';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }

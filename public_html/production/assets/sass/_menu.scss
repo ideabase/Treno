@@ -3,8 +3,13 @@
 	display: inline-table;
 	text-transform: uppercase;
 	width: 15%;
-	padding: 2% 5%;
 	margin: 1%;
+	@media only screen and (min-width: 320px) {
+		padding: 3% 15%;
+	}
+	@media only screen and (min-width: 654px) {
+		padding: 2% 5%;
+	}
 }
 
 .brunch-btn:hover , .lunch-btn:hover , .dinner-btn:hover , .specials-btn:hover  {
@@ -22,10 +27,35 @@
 
 .menu-btn {
 	margin: 5% 5% 7% 5%;
+	@media only screen and (min-width: 320px) {
+		display: none;
+	}
+	@media only screen and (min-width: 654px) {
+		display: block;
+	}
+}
+
+.scroll-menu {
+	background-color: #fff;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.no-scrollbar {
+	overflow: -moz-scrollbars-none; ;
+}
+
+.m-menu-btn {
+	margin: 5% 5% 7% 5%;
+	display: inline-block;
+	float: left;
+	@media only screen and (min-width: 654px) {
+		display: none;
+	}
 }
 
 .dinner-container {
-	@media only screen and (min-width: 330px) {
+	@media only screen and (min-width: 320px) {
 		height: 4850px;
 	}
 	@media only screen and (min-width: 404px) {
@@ -52,7 +82,37 @@
 	text-align: left;
 	padding-left: 5%;
 	float: left;
+	@media only screen and (min-width: 320px) {
+		display:none;
+	}
+	@media only screen and (min-width: 768px) {
+		display: block;
+	}
 }
+
+.m-dinner-nav {
+	@media only screen and (min-width: 320px) {
+		display:block;
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	max-width: 100%;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
 
 
 .dinner-nav a {
@@ -80,6 +140,9 @@
 	h2 {
 		text-align: left;
 		margin: 0% 0% 2% 0%;
+	}
+	h2::after {
+		margin: 0;
 	}
 	p {
 		text-align: left;
