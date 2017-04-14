@@ -9,62 +9,195 @@
 
 <div class="menu-btn">
 	<div class="col-3 col-m-12 brunch-btn">
-		<a id="brunch">Brunch</a>
+		<a href="javascript:showhide('brunch')">Brunch</a>
 	</div>
 	<div class="col-3 col-m-12 lunch-btn">
-		<a id="lunch">Lunch</a>
+		<a href="javascript:showhide('lunch')">Lunch</a>
 	</div>
 	<div class="col-3 col-m-12 dinner-btn">
-		<a id="dinner">Dinner</a>
+		<a href="javascript:showhide('dinner')">Dinner</a>
 	</div>
 	<div class="col-3 col-m-12 specials-btn">
-		<a id="specials">Specials</a>
+		<a href="javascript:showhide('specials')">Specials</a>
 	</div>
 </div>
-<!-- <div class="directions-half-grid">
-	<button class="col-3 col-m-12 accordion">Section 1</button>
-	<div class="panel">
-	  <p>Lorem ipsum...</p>
+<div class="scroll-menu">
+	<div class="m-menu-btn">
+		<div class="col-3 col-m-12 brunch-btn">
+			<a href="javascript:showhide('brunch')">Brunch</a>
+		</div>
+		<div class="col-3 col-m-12 lunch-btn">
+			<a href="javascript:showhide('lunch')">Lunch</a>
+		</div>
+		<div class="col-3 col-m-12 dinner-btn">
+			<a href="javascript:showhide('dinner')">Dinner</a>
+		</div>
+		<div class="col-3 col-m-12 specials-btn">
+			<a href="javascript:showhide('specials')">Specials</a>
+		</div>
 	</div>
-
-	<button class="col-3 col-m-12 accordion">Section 2</button>
-	<div class="panel">
-	  <p>Lorem ipsum...</p>
-	</div>
-
-	<button class="col-3 col-m-12 accordion">Section 3</button>
-	<div class="panel">
-	  <p>Lorem ipsum...</p>
-	</div>
-
-	<button class="col-3 col-m-12 accordion">Section 4</button>
-	<div class="panel">
-	  <p>Lorem ipsum...</p>
-	</div>
-</div> -->
+</div>
 <!-- BRUNCH CONTENT -->
+<div id="brunch" class="brunch-container">
+	<p>Brunch Container</p>
+</div>
 <!-- -->
 
 <!-- LUNCH CONTENT -->
 <div id="lunch" class="lunch-container">
-	<div class="lunch-menu">
-	</div>
+	<p>Lunch Container</p>
 </div>
 <!-- -->
 
 <!-- DINNER CONTENT -->
-<div id="dinner-container">
-  <h2>Dinner</h2>
-  	<div class="dinner-nav">
-		<a onclick="myFunction()">Appetizers</a>
-		<a>Sides</a>
-		<a>Entrees</a>
-		<a>Desserts</a>
+<div id="dinner" class="dinner-container">
+	<div class="col-3 dinner-nav">
+		<div class="col-12 col-m-12">
+			<a href="#appetizers">Appetizers</a>
+		</div>
+		<div class="col-12 col-m-12">
+			<a href="#sides">Sides</a>
+		</div>
+		<div class="col-12 col-m-12">
+			<a href="#entrees">Entrees</a>
+		</div>
+		<div class="col-12 col-m-12">
+			<a href="#desserts">Desserts</a>
+		</div>
 	</div>
-	<div class="col-3 col-m-12 dinner-content">
-		<div class="dinner-title">
-			<p class="menu-title">Sides</p>
-			<p class="menu-price">$5</p>
+
+	<!-- Mobile Dinner Nav -->
+
+	<div class="col-12 m-dinner-nav">
+		<div class="dropdown">
+			<div class="btn-primary">Select</div>
+			<div class="dropdown-content">
+				<a href="#appetizers">Appetizers</a>
+				<a href="#sides">Sides</a>
+				<a href="#entrees">Entrees</a>
+				<a href="#desserts">Desserts</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- END -->
+
+	<div class="col-9 dinner-menu">
+		<div id="appetizers"class="dinner-appetizers">
+			<h2>Appetizers</h2>
+			<div class="col-4 left-menu">
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col-4 right-menu">
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Appetizer</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+		<div id="sides" class="dinner-sides">
+			<h2>Sides</h2>
+			<div class="col-4 left-menu">
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col-4 right-menu">
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Side</p>
+				<p class="menu-price">$4</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+		<div id="entrees" class="dinner-entrees">
+			<h2>Entrees</h2>
+			<div class="col-4 left-menu">
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col-4 right-menu">
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Entree</p>
+				<p class="menu-price">$20</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+		<div id="desserts" class="dinner-desserts">
+			<h2>Desserts</h2>
+			<div class="col-4 left-menu">
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="col-4 right-menu">
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<p class="menu-title">Dessert</p>
+				<p class="menu-price">$8</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -72,29 +205,14 @@
 
 <!-- SPECIALS CONTENT -->
 <div id="specials" class="specials-container">
-	<div class="specials-menu">
-	</div>
+	<p>Specials Container</p>
 </div>
 <!-- -->
-
-<!-- <script type="text/javascript">
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
-
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    }
+{{>organisms-footer}}
+<script>
+function showhide(id) {
+	var e = document.getElementById(id);
+	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 }
-</script>  -->
+</script>
 
