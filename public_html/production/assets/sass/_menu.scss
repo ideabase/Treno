@@ -1,4 +1,4 @@
-.brunch-btn, .lunch-btn, .dinner-btn, .specials-btn {
+.brunch-btn, .lunch-btn, .dinner-btn, .specials-btn, .menu-button__single {
 	border: 2px solid $gold;
 	display: inline-table;
 	text-transform: uppercase;
@@ -12,7 +12,7 @@
 	}
 }
 
-.brunch-btn:hover , .lunch-btn:hover , .dinner-btn:hover , .specials-btn:hover  {
+.menu-button__single:hover, .brunch-btn:hover , .lunch-btn:hover , .dinner-btn:hover , .specials-btn:hover  {
 	border: 2px solid $gold;
 	background-color: $gold;
 	a {
@@ -20,7 +20,7 @@
 	}
 }
 
-.brunch-btn a, .lunch-btn a, .dinner-btn a, .specials-btn a {
+.menu-button__single a, .brunch-btn a, .lunch-btn a, .dinner-btn a, .specials-btn a {
 	color: $dark-gray;
 	font-weight: 600;
 }
@@ -69,7 +69,7 @@
     margin: 1%;
 }
 
-.dinner-nav {
+.dinner-nav, .meal-nav {
 	text-align: left;
 	padding-left: 5%;
 	float: left;
@@ -124,7 +124,7 @@
 }
 
 
-.dinner-nav a {
+.dinner-nav a, .meal-nav a {
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 1.5em;
@@ -190,7 +190,7 @@
 	width: 10%;
 }
 
-.brunch-container, .lunch-container, .dinner-container, .specials-container {
+.brunch-container, .lunch-container, .dinner-container, .specials-container, .meal-container {
 	display: none;
 }
 

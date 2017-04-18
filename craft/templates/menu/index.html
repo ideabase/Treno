@@ -4,87 +4,127 @@
   {% include '_includes/_feature.html' %}
   <h1>{{ entry.title }}</h1>
   
-  	{#{% for category in craft.categories.group('menuType') %}
-    <a href="{{category.url}}">{{ category.title }}</a>
-  	{% endfor %}
-  	<a href="{{ url('specials')}}">Specials</a>#}
-  {% set category = craft.categories.group('menuCategory') %}
   <div class="menu-btn">
-    {% for category in craft.categories.group('menuType') %}
-  	<div class="col-3 col-m-12 {{ category.title }}-btn">
-  			<a href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
-  	</div>
-    {% endfor %}
-  	{#<div class="col-3 col-m-12 brunch-btn">
-  		<a id="brunch" href="{{ url('brunch') }}">Drinks</a>
-  	</div>#}
+    {% set category = craft.categories.group('menuCategory') %}
+      {% for category in craft.categories.group('menuType') %}
+        <div class="col-3 col-m-12 menu-button__single">
+    			<a href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
+        </div>
+      {% endfor %}
   </div>
 
-<div class="scroll-menu">
-  <div class="m-menu-btn">
+{#scroll menu#}
+{#<div id="m-menu-container">
+  <div id="menu-modules">
     {% for category in craft.categories.group('menuType') %}
-    <div class="col-3 col-m-12 {{ category.title }}-btn">
-      <a href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
-    </div>
+      <a class="module" href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
     {% endfor %}
   </div>
-</div>
+</div>#}
 
- <div id="brunch" class="brunch-container">
-  <p>Brunch Container</p>
-</div>
-
- <div id="lunch" class="lunch-container">
- 	<p>Lunch Container</p>
- </div>
-
-<div id="dinner" class="dinner-container">>
-	<div class="col-3 dinner-nav">
-    {% for category in craft.categories.group('foodCategory') %}
-    <div class="col-12 col-m-12">
-       <a href="#{{ category.title }}">{{ category.title }}</a>
-		</div>
+{% for category in craft.categories.group('menuType') %}
     
-  </div>
-</div>
+    <section id="{{ category.title }}" class="meal-container">
+      <!-- Menu that lists the food categories -->
+      <div class="col-3 meal-nav">
+        {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
+           {% set entries = craft.entries.section('menu') %}
+            {% set foods = entries.relatedTo([
+            'and',
+            { targetElement: category },
+            { targetElement: foodmenu }
+          ]) %}
+        {% if foods | length %}
+        <div class="col-12 col-m-12">
+          <a href="#{{foodmenu.title}}">{{foodmenu.title}}</a>
+        </div>
+      {% endif %}
+        {% endfor %}
+      </div>
+      <!-- End food categories menu -->
+      <!-- List out each menu item organized by category -->
+      <div class="col-9 dinner-menu">
+        <h3>{{ category.title }}</h3>
+        {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
+          {% set entries = craft.entries.section('menu') %}
+            {% set foods = entries.relatedTo([
+            'and',
+            { targetElement: category },
+            { targetElement: foodcat }
+          ]) %}
+          {% if foods | length %}
+          <div id="{{ foodcat.title }}" class="dinner-{{ foodcat.title }}">
+          <h2>{{ foodcat.title }}</h2>
+            {% for food in foods %}
+              <p class="menu-title">{{ food.title }}</p>
+              <p class="menu-price">{{ food.foodPrice }}</p>
+              <p>{{ food.foodDescription }}</p>
+            {% endfor %}
+          </div>
+           {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+{% endfor %}   
 
-<div class="col-12 m-dinner-nav">
+{# dropdown #}
+{# <div class="col-12 m-dinner-nav">
+  <div class="breakline"></div>
   <div class="dropdown">
-    <div class="btn-priamry">Select</div>
-    <div class="dropdown-content">
-      <a href="#{{ category.title }}">{{ category.title }}</a>
-    {% endfor %}
-    </div>
+    <button onclick="muFunction()" class="dripbtn">Select</button>
+      <div id="myDropdown" class="dropdown-content">
+        {% for category in craft.categories.group('foodCategory') %}
+          <a href="{{ category.url }}">{{ category.title }}</a>
+        {% endfor %}
+      </div>
   </div>
-</div>
+</div> #}
 
-<div class="col-9 dinner-menu">
-  <h2>Appetizers</h2>
-  <div id="appetizers" class="dinner-appetizers">
-    {% set appetizer = craft.categories.group('foodCategory').relatedTo('appetizer') %}
-    {% for entry in craft.entries.section('food').relatedTo([
-      'and',
-      { targetElement: category },
-      { targetElement: appetizer }
-    ]) %}
-      <p class="menu-title">{{ entry.title }}</p>
-      <p class="menu-price">{{ entry.foodPrice }}</p>
-      <p>{{ entry.foodDescription }}</p>
-    {% endfor %}
-  </div>  
-  <div id="sides" class="dinner-sides">
-    <h2>Sides</h2>
-    <div class="col-4 left-menu">
-    {% set sides = craft.categories.group('foodCategory').relatedTo('sides') %}
-    {% for entry in craft.entries.section('food').relatedTo([
-      'and',
-      { targetElement: category },
-      { targetElement: sides }
-    ]) %}
-      <p class="menu-title">{{ entry.title }}</p>
-      <p class="menu-price">{{ entry.foodPrice }}</p>
-      <p>{{ entry.foodDescription }}</p>
-    {% endfor %}
-  </div>  
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-{% endblock %}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+{#<div class="col-9 dinner-menu">
+  {% for category in craft.categories.group('foodCategory') %}
+    <h2>{{ category.title }}</h2>
+    {% set entries = craft.entries.section('menu') %}
+    <div id="{{ category.title }}" class="dinner-{{ category.title }}">
+      {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
+        {% set foods = entries.relatedTo([
+        'and',
+        { targetElement: category },
+        { targetElement: foodcat }
+      ]) %}
+        {% for food in foods %}
+          <p class="menu-title">{{ food.title }}</p>
+          <p class="menu-price">{{ food.foodPrice }}</p>
+          <p>{{ food.foodDescription }}</p>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  {% endfor %}#}
+ 
+  
+  <script>
+function showhide(id) {
+  var e = document.getElementById(id);
+  e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+}
+</script>  
+  {% endblock %}
