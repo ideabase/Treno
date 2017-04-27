@@ -115,3 +115,42 @@ background-color: white;
 	
 }
 
+.article-title {
+	color: $gold;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+.articles-container {
+	background-color: $light-gray;
+	height: 505px;
+	@media only screen and (min-width: 420px) {
+		height: 400px;
+	}
+	@media only screen and (min-width: 768px) {
+		height: 650px;
+	}
+	@media only screen and (min-width: 976px) {
+		height: 505px;
+	}
+}
+#articles-modules {
+    height: 100%; 
+    margin: 5% 10%;
+    white-space:nowrap;
+    overflow-x: scroll;
+    overflow-y: hide;
+	-webkit-overflow-scrolling:touch;
+}
+.article-module {
+    display:inline-block;
+    margin: 1% 8% 8% 0%;
+    white-space: normal;
+    p {
+    	text-align: left;
+    }
+    a {
+    	float: left;
+    }
+}
+
