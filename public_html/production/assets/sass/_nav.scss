@@ -21,17 +21,21 @@
 	width: 20%;
 }
 
-.nav-list img {
-	width: 40%;
-	position: relative;
-	top: 11px;
-}
-
 .nav-list a {
 	display: block;
 	text-align: center;
 	padding: 15px 25px 15px 25px;
 	text-decoration: none;
+}
+
+.logo-bkg {
+  background-image: url("/production/assets/img/uploads/Treno-Logo-01.svg");
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 46px;
+  position: relative;
+  top: 11px;
+  margin: 0px auto;
 }
 
 .site-nav {
