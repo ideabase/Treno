@@ -1,14 +1,14 @@
 {% extends "_layout" %}
-{% block content %}
+{% block header %}
 	{% include '_includes/_feature.html' %}
-
+{% endblock %}
+{% block content %}
 	<div class="col-12 col-m-12 about_intro">
 		{% for entry in craft.entries.section('aboutTreno') %}
 		<h1>{{ entry.basicText }}</h1>
 		{{ entry.body }}
 		{% endfor %}
 	</div>
-		
 		
 	{# matrix field #}	
 	{#{% for block in entry.contentBlocks %}

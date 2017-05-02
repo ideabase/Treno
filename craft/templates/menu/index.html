@@ -1,7 +1,9 @@
 {% extends "_layout" %}
 
+{% block header %}
+    {% include '_includes/_feature.html' %}
+{% endblock %}
 {% block content %}
-  {% include '_includes/_feature.html' %}
   <h1>{{ entry.title }}</h1>
   
   <div class="menu-btn">
@@ -43,7 +45,7 @@
       </div>
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
-      <div class="col-9 dinner-menu">
+      <div class="col-9 menu-items">
         <h3>{{ category.title }}</h3>
         {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
           {% set entries = craft.entries.section('menu') %}
@@ -53,13 +55,16 @@
             { targetElement: foodcat }
           ]) %}
           {% if foods | length %}
-          <div id="{{ foodcat.title }}" class="dinner-{{ foodcat.title }}">
+          <div id="{{ foodcat.title }}" class="food-item">
           <h2>{{ foodcat.title }}</h2>
             {% for food in foods %}
-              <p class="menu-title">{{ food.title }}</p>
-              <p class="menu-price">{{ food.foodPrice }}</p>
-              <p>{{ food.foodDescription }}</p>
+              <div class="col-4">
+                <p class="menu-title">{{ food.title }}</p>
+                <p class="menu-price">{{ food.foodPrice }}</p>
+                <p>{{ food.foodDescription }}</p>
+              </div>
             {% endfor %}
+              
           </div>
            {% endif %}
           {% endfor %}

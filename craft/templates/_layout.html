@@ -21,37 +21,52 @@
 
 <body>
 		<header>
-
-			{#<nav>
-				
-				<a href="{{ siteUrl }}">{% for asset in header.logo %}
-						<img src="{{ asset.url('crop') }}" alt="asset.title" />
-				{% endfor %}</a>
-				{{ craft.amNav.getNav("mainMenu") }}
-			</nav>#}
 			{% block header %}
 				You forgot to include Header content 
 			{% endblock %}
+			{% set nav = craft.amNav.getNavRaw("mainMenu") %}
+				{% macro addNodeToNavigation(node, index) %}
+				    {%- set nodeClasses = ['nav-list'] -%}
+				    {%- if node.hasChildren -%}
+				        {%- set nodeClasses = nodeClasses|merge(['has-children']) -%}
+				    {%- endif -%}
+				    {%- if node.active or node.hasActiveChild -%}
+				        {%- set nodeClasses = nodeClasses|merge(['active']) -%}
+				    {%- endif -%}
+				    {%- if node.level == 1 and index == 1 -%}
+				        {%- set nodeClasses = nodeClasses|merge(['first']) -%}
+				    {%- endif -%}
+				    {%- if node.listClass|length -%}
+				        {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
+				    {%- endif -%}
+
+				    <li{% if nodeClasses|length %} class="{{ nodeClasses|join(' ') }}"{% endif %}>
+				        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
+				        {% if node.hasChildren %}
+				            <ul class="nav__level{{ (node.level + 1) }}">
+				                {% for subnode in node.children %}
+				                    {{ _self.addNodeToNavigation(subnode, loop.index) }}
+				                {% endfor %}
+				            </ul>
+				        {% endif %}
+				    </li>
+				{% endmacro %}
+
 			<ul class="col-12 nav-container" id="nav-container">
 				<div class="col-8 nav-alignment">
-					{#<li class="nav-list">{{ craft.amNav.getNav("mainMenu") }}</li>#}
-					<li class="nav-list"><a href="{{ 'about' }}">About</a></li>
-					<li class="nav-list"><a href="{{ 'menu' }}">Menu</a></li>
-					<li class="nav-list"><a href="{{ siteUrl }}">
-						{% for asset in header.logo %}
-							<img src="{{ asset.url }}" alt="asset.title" />
-						{% endfor %}
-					</a></li>
-					<li class="nav-list"><a href="{{ 'reservations' }}">Reservations</a></li>
-					<li class="nav-list"><a href="{{ 'directions' }}">Directions</a></li>
+				        {% for node in nav %}
+				            {{ _self.addNodeToNavigation(node, loop.index) }}
+				        {% endfor %}
 				</div>
 			</ul>
 
 				<nav class="site-nav">
-					<div class"m-nav-img">
-						{% for asset in header.logo %}
-							<img src="{{ asset.url }}" alt="asset.title" />
-						{% endfor %}
+					<div class="m-nav-img">
+						<a href="{{ siteUrl }}">
+							{% for asset in header.logo %}
+								<img src="{{ asset.url }}" alt="asset.title" />
+							{% endfor %}
+						</a>
 					</div>
 					<input id="site-menu-trigger" type="checkbox">
 					<label for="site-menu-trigger">
@@ -62,16 +77,10 @@
 
 					<div class="site-menu">
 						<ul>
-							{#<li>{{ craft.amNav.getNav("mainMenu") }}</li>#}
-							<li><a href="{{ 'about' }}">About</a></li>
-							<li><a href="{{ 'menu' }}">Menu</a></li>
-							<li><a href="{{ 'reservations' }}">Reservations</a></li>
-							<li><a href="{{ 'directions' }}">Directions</a></li>
+							{{ craft.amNav.getNav("mainMenu") }}
 						</ul>
 					</div>
 				</nav>
-
-
 		</header>
 
 		<main role="main">

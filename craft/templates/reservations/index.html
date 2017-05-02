@@ -1,6 +1,8 @@
 {% extends "_layout" %}
+{% block header %}
+    {% include '_includes/_feature.html' %}
+{% endblock %}
 {% block content %}
-{% include '_includes/_feature.html' %}
 <h1>{{ entry.title }}</h1>
 {% for entry in craft.entries.section('reservations') %}
 	{{ entry.reservationInfo }}<br><br>

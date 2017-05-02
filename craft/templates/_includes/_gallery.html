@@ -1,14 +1,11 @@
 <div class="col-12 col-m-12 slideshow-container">
-	<div class="slideshow-menu">
 
 {% if entry.slideShowLink | length %}
 		{% for link in entry.slideShowLink %}
 		<a href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
 	{% endfor %}	
 {% endif %}
-</div>
 
-<div class="mySlides fade">
 <div class="owl-carousel">
 
 {% for asset in entry.photoGallery %}
@@ -18,16 +15,7 @@
 			<source srcset="{{ asset.url('slideShowLarge') }}" media="(min-width: 800px)">
 			<img src="{{ asset.getUrl('slideShowSmall') }}" alt="asset.title"/>
 		</picture>
-		</div>
-
+	</div>
 {% endfor %}
 </div>
 </div>
-{% for asset in entry.galleryArrow %}
-<img class="prev" onclick="plusSlides(-1)" src="{{ asset.url }}" />
-{% endfor %}
-{% for asset in entry.galleryArrow2 %}
-<img class="next" onclick="plusSlides(1)" src="{{ asset.url }}" />
-{% endfor %}
-</div>
-</main>

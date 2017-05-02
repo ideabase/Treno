@@ -131,20 +131,21 @@
 	margin: 2%;
 }
 
-.dinner-menu {
+.dinner-menu, .menu-items {
 	display: inline-block;
 		@media only screen and (max-width: 767px) {
 		padding: 7%;
 	}
 }
 
-.dinner-appetizers, .dinner-sides, .dinner-entrees, .dinner-desserts {
+.dinner-appetizers, .dinner-sides, .dinner-entrees, .dinner-desserts, .food-item {
 	margin: 0;
 	text-align: left;
 	float: left;
 	content: "";
 	display: table;
 	clear: both;
+	width: 100%;
 	h2 {
 		text-align: left;
 		margin: 0% 0% 2% 0%;
