@@ -44,19 +44,21 @@
 		</div>
 		
 
-
-			<th><h2>Events</h2></th>
-		
-		
+<div class="articles-container">
+	<h2>Events</h2>
+		<div id="articles-modules">
 			{% for entry in craft.entries.section('news').limit(3) %}
-			
-			<a href="{{ entry.url }}">{{ entry.title }}</a>
-			{% set paragraphs = entry.body|split('</p>') %}
-			{% set firstParagraph = paragraphs|first ~ '</p>' %}
-			<p>{{ firstParagraph|raw }}</p>
-			{{ entry.eventDate.format('F d, Y') }}
-			<a href="{{ entry.url }}">More</a>
- 			{% endfor %}
+				<div class="col-4 article-module">
+					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
+						{% set paragraphs = entry.body|split('</p>') %}
+						{% set firstParagraph = paragraphs|first ~ '</p>' %}
+							<p>{{ firstParagraph|raw }}</p>
+							{#{{ entry.eventDate.format('F d, Y') }}#}
+							<a href="{{ entry.url }}">More</a>
+				</div>
+			{% endfor %}
+		</div>
+</div>
 
 
 
