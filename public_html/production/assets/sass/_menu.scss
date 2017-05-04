@@ -26,7 +26,7 @@
 }
 
 .menu-btn {
-	margin: 5% 5% 7% 5%;
+	margin: 0% 5% 10% 5%;
 	@media only screen and (min-width: 242px) {
 		display: none;
 	}
@@ -81,6 +81,13 @@
 	}
 }
 
+.dinner-nav {
+	position: fixed;
+	margin: 0;
+	top: 472px;
+}
+
+
 .m-dinner-nav {
 	@media only screen and (min-width: 320px) {
 		display:block;
@@ -133,8 +140,10 @@
 
 .dinner-menu, .menu-items {
 	display: inline-block;
+	margin-left: 24%;
 		@media only screen and (max-width: 767px) {
 		padding: 7%;
+		margin: 0px auto;
 	}
 }
 

@@ -63,59 +63,35 @@
     <a class="slideshow-menu" href="#">
       <h2>Menu</h2>
     </a>
-    <div class="mySlides fade">
+    <div class="fade">
       <img src="/production/assets/img/uploads/food/Pasta.svg">
     </div>
     <!--End-->
-    <div class="mySlides fade">
-      <img src="/production/assets/img/uploads/food/Tomatoes.svg">
-    </div>
-    <img class="prev" onclick="plusSlides(-1)" src="/production/assets/img/uploads/arrow-left-white.svg" />
+    <img class="prev" src="/production/assets/img/uploads/arrow-left-white.svg" />
 
-    <img class="next" onclick="plusSlides(1)" src="/production/assets/img/uploads/arrow-right-white.svg" />
+    <img class="next" src="/production/assets/img/uploads/arrow-right-white.svg" />
   </div>
 </main>
 
 <!--Need to move this into the JS file tomorrow-->
-
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-
-    slides[slideIndex-1].style.display = "block";  
-  }
-  </script>
 <!--End Slideshow-->
 <div class="half-grid">
-	<div class="col-6 col-m-12 about_events">
-	  <h2>Events</h2>
-	  <p class="event_title">Kent State Historical Fest</p>
-	  <p class="event_date">June 23,2017</p>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
+	<a href="">
+		<div class="col-6 col-m-12 about_events">
+		  <h2>Events</h2>
+		  <p class="event_title">Kent State Historical Fest</p>
+		  <p class="event_date">June 23,2017</p>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</a>
+	<a href="">
 	  <div class="col-6 col-m-12 about_specials">
 	    <h2>Specials</h2>
 	    <p class="event_title">Linguine Di Mare</h3>
 	    <p>Shrimp and mussels sauteed with homemade pmodoro sauce and whole grain linguine</p>
 	    <p class="event_price">$17</p>
 	  </div>
+	</a>
 </div>
 
   <div class="col-12 col-m-12 map-container">
@@ -125,7 +101,7 @@
   </div>
 
 <footer class="col-12 col-m-12">
-  <div class="col-6 col-m-12 footer-container">
+  <div class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
