@@ -42,10 +42,9 @@ footer {
 	text-align: left;
 	padding: 4% 0% 8% 10%;
 	@media only screen and (max-width: 599px) {
+		padding: 0;
+		padding-top: 3%;
+		padding-bottom: 5%;
 		text-align: center;
 	}
-	@media only screen and (min-width: 530px) and (max-width: 599px) {
-		padding: 4% 8% 4% 8%;
-	}
 }
-
