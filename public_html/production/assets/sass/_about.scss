@@ -127,9 +127,10 @@
 }
 
 #articles-modules {
-		position: relative;
+	position: relative;
     height: 100%;
   	margin: 5% 10% 0 10%;
+  	text-align: left;
     white-space:nowrap;
     overflow-x: scroll;
     overflow-y: hide;
@@ -148,8 +149,5 @@
     vertical-align: text-top;
     p {
     	text-align: left;
-    }
-    a {
-    	float: left;
     }
 }
