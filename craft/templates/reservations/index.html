@@ -4,10 +4,19 @@
 {% endblock %}
 {% block content %}
 <h1>{{ entry.title }}</h1>
-{% for entry in craft.entries.section('reservations') %}
-	{{ entry.reservationInfo }}<br><br>
-	Phone Number: {{ entry.phoneNumber }}
-	{{ entry.privateParty }}
-{% endfor %}
+
+
+
+	<div class="directions-half-grid">
+		<div class="col-5 col-m-12 treno-phone">
+			<h3>{{ entry.phoneNumber }}</h3>
+			<p>{{ entry.reservationInfo }}</p>
+		</div>
+	</div>
+		<div class="col-7 col-m-12 reservation-room">
+			<h4>Party Room</h4>
+			{{ entry.privateParty }}
+		</div>	
+	</div>
 
 {% endblock %}
