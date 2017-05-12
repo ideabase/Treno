@@ -78,11 +78,12 @@
 
 
 
-		<a href="{{ url('specials') }}">
+		<a href="{{ url('menu') }}">
 			<div class="col-6 col-m-12 about_specials">
 			{% set today = "now"|date("l") %}
+			{% set special = craft.categories.group('menuType').relatedTo('specials') %}
 			<h2>{{ today }}'s Specials</h2>
-				{% for entry in craft.entries.section('specials').specialLightSwitch('1') %}
+				{% for entry in craft.entries.section('food').relatedTo(special).limit('1') %}
 					{% for date in entry.specialDate %}
 						{% if date == today %}
 							<p class="event_title">{{ entry.title }}</p>
