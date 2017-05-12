@@ -33,7 +33,7 @@
   letter-spacing: 0.05em;
 }
 
-.nav-list a:hover, .nav-list a:focus, .nav-list.active {
+.nav-list a:hover, .nav-list a:focus, .nav-list.active a {
 	border-bottom-color: $gold;
 	color: $dark-gray;
 }
