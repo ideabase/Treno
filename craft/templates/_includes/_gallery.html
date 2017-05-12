@@ -1,10 +1,5 @@
 <div class="col-12 col-m-12 slideshow-container">
 
-{% if entry.slideShowLink | length %}
-		{% for link in entry.slideShowLink %}
-		<a href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
-	{% endfor %}	
-{% endif %}
 
 <div class="owl-carousel">
 
@@ -12,6 +7,11 @@
 
 	<div class="item">
 		<picture>
+			{% if entry.slideShowLink | length %}
+				{% for link in entry.slideShowLink %}
+					<a href="{{ link.url }}"><h2>{{ link.title }}</h2></a>
+				{% endfor %}	
+			{% endif %}
 			<source srcset="{{ asset.url('slideShowLarge') }}" media="(min-width: 800px)">
 			<img src="{{ asset.getUrl('slideShowSmall') }}" alt="asset.title"/>
 		</picture>
