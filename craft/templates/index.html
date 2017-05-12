@@ -35,7 +35,7 @@
 	<div class="col-12 col-m-12 header-container">
 		<div class="header-bckg"></div>
 		<div class="titleContainer">
-			
+
 				<div class="tomatoPlant">
 					{% for asset in entry.illustration %}
 						<img src="{{ asset.Url('illustrationCrop') }}" alt="{{asset.title}}" />
@@ -43,25 +43,25 @@
 				</div>
 			<div class="pageTitle">
 					<h1>{{ entry.headerTitle1 }}</h1>
-					<h3>{{ entry.headerTitle2 }}</h3>			
+					<h3>{{ entry.headerTitle2 }}</h3>
 					<h1>{{ entry.headerTitle3 }}</h1>
 			</div>
 		</div>
 	</div>
 {% endblock %}
 {% block content %}
-	
+
 
 	<div class="col-12 col-m-12 about_intro">
 		<h2>About</h2>
-		<p>{{ entry.body }}</p>
+		{{ entry.body }}
 	</div>
-		
-	
+
+
 	{% include '_includes/_gallery.html' %}
-	
+
 	<div class="half-grid">
-				
+
 		{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
 			<a href="{{ entry.url }}">
 			<div class="col-6 col-m-12 about_events">
@@ -74,10 +74,10 @@
 			</div>
 			</a>
  		{% endfor %}
- 	
 
 
-	
+
+
 		<a href="{{ url('specials') }}">
 			<div class="col-6 col-m-12 about_specials">
 			{% set today = "now"|date("l") %}
