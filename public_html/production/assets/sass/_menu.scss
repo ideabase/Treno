@@ -1,3 +1,10 @@
+.menu_intro h3 {
+	text-align: center;
+	margin: 4% 17%;
+	line-height: 250%;
+	color: $dark-gray;
+}
+
 .brunch-btn, .lunch-btn, .dinner-btn, .specials-btn, .menu-button__single {
 	border: 2px solid $gold;
 	display: inline-table;
@@ -19,6 +26,7 @@
 		color: #ffffff;
 	}
 }
+
 
 .menu-button__single a, .brunch-btn a, .lunch-btn a, .dinner-btn a, .specials-btn a {
 	color: $dark-gray;

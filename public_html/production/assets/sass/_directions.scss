@@ -68,10 +68,22 @@
 	border: 2px solid $gold;
 	text-transform: uppercase;
 	margin-top: 10%;
-	width: 40%;
+	width: 45%;
 	text-align: center;
-	padding: 4% 1%;
+	padding: 2% 5%;
+	a {
+		color: $dark-gray;
+		font-weight: 600;	
+	}
 }
+
+.btn-primary:hover {
+	background-color: $gold;
+	a {
+		color: #ffffff;
+	}
+}
+
 
 .valet-price {
 	color: $gold;

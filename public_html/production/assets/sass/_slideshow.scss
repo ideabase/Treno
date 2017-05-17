@@ -35,7 +35,7 @@
   margin: 0 auto;
   h2 {
     margin-top: 0;
-    background-color: rgba(255,255,255,.85);
+    background-color: rgba(255,255,255,.75);
     padding: .75em .5em;
     width:35%;
     max-width: 300px;
@@ -44,6 +44,10 @@
 
  .slideshow-menu h2:after {
   width: 36%;
+ }
+
+ .slideshow-menu h2:hover {
+    background-color: #ffffff;
  }
 
 
