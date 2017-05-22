@@ -35,7 +35,7 @@
 	<div class="col-12 col-m-12 header-container">
 		<div class="header-bckg"></div>
 		<div class="titleContainer">
-        
+
 				<div class="tomatoPlant">
 					{% for asset in entry.illustration %}
 						<img src="{{ asset.Url('illustrationCrop') }}" alt="{{asset.title}}" />
@@ -56,7 +56,6 @@
 		<h2>About</h2>
 		{{ entry.body }}
 	</div>
-
 
 	{% include '_includes/_gallery.html' %}
 
@@ -80,18 +79,33 @@
 
 		<a href="{{ url('menu') }}">
 			<div class="col-6 col-m-12 about_specials">
-			{% set today = "now"|date("l") %}
-			{% set special = craft.categories.group('menuType').relatedTo('specials') %}
+
+<!-- previous code -->
+<!--	{% set today = "now"|date("l") %}
+			{% set special = craft.categories.group('menuType').relatedTo('Specials') %}
 			<h2>{{ today }}'s Specials</h2>
-				{% for entry in craft.entries.section('food').relatedTo(special).limit('1') %}
+				{% for entry in craft.entries.section('menu').relatedTo(special).limit('1') %}
 					{% for date in entry.specialDate %}
 						{% if date == today %}
-							<p class="event_title">{{ entry.title }}</p>
+							<p class="event_title">{{ entry.title }} </p>
 							<p>{{ entry.foodDescription }}</p>
 							<p class="event_price">${{ entry.foodPrice }}</p>
 						{% endif %}
 					{% endfor %}
-				{% endfor %}
+				{% endfor %}  -->
+
+<!-- updated on monday 22 -->
+          {% set today = "now"|date("l") %}
+          <h2>{{ today }}'s Specials</h2>
+          {% for entry in craft.entries.section('menu') %}
+            {% for date in entry.specialDate %}
+              {% if date == today %}
+              <p class="event_title">{{ entry.title }} </p>
+              <p>{{ entry.foodDescription }}</p>
+              <p class="event_price">${{ entry.foodPrice }}</p>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
 			</div>
 		</a>
 		</div>
