@@ -26,6 +26,9 @@
 /*	width: 50%;*/
 	float:left;
 	color: $medium-gray;
+	h2:hover {
+		color:#ffffff;
+	}
 }
 
 .event_date, .event_price {
@@ -38,6 +41,9 @@
 	position: relative;
 	float: left;
 	color: $medium-gray;
+	h2:hover {
+		color: $gold;
+	}
 }
 
 .event_title {
