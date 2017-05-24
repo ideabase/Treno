@@ -23,11 +23,15 @@
 .about_events {
 	background-color: $gold;
 	position: relative;
-/*	width: 50%;*/
-	float:left;
+  width: 50%;
 	color: $medium-gray;
+	display: block;
+	padding: 2em 1em;
 	h2:hover {
 		color:#ffffff;
+	}
+	@media only screen and (max-width: 599px) {
+		width: 100%;
 	}
 }
 
@@ -37,12 +41,17 @@
 
 .about_specials {
 	background-color: #fff;
-	/*width: 50%;*/
+	width: 50%;
 	position: relative;
-	float: left;
 	color: $medium-gray;
+	display: block;
+	min-height: 300px;
+	padding: 2em 1em;
 	h2:hover {
 		color: $gold;
+	}
+	@media only screen and (max-width: 599px) {
+		width: 100%;
 	}
 }
 
@@ -54,9 +63,10 @@
 }
 
 .half-grid {
-	content:"";
-	display: table;
-	clear: both;
+	display: flex;
+	@media only screen and (max-width: 599px) {
+		display: inherit;
+	}
 }
 
 .half-grid p {
