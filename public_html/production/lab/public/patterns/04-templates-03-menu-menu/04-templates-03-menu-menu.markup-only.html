@@ -80,7 +80,7 @@
 <!-- DINNER CONTENT -->
 <div id="dinner" class="dinner-container">
 
-	<div class="col-3 dinner-nav">
+	<div id="dinner-nav" class="col-3 dinner-nav">
 			<div class="col-12 col-m-12">
 				<a href="#appetizers">Appetizers</a>
 			</div>
@@ -96,11 +96,30 @@
 		</div>
 	
 	
-	<script>
-	<!-- $(window).scroll(function(){
-		$(".dinner-nav").css("top",Math.max(472,472-$(this).scrollTop()));
-	}); -->
-	</script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	var windw = this;
+	
+	$.fn.followTo = function ( pos ) {
+	    var $this = this,
+	        $window = $(windw);
+	    
+	    $window.scroll(function(e){
+	        if ($window.scrollTop() > pos) {
+	            $this.css({
+	                position: 'absolute',
+	                top: pos
+	            });
+	        } else {
+	            $this.css({
+	                position: 'fixed',
+	                top: 0
+	            });
+	        }
+	    });
+	};
+	
+	$('#dinner-nav').followTo(350);
+	</script> -->
 	<!-- Mobile Dinner Nav -->
 
 	<!-- Mobile Dinner Nav -->
@@ -282,7 +301,7 @@
 </div>
 <!-- -->
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>

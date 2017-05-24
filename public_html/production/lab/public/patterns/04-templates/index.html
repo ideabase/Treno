@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../../../assets/css/style.css?1495050010" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1495050010" media="all" />
+    <link rel="stylesheet" href="../../../../assets/css/style.css?1495660606" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1495660606" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
@@ -17,8 +17,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1495050010" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1495050010" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1495660606" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1495660606" media="all" />
 
     <!-- End Pattern Lab -->
 
@@ -148,7 +148,7 @@
   </div>
 
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
@@ -295,9 +295,11 @@
         	<a href="#">More</a>
         </div>
     </div>
+    <div id="gradient">
+        </div>
 </div>
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
@@ -403,7 +405,7 @@
 	  </div>
 	</div>
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
@@ -532,7 +534,7 @@
 <!-- DINNER CONTENT -->
 <div id="dinner" class="dinner-container">
 
-	<div class="col-3 dinner-nav">
+	<div id="dinner-nav" class="col-3 dinner-nav">
 			<div class="col-12 col-m-12">
 				<a href="#appetizers">Appetizers</a>
 			</div>
@@ -548,11 +550,30 @@
 		</div>
 	
 	
-	<script>
-	<!-- $(window).scroll(function(){
-		$(".dinner-nav").css("top",Math.max(472,472-$(this).scrollTop()));
-	}); -->
-	</script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	var windw = this;
+	
+	$.fn.followTo = function ( pos ) {
+	    var $this = this,
+	        $window = $(windw);
+	    
+	    $window.scroll(function(e){
+	        if ($window.scrollTop() > pos) {
+	            $this.css({
+	                position: 'absolute',
+	                top: pos
+	            });
+	        } else {
+	            $this.css({
+	                position: 'fixed',
+	                top: 0
+	            });
+	        }
+	    });
+	};
+	
+	$('#dinner-nav').followTo(350);
+	</script> -->
 	<!-- Mobile Dinner Nav -->
 
 	<!-- Mobile Dinner Nav -->
@@ -734,7 +755,7 @@
 </div>
 <!-- -->
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
@@ -835,7 +856,7 @@ function showhide(id) {
 	  </div>
 	</div>
 <footer class="col-12 col-m-12">
-  <div class="col-8 col-m-12 footer-container">
+  <div id="footer-container" class="col-8 col-m-12 footer-container">
     <div class="col-4 col-m-4 location">
       <h4>Location</h4>
       <p>152 Franklin Ave,</p>
@@ -902,10 +923,10 @@ function showhide(id) {
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1495050010">
+<script id="pl-js-polyfill-insert-1495660606">
   (function() {
     if (self != top) {
-      var cb = '1495050010';
+      var cb = '1495660606';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -915,10 +936,10 @@ function showhide(id) {
   })();
 </script>
 
-<script id="pl-js-insert-1495050010">
+<script id="pl-js-insert-1495660606">
   (function() {
     if (self != top) {
-      var cb = '1495050010';
+      var cb = '1495660606';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
