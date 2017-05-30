@@ -171,7 +171,19 @@
 
 
 
-//custom gallery 
+//custom gallery
 .owl-item {
   width:100%;
+}
+
+.owl-nav{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.owl-next{
+  float: right;
+}
+.owl-prev{
+  float: left;
 }

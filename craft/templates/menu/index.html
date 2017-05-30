@@ -5,6 +5,8 @@
 {% endblock %}
 {% block content %}
   <h1>{{ entry.title }}</h1>
+
+  {{entry.body}}
   
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
@@ -25,7 +27,7 @@
 </div>#}
 
 {% for category in craft.categories.group('menuType') %}
-    
+
     <section id="{{ category.title }}" class="meal-container">
       <!-- Menu that lists the food categories -->
       <div class="col-3 meal-nav">
@@ -64,13 +66,13 @@
                 <p>{{ food.foodDescription }}</p>
               </div>
             {% endfor %}
-              
+
           </div>
            {% endif %}
           {% endfor %}
         </div>
       </section>
-{% endfor %}   
+{% endfor %}
 
 {# dropdown #}
 {# <div class="col-12 m-dinner-nav">
@@ -124,12 +126,12 @@ window.onclick = function(event) {
       {% endfor %}
     </div>
   {% endfor %}#}
- 
-  
+
+
   <script>
 function showhide(id) {
   var e = document.getElementById(id);
   e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 }
-</script>  
+</script>
   {% endblock %}

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $(".owl-carousel").owlCarousel({
-	  nav: true,
+	  nav : true,
 	  loop: true,
 	  autoplay: true,
 	  autoplayHoverPause: true,
@@ -11,7 +11,7 @@ $(document).ready(function(){
 	  responsive:{
 	  	0:{
 	  		items:1,
-	  		nav: true,
+
 	  		loop: true
 	  	}
 	  }
