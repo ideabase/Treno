@@ -7,7 +7,7 @@
   <h1>{{ entry.title }}</h1>
 
   {{entry.body}}
-  
+
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
       {% for category in craft.categories.group('menuType') %}
@@ -39,8 +39,8 @@
             { targetElement: foodmenu }
           ]) %}
         {% if foods | length %}
-        <div class="col-12 col-m-12">
-          <a href="#{{foodmenu.title}}">{{foodmenu.title}}</a>
+        <div id="f" class="col-12 col-m-12">
+          <a  href="#{{foodmenu.title}}">{{foodmenu.title}}</a>
         </div>
       {% endif %}
         {% endfor %}
