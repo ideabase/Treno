@@ -34,4 +34,49 @@ $(document).ready(function(){
 	  }
   });
 
+	$('#brunch').click(function() {
+	  $('#lunch').not(this).removeClass("active");
+	    $('#dinner').not(this).removeClass("active");
+	      $('#specials').not(this).removeClass("active");
+	        $(this).toggleClass("active");
+	          $('.brunch-container').slideToggle("fast");
+	            $( ".lunch-container" ).hide( "fast" );
+	              $( ".dinner-container" ).hide( "fast" );
+	                $( ".specials-container" ).hide( "fast" );
+	});
+
+    $('#lunch').click(function() {
+      $('#brunch').not(this).removeClass("active");
+        $('#dinner').not(this).removeClass("active");
+          $('#specials').not(this).removeClass("active");
+            $(this).toggleClass("active");
+              $('.lunch-container').slideToggle("fast");
+                $( ".brunch-container" ).hide( "fast" );
+                  $( ".dinner-container" ).hide( "fast" );
+                    $( ".specials-container" ).hide( "fast" );
+
+    });
+
+    $('#dinner').click(function() {
+      $('#brunch').not(this).removeClass("active");
+        $('#lunch').not(this).removeClass("active");
+          $('#specials').not(this).removeClass("active");
+            $(this).toggleClass("active");
+              $('.dinner-container').slideToggle("fast");
+                $( ".brunch-container" ).hide( "fast" );
+                  $( ".lunch-container" ).hide( "fast" );
+                    $( ".specials-container" ).hide( "fast" );
+    });
+
+    $('#specials').click(function() {
+      $('#brunch').not(this).removeClass("active");
+        $('#lunch').not(this).removeClass("active");
+          $('#dinner').not(this).removeClass("active");
+            $(this).toggleClass("active");
+              $('.specials-container').slideToggle("fast");
+                $( ".brunch-container" ).hide( "fast" );
+                  $( ".lunch-container" ).hide( "fast" );
+                    $( ".dinner-container" ).hide( "fast" );
+    });
+
 });
