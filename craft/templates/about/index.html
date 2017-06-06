@@ -9,8 +9,8 @@
 		{{ entry.body }}
 		{% endfor %}
 	</div>
-		
-	{# matrix field #}	
+
+	{# matrix field #}
 	{#{% for block in entry.contentBlocks %}
 		{% if block.type == "image" %}
 			{% for image in block.imageFile %}
@@ -18,10 +18,10 @@
 			{% endfor %}
 		{% elseif block.type == "text" %}
 			{{ block.textBlock| markdown }}
-			
+
 		{% endif %}
 	{% endfor %}#}
-		
+
 
 		{# having trouble looping items while putting them in a table #}
 		{% include '_includes/_gallery.html' %}
@@ -42,11 +42,11 @@
 			{% endfor %}
 			</div>
 		</div>
-		
+
 
 <div class="articles-container">
 	<h2>Events</h2>
-		<div id="articles-modules">
+		<div id="articles-modules" class="news-carousel">
 			{% for entry in craft.entries.section('news').limit(3) %}
 				<div class="col-4 article-module">
 					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
@@ -66,6 +66,6 @@
 		{#{% for asset in entry.photoGallery %}
 			<a href="{{ asset.getUrl }}"><img src="{{ asset.getUrl('crop') }}"/></a>
 		{% endfor %}#}
-		
+
 
 {% endblock %}
