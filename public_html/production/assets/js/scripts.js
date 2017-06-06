@@ -9,7 +9,7 @@ $(document).ready(function(){
           zoom: 17,
 
           // The latitude and longitude to center the map (always required)
-          center: new google.maps.LatLng(41.1529328, -81.3591974), // New York
+          center: new google.maps.LatLng(41.1529328, -81.3591974), // kent
 
           // How you would like to style the map.
           // This is where you would paste any style found on Snazzy Maps.
@@ -122,12 +122,12 @@ $.fn.followTo = function ( pos ) {
         if ($window.scrollTop() < pos) {
             $this.css({
                 position: 'absolute',
-                top: pos+200
+                top: pos+400
             });
         } else {
             $this.css({
                 position: 'fixed',
-                top: 200
+                top: 400
             });
         }
     });
