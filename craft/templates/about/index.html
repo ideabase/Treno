@@ -36,7 +36,7 @@
 					<img src="{{ image.url('investorProfile') }}">
 				{% endfor %}
 			</div>
-			<div class="col-6 col-m-12 chef-bio">
+			<div class="col-6 col-m-12 chef-bio" >
 				<p class="chef-name">{{ entry.title }}</p>
 				<p>{{ entry.teamMemberBio }}</p>
 			{% endfor %}
@@ -46,7 +46,7 @@
 
 <div class="articles-container">
 	<h2>Events</h2>
-		<div id="articles-modules" class="article-carousel">
+		<div id="articles-modules" class="news-carousel">
 			{% for entry in craft.entries.section('news').limit(3) %}
 				<div class="col-4 article-module">
 					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
@@ -57,6 +57,8 @@
 							<a href="{{ entry.url }}">More</a>
 				</div>
 			{% endfor %}
+		</div>
+		<div id="gradient">
 		</div>
 </div>
 

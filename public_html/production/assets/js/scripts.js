@@ -50,7 +50,7 @@ $(document).ready(function(){
 
   $(".article-carousel").owlCarousel({
 	  nav : true,
-	  autoplay: false,
+	  autoplay: true,
 	  autoplayHoverPause: true,
 	  autoplayTimeout: 5000,
 	  autoplaySpeed: 1500,
@@ -122,15 +122,15 @@ $.fn.followTo = function ( pos ) {
         if ($window.scrollTop() < pos) {
             $this.css({
                 position: 'absolute',
-                top: pos+1000
+                top: pos+200
             });
         } else {
             $this.css({
                 position: 'fixed',
-                top: 1000
+                top: 200
             });
         }
     });
 };
 
-$('#f').followTo(300);
+$('#f').followTo(800);
