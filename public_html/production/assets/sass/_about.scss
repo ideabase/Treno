@@ -23,10 +23,10 @@
 .about_events {
 	background-color: $gold;
 	position: relative;
-  width: 50%;
 	color: $medium-gray;
 	display: block;
 	padding: 2em 1em;
+	height: 100%;
 	h2:hover {
 		color:#ffffff;
 	}
@@ -41,12 +41,12 @@
 
 .about_specials {
 	background-color: #fff;
-	width: 50%;
 	position: relative;
 	color: $medium-gray;
 	display: block;
 	min-height: 300px;
 	padding: 2em 1em;
+	height: 100%;
 	h2:hover {
 		color: $gold;
 	}
