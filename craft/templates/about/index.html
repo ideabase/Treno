@@ -46,7 +46,7 @@
 
 <div class="articles-container">
 	<h2>Events</h2>
-		<div id="articles-modules" class="news-carousel">
+		<div id="articles-modules" class="article-carousel">
 			{% for entry in craft.entries.section('news').limit(3) %}
 				<div class="col-4 article-module">
 					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
