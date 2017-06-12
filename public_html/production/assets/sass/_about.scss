@@ -142,12 +142,13 @@
 	padding-top: 1em;
 	position: relative;
 	overflow: hidden;
+  clear: left;
 }
 
 .news-carousel {
 	position: relative;
     height: 100%;
-  	margin: 5% 10% 0 10%;
+  	padding: 5% 10% 0 10%;
   	text-align: left;
     white-space:nowrap;
 }

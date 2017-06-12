@@ -178,14 +178,28 @@
 
 .owl-nav{
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
+}
+
+.owl-next, .owl-prev {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -999999px;
+  overflow: hidden;
 }
 
 .owl-next{
   float: right;
+  margin-right: 25px;
+  background-image: url("../img/ui/arrow-left.svg");
+  transform: rotateY(180deg);
+
 }
 .owl-prev{
   float: left;
-  background-image: url("http://treno.web/production/assets/Arrow-left-white.svg");
+  margin-left: 25px;
+  background-image: url("../img/ui/arrow-left.svg");
 }

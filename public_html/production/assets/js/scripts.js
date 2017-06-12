@@ -48,19 +48,20 @@ $(document).ready(function(){
 	  }
   });
 
-  $(".article-carousel").owlCarousel({
+  $(".news-carousel").owlCarousel({
 	  nav : true,
 	  autoplay: true,
 	  autoplayHoverPause: true,
 	  autoplayTimeout: 5000,
 	  autoplaySpeed: 1500,
 	  responsiveClass: true,
-	  items:3,
+	  items:1,
 	  loop:true,
 	  responsive:{
-	  	0:{
-	  		items:3,
-
+	  	800:{
+	  		items:2,
+        nav : true,
+        loop: true
 	  	}
 	  }
   });

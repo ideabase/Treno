@@ -29,7 +29,7 @@
 		<div class="col-12 col-m-12">
 			<h2>chef</h2>
 		</div>
-		<div class="about-half-grid">
+		<div class="col-12 col-m-12">
 			<div class="col-6 col-m-12 chef-img">
 			{% for entry in craft.entries.section('profiles') %}
 				{% for image in entry.teamMemberPhoto %}
@@ -46,9 +46,9 @@
 
 <div class="articles-container">
 	<h2>Events</h2>
-		<div id="articles-modules" class="news-carousel">
+		<div id="articles-modules" class="owl-carousel news-carousel">
 			{% for entry in craft.entries.section('news').limit(3) %}
-				<div class="col-4 article-module">
+				<div class="article-module">
 					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
 						{% set paragraphs = entry.body|split('</p>') %}
 						{% set firstParagraph = paragraphs|first ~ '</p>' %}
