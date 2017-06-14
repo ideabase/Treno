@@ -60,6 +60,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25em;
+	padding-top: 5%;
 }
 
 .half-grid {
@@ -70,7 +71,7 @@
 }
 
 .half-grid p {
-	margin: 7% 25% 7% 25%;
+	margin: 4% 18%;
 	@media only screen and (max-width: 599px) {
 		margin: 10% 13% 10% 13%;
 	}
