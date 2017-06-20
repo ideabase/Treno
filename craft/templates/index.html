@@ -57,48 +57,42 @@
 		{{ entry.body }}
 	</div>
 
-
 	{% include '_includes/_gallery.html' %}
 
-	<div class="half-grid">
+ <div class="half-grid">
 
 		{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
-			<a href="{{ entry.url }}">
-			<div class="col-6 col-m-12 about_events">
+			<a class="col-6 col-m-12 about_events" href="{{ entry.url }}">
 			<h2>Events</h2>
 			<p class="event_title">{{ entry.title }}</p>
 			<p class="event_date">{{ entry.eventDate.format('F d, Y') }}</p>
 			{% set paragraphs = entry.body|split('</p>') %}
 			{% set firstParagraph = paragraphs|first ~ '</p>' %}
 			<p>{{ firstParagraph|raw }}</p>
-			</div>
 			</a>
  		{% endfor %}
 
 
 
 
-		<a href="{{ url('menu') }}">
-			<div class="col-6 col-m-12 about_specials">
-			{% set today = "now"|date("l") %}
-			{% set special = craft.categories.group('menuType').relatedTo('specials') %}
-			<h2>{{ today }}'s Specials</h2>
-				{% for entry in craft.entries.section('food').relatedTo(special).limit('1') %}
-					{% for date in entry.specialDate %}
-						{% if date == today %}
-							<p class="event_title">{{ entry.title }}</p>
-							<p>{{ entry.foodDescription }}</p>
-							<p class="event_price">${{ entry.foodPrice }}</p>
-						{% endif %}
-					{% endfor %}
-				{% endfor %}
-			</div>
+		<a class="col-6 col-m-12 about_specials" href="{{ url('menu') }}">
+          {% set today = "now"|date("l") %}
+          <h2>{{ today }}'s Specials</h2>
+          {% for entry in craft.entries.section('menu') %}
+            {% for date in entry.specialDate %}
+              {% if date == today %}
+              <p class="event_title">{{ entry.title }} </p>
+              <p>{{ entry.foodDescription }}</p>
+              <p class="event_price">${{ entry.foodPrice }}</p>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
 		</a>
 		</div>
 
-		<div class="col-12 col-m-12 map-container">
+		<div id="map" class="col-12 col-m-12 map-container">
 		</div>
-		<div class="circle">
+		<div class="circle" style="pointer-events: none">
 			{% for asset in craft.entries.section('directions') %}
 				{% for asset in asset.mapCircle %}
 					<img src="{{ asset.url }}" alt="circle" />

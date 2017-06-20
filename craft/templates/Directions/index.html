@@ -1,6 +1,8 @@
 {% extends "_layout" %}
 {% block header %}
-    {% include '_includes/_map.html' %}
+
+    <div id="map" class="col-12 col-m-12 map-container" style="height:500px">
+		</div>
 {% endblock %}
 {% block content %}
 	<h1>{{ entry.title }}</h1>
@@ -8,11 +10,11 @@
 		<div class="col-4 col-m-12 treno-address">
 			<h3>152 Franklin Ave,</h3>
 			<h3>Kent, OH - 44240</h3>
-		
 
-	<p class="btn-primary"><a href="https://www.google.com/maps/place/IdeaBase/@41.1534758,-81.3595405,17z/data=!3m1!4b1!4m5!3m4!1s0x883125213bb987bb:0x25ce1992d4aa5850!8m2!3d41.1534758!4d-81.3573518">Google Maps</a></p>	
+
+	<p class="btn-primary"><a href="https://www.google.com/maps/@41.1529328,-81.3591974,18z">Google Maps</a></p>
 	</div>
-	
+
 	<div class="col-4 col-m-12 treno-parking">
 		<p class="parking-title">Parking</p>
 		<ol>
@@ -31,6 +33,6 @@
 
 
 	{% include '_includes/_feature.html' %}
-		
-	
+
+
 {% endblock %}

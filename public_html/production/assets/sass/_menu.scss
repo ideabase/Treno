@@ -11,6 +11,7 @@
 	text-transform: uppercase;
 	width: 15%;
 	margin: 1%;
+	cursor: pointer;
 	@media only screen and (min-width: 242px) {
 		padding: 3% 15%;
 	}
@@ -24,6 +25,13 @@
 	background-color: $gold;
 	a {
 		color: #ffffff;
+	}
+}
+
+#brunch:active, #lunch:active, #dinner:active, #specials:active {
+	background-color: $gold;
+	a {
+		color: #ffffff!important;
 	}
 }
 
@@ -209,6 +217,6 @@
 	display: block;
 }
 
-
-
-
+#f{
+	position:fixed;
+}

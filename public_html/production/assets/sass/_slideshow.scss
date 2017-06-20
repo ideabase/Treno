@@ -7,20 +7,6 @@
   overflow: hidden;
   position: relative;
   margin: auto;
-  height: 35em;
-  @media only screen and (max-width: 599px) {
-    height: 15em;
-  }
-   @media all and (min-width: 600px) and (max-width: 835px) {
-    height: 21em;
-  }
-  @media all and (min-width: 836px) and (max-width: 1010px) {
-    height: 25em;
-  }
-  @media all and (min-width: 1011px) and (max-width: 1298px) {
-    height: 31em;
-  }
-
  }
 
  .slideshow-menu {
@@ -56,7 +42,7 @@
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev .owl-prev, .next .owl-next {
   width: 100%;
   cursor: pointer;
   position: absolute;

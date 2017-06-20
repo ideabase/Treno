@@ -9,8 +9,8 @@
 		{{ entry.body }}
 		{% endfor %}
 	</div>
-		
-	{# matrix field #}	
+
+	{# matrix field #}
 	{#{% for block in entry.contentBlocks %}
 		{% if block.type == "image" %}
 			{% for image in block.imageFile %}
@@ -18,10 +18,10 @@
 			{% endfor %}
 		{% elseif block.type == "text" %}
 			{{ block.textBlock| markdown }}
-			
+
 		{% endif %}
 	{% endfor %}#}
-		
+
 
 		{# having trouble looping items while putting them in a table #}
 		{% include '_includes/_gallery.html' %}
@@ -29,26 +29,26 @@
 		<div class="col-12 col-m-12">
 			<h2>chef</h2>
 		</div>
-		<div class="about-half-grid">
+		<div class="col-12 col-m-12">
 			<div class="col-6 col-m-12 chef-img">
 			{% for entry in craft.entries.section('profiles') %}
 				{% for image in entry.teamMemberPhoto %}
 					<img src="{{ image.url('investorProfile') }}">
 				{% endfor %}
 			</div>
-			<div class="col-6 col-m-12 chef-bio">
+			<div class="col-6 col-m-12 chef-bio" >
 				<p class="chef-name">{{ entry.title }}</p>
 				<p>{{ entry.teamMemberBio }}</p>
 			{% endfor %}
 			</div>
 		</div>
-		
+
 
 <div class="articles-container">
 	<h2>Events</h2>
-		<div id="articles-modules">
+		<div id="articles-modules" class="owl-carousel news-carousel">
 			{% for entry in craft.entries.section('news').limit(3) %}
-				<div class="col-4 article-module">
+				<div class="article-module">
 					<div class="article-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
 						{% set paragraphs = entry.body|split('</p>') %}
 						{% set firstParagraph = paragraphs|first ~ '</p>' %}
@@ -58,6 +58,8 @@
 				</div>
 			{% endfor %}
 		</div>
+		<div id="gradient">
+		</div>
 </div>
 
 
@@ -66,6 +68,6 @@
 		{#{% for asset in entry.photoGallery %}
 			<a href="{{ asset.getUrl }}"><img src="{{ asset.getUrl('crop') }}"/></a>
 		{% endfor %}#}
-		
+
 
 {% endblock %}

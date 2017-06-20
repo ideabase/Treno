@@ -10,34 +10,34 @@
 	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
 </div>
 <div class="menu-btn">
-	<div class="col-3 col-m-12 brunch-btn">
-		<a href="javascript:showhide('brunch')">Brunch</a>
+	<div id="brunch" class="col-3 col-m-12 brunch-btn box">
+		<a class="top">Brunch</a>
 	</div>
-	<div class="col-3 col-m-12 lunch-btn">
-		<a href="javascript:showhide('lunch')">Lunch</a>
+	<div id="lunch" class="col-3 col-m-12 lunch-btn box">
+		<a class="top">Lunch</a>
 	</div>
-	<div class="col-3 col-m-12 dinner-btn">
-		<a href="javascript:showhide('dinner')">Dinner</a>
+	<div id="dinner" class="col-3 col-m-12 dinner-btn box">
+		<a class="top">Dinner</a>
 	</div>
-	<div class="col-3 col-m-12 specials-btn">
-		<a href="javascript:showhide('specials')">Specials</a>
+	<div id="specials" class="col-3 col-m-12 specials-btn box">
+		<a class="top">Specials</a>
 	</div>
 </div>
 {{>organisms-scrollmenu}}
 <!-- BRUNCH CONTENT -->
-<div id="brunch" class="brunch-container">
+<div id="brunch" class="brunch-container bottom">
 	<p>Brunch Container</p>
 </div>
 <!-- -->
 
 <!-- LUNCH CONTENT -->
-<div id="lunch" class="lunch-container">
+<div id="lunch" class="lunch-container bottom">
 	<p>Lunch Container</p>
 </div>
 <!-- -->
 
 <!-- DINNER CONTENT -->
-<div id="dinner" class="dinner-container">
+<div id="dinner" class="dinner-container bottom">
 
 	{{>organisms-sidebar}}
 
@@ -52,14 +52,8 @@
 <!-- -->
 
 <!-- SPECIALS CONTENT -->
-<div id="specials" class="specials-container">
+<div id="specials" class="specials-container bottom">
 	<p>Specials Container</p>
 </div>
 <!-- -->
 {{>organisms-footer}}
-<script>
-function showhide(id) {
-	var e = document.getElementById(id);
-	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-}
-</script>

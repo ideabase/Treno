@@ -23,11 +23,15 @@
 .about_events {
 	background-color: $gold;
 	position: relative;
-/*	width: 50%;*/
-	float:left;
 	color: $medium-gray;
+	display: block;
+	padding: 2em 1em;
+	height: 100%;
 	h2:hover {
 		color:#ffffff;
+	}
+	@media only screen and (max-width: 599px) {
+		width: 100%;
 	}
 }
 
@@ -37,12 +41,17 @@
 
 .about_specials {
 	background-color: #fff;
-	/*width: 50%;*/
 	position: relative;
-	float: left;
 	color: $medium-gray;
+	display: block;
+	min-height: 300px;
+	padding: 2em 1em;
+	height: 100%;
 	h2:hover {
 		color: $gold;
+	}
+	@media only screen and (max-width: 599px) {
+		width: 100%;
 	}
 }
 
@@ -51,16 +60,18 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25em;
+	padding-top: 5%;
 }
 
 .half-grid {
-	content:"";
-	display: table;
-	clear: both;
+	display: flex;
+	@media only screen and (max-width: 599px) {
+		display: inherit;
+	}
 }
 
 .half-grid p {
-	margin: 7% 25% 7% 25%;
+	margin: 4% 18%;
 	@media only screen and (max-width: 599px) {
 		margin: 10% 13% 10% 13%;
 	}
@@ -96,6 +107,7 @@
 
 .circle img {
 	width: 100px;
+	pointer-events: none;
 	@media only screen and (min-width: 900px) {
 		width: 150px;
 	}
@@ -112,6 +124,7 @@
 	left: 0;
 	display: block;
 	float: left;
+	pointer-events: none;
 	@media only screen and (min-width: 900px) {
 		top: -323px;
 	}
@@ -130,21 +143,17 @@
 .articles-container {
 	background-color: #f5f5f5;
 	padding-top: 1em;
+	position: relative;
+	overflow: hidden;
+  clear: left;
 }
 
-#articles-modules {
+.news-carousel {
 	position: relative;
     height: 100%;
-  	margin: 5% 10% 0 10%;
+  	padding: 5% 10% 0 10%;
   	text-align: left;
     white-space:nowrap;
-    overflow-x: scroll;
-    overflow-y: hide;
-		-webkit-overflow-scrolling:touch;
-		&::-webkit-scrollbar {
-	    width: 0px;  /* remove scrollbar space */
-	    background: transparent;  /* optional: just make scrollbar invisible */
-		}
 }
 
 
@@ -156,4 +165,21 @@
     p {
     	text-align: left;
     }
+}
+
+#gradient {
+    position:absolute;
+    z-index:2;
+    right:0; bottom:0; left:0;
+    height:80%;
+    width: 30%;
+    left: 70%;
+    background: -moz-linear-gradient(right,  rgba(245, 245, 245,0) 0%, rgba(245, 245, 245,1) 70%);
+    background: -webkit-gradient(linear, right, color-stop(0%,rgba(255,255,255,0)), color-stop(70%,rgba(245, 245, 245,1)));
+    background: -webkit-linear-gradient(right,  rgba(245, 245, 245,0) 0%,rgba(255,255,255,1) 70%);
+    background: -o-linear-gradient(right,  rgba(245, 245, 245,0) 0%,rgba(245, 245, 245,1) 70%);
+    background: -ms-linear-gradient(right,  rgba(245, 245, 245,0) 0%,rgba(245, 245, 245,1) 70%);
+    background: linear-gradient(to right,  rgba(245, 245, 245,0) 0%,rgba(245, 245, 245,1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(245, 245, 245)', endColorstr='rgb(245, 245, 245)',GradientType=0 );
+
 }
