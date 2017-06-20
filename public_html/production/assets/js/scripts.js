@@ -57,6 +57,7 @@ $(document).ready(function(){
 	  responsiveClass: true,
 	  items:1,
 	  loop:true,
+    navContainerClass: 'owl-nav-news',
 	  responsive:{
 	  	800:{
 	  		items:2,
@@ -118,7 +119,7 @@ $(document).ready(function(){
  //    });
 
 });
-
+/*
 var windw = this;
 
 $.fn.followTo = function ( pos ) {
@@ -141,3 +142,4 @@ $.fn.followTo = function ( pos ) {
 };
 
 $('#f').followTo(800);
+*/
