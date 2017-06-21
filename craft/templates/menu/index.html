@@ -30,7 +30,7 @@
 
     <section id="{{ category.title }}" class="meal-container">
       <!-- Menu that lists the food categories -->
-      <div id="scroll-menu-side" class="col-3 meal-nav">
+      <div class="scroll-menu-side col-3 meal-nav">
         {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
            {% set entries = craft.entries.section('menu') %}
             {% set foods = entries.relatedTo([
