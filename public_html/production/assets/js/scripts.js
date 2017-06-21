@@ -119,7 +119,7 @@ $(document).ready(function(){
  //    });
 
 });
-/*
+
 var windw = this;
 
 $.fn.followTo = function ( pos ) {
@@ -141,5 +141,4 @@ $.fn.followTo = function ( pos ) {
     });
 };
 
-$('#f').followTo(800);
-*/
+$('#scroll-menu-side').followTo(600);

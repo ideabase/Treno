@@ -60,7 +60,6 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25em;
-	padding-top: 5%;
 }
 
 .half-grid {
@@ -71,7 +70,7 @@
 }
 
 .half-grid p {
-	margin: 4% 18%;
+	margin: 7% 25% 7% 25%;
 	@media only screen and (max-width: 599px) {
 		margin: 10% 13% 10% 13%;
 	}
@@ -107,7 +106,6 @@
 
 .circle img {
 	width: 100px;
-	pointer-events: none;
 	@media only screen and (min-width: 900px) {
 		width: 150px;
 	}
@@ -124,7 +122,7 @@
 	left: 0;
 	display: block;
 	float: left;
-	pointer-events: none;
+
 	@media only screen and (min-width: 900px) {
 		top: -323px;
 	}
