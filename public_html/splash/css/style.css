@@ -443,6 +443,13 @@ responsive
     .top {
       height: 33em;
     }
+    .wrap1 {
+      margin: 3.5em auto;
+    }
+    .footerinfo {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
 }
 
 @media only screen and (max-width: 650px) {
