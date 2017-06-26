@@ -417,7 +417,30 @@ responsive
 
 
     #logo {
-        left: 7.2em;
+        width: 125px;
+        left: 1.5em;
+        top: 2em;
+    }
+    .welcome {
+      left: .45em;
+      font-size: 4em;
+    }
+    .tokent {
+      font-size: 1.35em;
+      top: 13em;
+      left: 3.5em;
+    }
+    .welcome1 {
+      font-size: 4em;
+      top: 4.8em;
+      left: .45em;
+    }
+    .tomato {
+      top: 9em;
+      left: 0;
+    }
+    .top {
+      height: 37.5em;
     }
 }
 
