@@ -268,13 +268,14 @@ h5 {
     margin: -5.3em 0 0 0;
     background-color: #343434;
     text-align: center;
+    display:table;
 }
 .footerinfo {
     margin: auto;
     display: inline-block;
 }
 .footerinfo1{
-    max-width: 33%;
+
     margin: 3em 7em 0 0em;
     float: left;
 }
@@ -383,12 +384,12 @@ responsive
     }
      .footerinfo {
     margin: 1em;
+    text-align: left;
     }
     .footer {
         height: 14em;
     }
     .footerinfo1{
-    max-width: 33%;
     margin: 2em 2em 0 0em;
     float: left;
     }
