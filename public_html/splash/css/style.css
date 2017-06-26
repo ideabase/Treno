@@ -427,7 +427,7 @@ responsive
     }
     .tokent {
       font-size: 1.35em;
-      top: 13em;
+      top: 12.7em;
       left: 3.5em;
     }
     .welcome1 {
@@ -437,7 +437,8 @@ responsive
     }
     .tomato {
       top: 9em;
-      left: 0;
+      left: 1em;
+      width: 15em;
     }
     .top {
       height: 37.5em;
