@@ -223,6 +223,7 @@ about  ++++++++++++++++++++++++++++++++++++
 .may {
     text-align: center;
     color: #af8417;
+    padding: .5em;
 }
 
 .btn1 {
@@ -235,6 +236,7 @@ about  ++++++++++++++++++++++++++++++++++++
     padding: .3em;
     color: #3e3e3e;
     border-color: #3e3e3e;
+    padding: .75em;
 }
 .btn:hover {
     border-color: #af8417;
@@ -280,12 +282,10 @@ h5 {
     float: left;
 }
 .footerinfo2{
-    max-width: 18em;
-    margin: 0 0em 0;
-    display: inline;
+
 }
 .rights {
-    margin: 3em 0 0 0;
+    margin: 3em auto 2em auto
 }
 /**
 
@@ -361,7 +361,7 @@ responsive
         margin: 0 0 0 14em;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 915px) {
      .storycopy{
         padding: 10px;
     }
@@ -391,24 +391,23 @@ responsive
     }
     .footerinfo1{
     margin: 2em 2em 0 0em;
-    float: left;
+    float: none;
     }
     .footerinfo2 {
     margin: 2em 2em 0 0em;
     text-align: left;
     }
     .rights{
-        margin: 0 0 0 0;
+        margin: 1em;
     }
 }
 @media only screen and (max-width: 500px) {
    .footerinfo {
     margin: 1em;
     max-width: 30em;
+    display:block;
     }
-    .rights{
-        margin: 0 0 0 9em;
-    }
+
     #logo {
         left: 7.2em;
     }
