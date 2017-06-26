@@ -20,7 +20,365 @@
     <link rel="icon" type="image/ico" href="favicon.ico">
 
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,700|Proza+Libre:400,400i,600,700" rel="stylesheet">
+    <!--Begin Critical Css -->
+    <style type="text/css">
+    * {
+border: none;
+outline: none;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
+body {
+background-color: transparent;
+}
+
+::-webkit-scrollbar {
+width: 0;
+background-color: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+background: #c3c3c3;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+background: #c3c3c3;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i|Pinyon+Script');
+
+h1 {
+font-family: 'Crimson Text', serif;
+text-rendering: optimizeLegibility;
+font-size: 7em;
+font-weight: 400;
+line-height: 1.2;
+color: #e80000;
+font-style: italic;
+}
+
+h2 {
+font-family: 'Proza Libre', sans-serif;
+text-rendering: optimizeLegibility;
+font-size: 1.7em;
+font-weight: 600;
+line-height: 1.4;
+color: #3e3e3e;
+text-transform: uppercase;
+letter-spacing: .1em;
+text-align: center;
+}
+
+h3 {
+font-family: 'Crimson Text', serif;
+text-rendering: optimizeLegibility;
+font-size: 1.5em;
+font-weight: 400;
+line-height: 1.4;
+color: #3e3e3e;
+}
+
+#logo {
+position: absolute;
+top: 4em;
+left: 4em;
+z-index: 10;
+width: 10em;
+/*    cursor: pointer; */
+}
+
+.welcome {
+position: absolute;
+top: 1.6em;
+left: 30%;
+z-index: 5;
+color: white;
+}
+
+.welcome1 {
+position: absolute;
+top: 3em;
+left: 30%;
+z-index: 5;
+color: white;
+}
+
+.tokent {
+font-size: 1.7em;
+font-style: normal;
+position: absolute;
+top: 11.5em;
+left: 40%;
+z-index: 5;
+color: white;
+}
+
+.top {
+height: 41.5em;
+width: 100%;
+margin: -.5em 0 0 0;
+background-color: #bab9b9;
+z-index: -10;
+position: relative;
+}
+
+.top:after {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+content: "";
+background-color: rgba(0,0,0,.25);
+height: 100%;
+z-index: 2;
+}
+
+.img1 {
+height: 40em;
+margin: auto;
+z-index: 1;
+position: absolute;
+top: 1.5em;
+right: 0em;
+}
+
+.tomato {
+height: 35em;
+z-index: 2;
+position: absolute;
+top: 5em;
+left: 23%;
+}
+
+.wrap1 {
+margin: 5em auto;
+}
+
+.rule {
+margin: 1.2em auto 3em auto;
+max-width: 6em;
+border-bottom: solid;
+border-bottom-width: .35em;
+border-bottom-color: #af8417;
+}
+
+.storycopy {
+max-width: 30em;
+margin: auto;
+}
+
+.center {
+margin: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+.welcome,
+.welcome1 {
+  left: 35%;
+}
+
+.tokent {
+  left: 45%;
+}
+}
+
+@media only screen and (max-width: 800px) {
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+.welcome {
+  top: 3em;
+  left: .75em;
+}
+
+.welcome1 {
+  top: 4.5em;
+  left: .75em;
+}
+
+.tokent {
+  top: 14em;
+  left: 5em;
+  font-size: 1.5em;
+}
+
+.tomato {
+  width: 22em;
+  height: auto;
+  position: absolute;
+  top: 12em;
+  left: 2em;
+}
+}
+
+@media only screen and (max-width: 915px) {
+.storycopy {
+  padding: 10px;
+}
+
+.ourstory {
+  padding: .5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+.tomato {
+  width: 20em;
+  height: auto;
+  position: absolute;
+  top: 12em;
+  left: 2em;
+}
+}
+
+@media only screen and (max-width: 500px) {
+#logo {
+  width: 125px;
+  left: 1.5em;
+  top: 2em;
+}
+
+.welcome {
+  left: .45em;
+  font-size: 4em;
+}
+
+.tokent {
+  font-size: 1.35em;
+  top: 12.9em;
+  left: 3.5em;
+}
+
+.welcome1 {
+  font-size: 4em;
+  top: 4.8em;
+  left: .45em;
+}
+
+.tomato {
+  top: 9em;
+  left: 1em;
+  width: 15em;
+}
+
+.top {
+  height: 33em;
+}
+
+.wrap1 {
+  margin: 3.5em auto;
+}
+}
+
+@media only screen and (max-width: 650px) {
+.img1 {
+  right: -55%;
+}
+
+.top {
+  overflow: hidden;
+}
+}
+
+.fadein {
+/* fadein style on load or toggle
+ -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+-moz-animation: fadein 1s;
+/* Firefox < 16 */
+-ms-animation: fadein 1s;
+/* Internet Explorer */
+-o-animation: fadein 1s;
+/* Opera < 12.1 */
+animation: fadein 1s;
+}
+
+@keyframes fadein {
+from {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+}
+
+@-moz-keyframes fadein {
+from {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+}
+
+@-webkit-keyframes fadein {
+from {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+}
+
+@-ms-keyframes fadein {
+from {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+}
+
+@-o-keyframes fadein {
+from {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+}
+    </style>
 
     </head>
 
