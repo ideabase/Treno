@@ -1,5 +1,5 @@
 * {
-       
+
     border: none;
     outline: none;
     margin: 0;
@@ -15,11 +15,11 @@ body {
     background-color: transparent;
 }
 
-::-moz-selection { 
-    background: #d1d1d1; 
+::-moz-selection {
+    background: #d1d1d1;
 }
-::selection { 
-    background: #d1d1d1; 
+::selection {
+    background: #d1d1d1;
     }
 
 ::-webkit-scrollbar {
@@ -27,16 +27,16 @@ body {
     background-color: #e5e5e5;
     }
 ::-webkit-scrollbar-thumb {
-    background: #c3c3c3; 
+    background: #c3c3c3;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #c3c3c3; 
+	background: #c3c3c3;
 }
 
 /*
 
 type
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Proza+Libre:400,400i,600,600i,700,700i|Pinyon+Script');
@@ -117,14 +117,14 @@ main structure
     left: 30%;
     z-index: 5;
     color: white;
-    
+
 }
 .welcome1 {
     position: absolute;
     top: 3em;
     left: 30%;
     z-index: 5;
-    color: white;    
+    color: white;
 }
 .tokent {
     font-size: 1.7em;
@@ -160,7 +160,7 @@ main structure
     position: absolute;
     top: 1.5em;
     right: 0em
-    
+
 }
 .tomato{
     height: 35em;
@@ -168,7 +168,7 @@ main structure
     position: absolute;
     top: 5em;
     left: 23%;
- 
+
 }
 .wrap1{
     margin: 5em auto;
@@ -179,12 +179,12 @@ main structure
     border-bottom: solid;
     border-bottom-width: .35em;
     border-bottom-color: #af8417;
-    
+
 }
 .comingsoon{
     margin-top: 5em;
 
-    
+
 }
 .pasta {
     width: 100%;
@@ -222,7 +222,7 @@ about  ++++++++++++++++++++++++++++++++++++
 
 .may {
     text-align: center;
-    color: #af8417; 
+    color: #af8417;
 }
 
 .btn1 {
@@ -232,7 +232,7 @@ about  ++++++++++++++++++++++++++++++++++++
     cursor: pointer;
     border: solid;
     border-width: .15em;
-    padding: .3em; 
+    padding: .3em;
     color: #3e3e3e;
     border-color: #3e3e3e;
 }
@@ -265,31 +265,32 @@ h5 {
 }
 .footer {
     width: 100%;
-    height: 12em;
     margin: -5.3em 0 0 0;
     background-color: #343434;
+    text-align: center;
 }
 .footerinfo {
-    max-width: 45em;
     margin: auto;
+    display: inline-block;
 }
 .footerinfo1{
-    max-width: 15em;
+    max-width: 33%;
     margin: 3em 7em 0 0em;
     float: left;
 }
 .footerinfo2{
     max-width: 18em;
     margin: 0 0em 0;
+    display: inline;
 }
 .rights {
     margin: 3em 0 0 0;
 }
-/** 
+/**
 
 responsive
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 *
@@ -304,7 +305,7 @@ responsive
     }
     .tokent {
         left: 50%;
-    } 
+    }
 }
 @media only screen and (min-width: 1200px) {
     .welcome, .welcome1 {
@@ -312,9 +313,9 @@ responsive
     }
     .tokent {
         left: 45%;
-    } 
+    }
     .tomato {
-        
+
     }
 }
 @media only screen and (max-width: 800px) {
@@ -323,7 +324,7 @@ responsive
     }
     h3 {
        font-size:  1.2em;
-    } 
+    }
     h1 {
         font-size: 5em;
     }
@@ -359,7 +360,7 @@ responsive
         margin: 0 0 0 14em;
     }
 }
-@media only screen and (max-width: 700px) { 
+@media only screen and (max-width: 700px) {
      .storycopy{
         padding: 10px;
     }
@@ -387,19 +388,19 @@ responsive
         height: 14em;
     }
     .footerinfo1{
-    max-width: 15em;
+    max-width: 33%;
     margin: 2em 2em 0 0em;
     float: left;
     }
     .footerinfo2 {
-    margin: 2em 2em 0 0em;  
+    margin: 2em 2em 0 0em;
     text-align: left;
     }
     .rights{
         margin: 0 0 0 0;
     }
 }
-@media only screen and (max-width: 500px) { 
+@media only screen and (max-width: 500px) {
    .footerinfo {
     margin: 1em;
     max-width: 30em;
@@ -412,7 +413,7 @@ responsive
     }
 }
 /*
-@media only screen and (max-width: 650px) { 
+@media only screen and (max-width: 650px) {
     .welcome {
         padding-right: 0em;
     }
@@ -422,7 +423,7 @@ responsive
 /*
 *
 fade in on load
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 *
 */
 .fade {
@@ -434,7 +435,7 @@ transition: all .25s ease;
 }
 
 .fadein {
-    /* fadein style on load or toggle 
+    /* fadein style on load or toggle
    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
         -ms-animation: fadein 1s; /* Internet Explorer */
@@ -444,13 +445,13 @@ transition: all .25s ease;
 
 /* fadein keyframes for transitions */
 @keyframes fadein {
-    from { 
-        opacity: .5; 
+    from {
+        opacity: .5;
         -webkit-transform: translate3d(0, 25%, 0);
         transform: translate3d(0, 25%, 0);
     }
-    to   { 
-        opacity: 1; 
+    to   {
+        opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
@@ -458,13 +459,13 @@ transition: all .25s ease;
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-      from { 
-        opacity: .5; 
+      from {
+        opacity: .5;
         -webkit-transform: translate3d(0, 25%, 0);
         transform: translate3d(0, 25%, 0);
     }
-    to   { 
-        opacity: 1; 
+    to   {
+        opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
@@ -472,13 +473,13 @@ transition: all .25s ease;
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-      from { 
-        opacity: .5; 
+      from {
+        opacity: .5;
         -webkit-transform: translate3d(0, 25%, 0);
         transform: translate3d(0, 25%, 0);
     }
-    to   { 
-        opacity: 1; 
+    to   {
+        opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
@@ -486,13 +487,13 @@ transition: all .25s ease;
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-      from { 
-        opacity: .5; 
+      from {
+        opacity: .5;
         -webkit-transform: translate3d(0, 25%, 0);
         transform: translate3d(0, 25%, 0);
     }
-    to   { 
-        opacity: 1; 
+    to   {
+        opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
@@ -500,18 +501,14 @@ transition: all .25s ease;
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-      from { 
-        opacity: .5; 
+      from {
+        opacity: .5;
         -webkit-transform: translate3d(0, 25%, 0);
         transform: translate3d(0, 25%, 0);
     }
-    to   { 
-        opacity: 1; 
+    to   {
+        opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
 }
-
-
-
-
