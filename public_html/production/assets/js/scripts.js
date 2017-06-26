@@ -141,7 +141,7 @@ $.fn.followTo = function ( pos ) {
     });
 };
 
-$(".scroll-menu-side").followTo(600);
+$(".scroll-menu-side").followTo(860);
 
 
 //smooth scroll function
