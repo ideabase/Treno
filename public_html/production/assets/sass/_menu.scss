@@ -5,7 +5,7 @@
 	color: $dark-gray;
 }
 
-.brunch-btn, .lunch-btn, .dinner-btn, .specials-btn, .menu-button__single {
+.menu-button__single {
 	border: 2px solid $gold;
 	display: inline-table;
 	text-transform: uppercase;
@@ -17,6 +17,10 @@
 	}
 	@media only screen and (min-width: 654px) {
 		padding: 2% 5%;
+	}
+	&.active {
+		background-color: $gold;
+		color: white;
 	}
 }
 
@@ -43,12 +47,7 @@
 
 .menu-btn {
 	margin: 0% 5% 10% 5%;
-	@media only screen and (min-width: 242px) {
-		display: none;
-	}
-	@media only screen and (min-width: 654px) {
-		display: block;
-	}
+	display: block;
 }
 
 .breakline {
@@ -85,16 +84,11 @@
     margin: 1%;
 }
 
-.dinner-nav, .meal-nav {
+.meal-nav {
 	text-align: left;
 	padding-left: 5%;
 	float: left;
-	@media only screen and (min-width: 242px) {
-		display:none;
-	}
-	@media only screen and (min-width: 768px) {
-		display: block;
-	}
+	display: none;
 }
 
 .dinner-nav {
@@ -210,8 +204,19 @@
 	width: 10%;
 }
 
-.brunch-container, .lunch-container, .dinner-container, .specials-container, .meal-container {
-	display: none;
+.meal-container {
+	max-height: 0;
+	overflow: hidden;
+	transition: .3s max-height ease-in-out;
+	position:relative;
+}
+
+.meal-container.active {
+	max-height: 50em;
+}
+
+.meal-container.active .meal-nav {
+	display: block;
 }
 
 .dinner-content {

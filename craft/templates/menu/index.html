@@ -11,9 +11,7 @@
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
       {% for category in craft.categories.group('menuType') %}
-        <div class="col-3 col-m-12 menu-button__single">
-    			<a href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
-        </div>
+        <a href="#" data-tab="{{ category.title }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
       {% endfor %}
   </div>
 
@@ -106,32 +104,4 @@ window.onclick = function(event) {
   }
 }
 </script>
-
-{#<div class="col-9 dinner-menu">
-  {% for category in craft.categories.group('foodCategory') %}
-    <h2>{{ category.title }}</h2>
-    {% set entries = craft.entries.section('menu') %}
-    <div id="{{ category.title }}" class="dinner-{{ category.title }}">
-      {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
-        {% set foods = entries.relatedTo([
-        'and',
-        { targetElement: category },
-        { targetElement: foodcat }
-      ]) %}
-        {% for food in foods %}
-          <p class="menu-title">{{ food.title }}</p>
-          <p class="menu-price">{{ food.foodPrice }}</p>
-          <p>{{ food.foodDescription }}</p>
-        {% endfor %}
-      {% endfor %}
-    </div>
-  {% endfor %}#}
-
-
-  <script>
-function showhide(id) {
-  var e = document.getElementById(id);
-  e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-}
-</script>
-  {% endblock %}
+{% endblock %}

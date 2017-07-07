@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+// New Show/Hide Menu Items //
+
+  $('.menu-btn a').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.menu-btn a').removeClass('active');
+		$('.meal-container').removeClass('active');
+
+		$(this).addClass('active');
+		$("#"+tab_id).addClass('active');
+	});
+
+
   google.maps.event.addDomListener(window, 'load', init);
 
   function init() {
@@ -71,52 +85,10 @@ $(document).ready(function(){
   $parent_box = $(this).closest('.box');
   $parent_box.siblings().find('.bottom').hide();
   $parent_box.find('.bottom').toggle();
+
+
 });
 
-	// $('#brunch').click(function() {
-	//   $('#lunch').not(this).removeClass("active");
-	//     $('#dinner').not(this).removeClass("active");
-	//       $('#specials').not(this).removeClass("active");
-	//         $(this).toggleClass("active");
-	//           $('.brunch-container').slideToggle("fast");
-	//             $( ".lunch-container" ).hide( "fast" );
-	//               $( ".dinner-container" ).hide( "fast" );
-	//                 $( ".specials-container" ).hide( "fast" );
-	// });
-
- //    $('#lunch').click(function() {
- //      $('#brunch').not(this).removeClass("active");
- //        $('#dinner').not(this).removeClass("active");
- //          $('#specials').not(this).removeClass("active");
- //            $(this).toggleClass("active");
- //              $('.lunch-container').slideToggle("fast");
- //                $( ".brunch-container" ).hide( "fast" );
- //                  $( ".dinner-container" ).hide( "fast" );
- //                    $( ".specials-container" ).hide( "fast" );
-
- //    });
-
- //    $('#dinner').click(function() {
- //      $('#brunch').not(this).removeClass("active");
- //        $('#lunch').not(this).removeClass("active");
- //          $('#specials').not(this).removeClass("active");
- //            $(this).toggleClass("active");
- //              $('.dinner-container').slideToggle("fast");
- //                $( ".brunch-container" ).hide( "fast" );
- //                  $( ".lunch-container" ).hide( "fast" );
- //                    $( ".specials-container" ).hide( "fast" );
- //    });
-
- //    $('#specials').click(function() {
- //      $('#brunch').not(this).removeClass("active");
- //        $('#lunch').not(this).removeClass("active");
- //          $('#dinner').not(this).removeClass("active");
- //            $(this).toggleClass("active");
- //              $('.specials-container').slideToggle("fast");
- //                $( ".brunch-container" ).hide( "fast" );
- //                  $( ".lunch-container" ).hide( "fast" );
- //                    $( ".dinner-container" ).hide( "fast" );
- //    });
 
 });
 //scroll menu until a point
@@ -130,18 +102,18 @@ $.fn.followTo = function ( pos ) {
         if ($window.scrollTop() < pos) {
             $this.css({
                 position: 'absolute',
-                top: pos+200
+                top: 0
             });
         } else {
             $this.css({
                 position: 'fixed',
-                top: 200
+                top: pos
             });
         }
     });
 };
 
-$(".scroll-menu-side").followTo(860);
+$(".scroll-menu-side").followTo(230);
 
 
 //smooth scroll function
