@@ -46,19 +46,19 @@ $(document).ready(function(){
   }
 
   $(".photo-gallery").owlCarousel({
-	  nav : true,
+	  nav : false,
 	  loop: true,
 	  autoplay: true,
 	  autoplayHoverPause: true,
 	  autoplayTimeout: 5000,
 	  autoplaySpeed: 1500,
 	  responsiveClass: true,
+    items:1,
+    loop: true,
 	  responsive:{
-	  	0:{
-	  		items:1,
-
-	  		loop: true
-	  	}
+      800: {
+        nav: true
+      }
 	  }
   });
 
@@ -71,9 +71,8 @@ $(document).ready(function(){
 	  responsiveClass: true,
 	  items:1,
 	  loop:true,
-    navContainerClass: 'owl-nav-news',
-	  responsive:{
-	  	800:{
+	  responsive: {
+	  	800: {
 	  		items:2,
         nav : true,
         loop: true
