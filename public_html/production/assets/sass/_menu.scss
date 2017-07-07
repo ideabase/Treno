@@ -27,6 +27,7 @@
 .menu-button__single:hover, .brunch-btn:hover , .lunch-btn:hover , .dinner-btn:hover , .specials-btn:hover  {
 	border: 2px solid $gold;
 	background-color: $gold;
+	color: white;
 	a {
 		color: #ffffff;
 	}
@@ -224,5 +225,4 @@
 }
 
 .scroll-menu-side{
-
 }
