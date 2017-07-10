@@ -63,7 +63,7 @@ $(document).ready(function(){
   });
 
   $(".news-carousel").owlCarousel({
-	  nav : true,
+	  nav : false,
 	  autoplay: true,
 	  autoplayHoverPause: true,
 	  autoplayTimeout: 5000,
@@ -73,9 +73,8 @@ $(document).ready(function(){
 	  loop:true,
 	  responsive: {
 	  	800: {
-	  		items:2,
         nav : true,
-        loop: true
+	  		items:1,
 	  	}
 	  }
   });
