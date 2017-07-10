@@ -89,8 +89,8 @@
           {% endfor %}
 		</a>
 		</div>
-
-		<div id="map" class="col-12 col-m-12 map-container">
+    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+		<div id="map" class="col-12 col-m-12 map-container" >
 		</div>
 		<div class="circle" style="pointer-events: none">
 			{% for asset in craft.entries.section('directions') %}

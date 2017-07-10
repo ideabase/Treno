@@ -131,3 +131,11 @@
 		font-size: 6em;
 	}
 }
+.overlay{
+		background: transparent;
+		position: relative;
+		height:500px;
+		top:500px;
+		margin-top: -500px;
+		z-index:3
+}
