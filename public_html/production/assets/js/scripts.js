@@ -105,7 +105,7 @@ $.fn.followTo = function ( pos ) {
         } else {
             $this.css({
                 position: 'fixed',
-                top: pos+350
+                top: pos+420
             });
         }
     });

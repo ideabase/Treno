@@ -4,6 +4,7 @@
     {% include '_includes/_feature.html' %}
 {% endblock %}
 {% block content %}
+  <!--<div style="height:371px; background-color: gray;"></div>-->
   <h1>{{ entry.title }}</h1>
 
   {{entry.body}}
@@ -16,13 +17,7 @@
   </div>
 
 {#scroll menu#}
-{#<div id="m-menu-container">
-  <div id="menu-modules">
-    {% for category in craft.categories.group('menuType') %}
-      <a class="module" href="javascript:showhide('{{ category.title }}')">{{ category.title }}</a>
-    {% endfor %}
-  </div>
-</div>#}
+
 
 {% for category in craft.categories.group('menuType') %}
 
