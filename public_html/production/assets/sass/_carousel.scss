@@ -12,7 +12,7 @@
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
-  z-index: 1; }
+  z-index: inherit; }
   .owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
@@ -24,7 +24,11 @@
     clear: both;
     visibility: hidden;
     line-height: 0;
-    height: 0; }
+    height: 0;
+  }
+  .owl-stage-outer{
+      z-index:100;
+  }
   .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
@@ -176,10 +180,11 @@
   width:100%;
 }
 
-.owl-nav{
+.owl-nav, .owl-nav-news {
   position: absolute;
   top: 40%;
   width: 100%;
+  left: 0;
 }
 
 .owl-next, .owl-prev {
@@ -189,6 +194,8 @@
   background-size: contain;
   text-indent: -999999px;
   overflow: hidden;
+  z-index:1000;
+  position: relative;
 }
 
 .owl-next{
@@ -196,7 +203,6 @@
   margin-right: 25px;
   background-image: url("../img/ui/arrow-left.svg");
   transform: rotateY(180deg);
-
 }
 .owl-prev{
   float: left;
@@ -204,8 +210,10 @@
   background-image: url("../img/ui/arrow-left.svg");
 }
 
-.owl-nav-news{
-  position: absolute;
-  top: 40%;
-  width: 100%;
+.news-carousel .owl-next {
+  background-image: url("../img/ui/arrow-left-gold.svg");
+}
+
+.news-carousel .owl-prev {
+  background-image: url("../img/ui/arrow-left-gold.svg");
 }

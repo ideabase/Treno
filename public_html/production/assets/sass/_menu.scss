@@ -213,7 +213,7 @@
 }
 
 .meal-container.active {
-	max-height: 50em;
+	max-height: 500em;
 }
 
 .meal-container.active .meal-nav {
@@ -225,4 +225,7 @@
 }
 
 .scroll-menu-side{
+	text-align:center;
+	font-size:0.7em;
+	padding-left:0px;
 }
