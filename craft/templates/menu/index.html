@@ -6,7 +6,7 @@
 {% block content %}
   <!--<div style="height:371px; background-color: gray;"></div>-->
   <h1>{{ entry.title }}</h1>
-  
+
   <div class="col-12 col-m-12 about_intro">
     {{entry.body}}
   </div>
@@ -14,7 +14,7 @@
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
       {% for category in craft.categories.group('menuType') %}
-        <a href="#" data-tab="{{ category.title }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
+        <a data-tab="{{ category.title }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
       {% endfor %}
   </div>
 
@@ -43,7 +43,7 @@
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
       <div class="col-9 menu-items">
-        <h3>{{ category.title }}</h3>
+        
         {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
           {% set entries = craft.entries.section('menu') %}
             {% set foods = entries.relatedTo([

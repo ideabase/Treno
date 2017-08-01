@@ -13,7 +13,7 @@ return array(
 	'server' => 'localhost',
 
 	// The name of the database to select.
-	'database' => 'treno.web',
+	'database' => 'treno',
 
 	// The database username to connect with.
 	'user' => 'root',

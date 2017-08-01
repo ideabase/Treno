@@ -3,11 +3,13 @@ footer {
 	font-family: $serif;
 	position: absolute;
 	color: white;
-	padding: 1%;
+	padding-top: 1em;
+	padding-bottom: 2em;
 }
 
 .footer-container, .copyright {
 	margin: 0 auto;
+
 }
 
 .location p, .contact p, .hours p {
@@ -47,4 +49,5 @@ footer {
 		padding-bottom: 5%;
 		text-align: center;
 	}
+
 }
