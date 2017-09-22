@@ -28,6 +28,13 @@
 </head>
 
 <body>
+  <!-- Helper code for the Admin toolbar, only shown when logged in -->
+      {% if entry is defined %}
+      {% set config = {
+        entry: entry,
+      } %}
+      {{ craft.adminbar.bar(config) }}
+    {% endif %}
 		<header>
 			{% block header %}
 				You forgot to include Header content

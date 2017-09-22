@@ -4,8 +4,9 @@
 /public/node_modules
 /public/.sass-cache
 /public_html/production/node_modules/grunt-critical-css/node_modules/critical-css/node_modules/phantomjs/phantomjs/phantomjs-1.9.7-macosx.zip
-/public_html/production/assets/img/uploads/_featureImageLarge/american_greetings.jpg
-/public_html/production/assets/img/uploads/_featureImageSmall/american_greetings.jpg
-/public_html/production/assets/img/uploads/american_greetings.jpg
 public_html/production/assets/img/uploads/*
 /craft/config/db.php
+/public_html/production/assets/img/uploads/_featureImageLarge/DSCF2212_2.JPG
+/public_html/production/assets/img/uploads/_featureImageSmall/DSCF2212_2.JPG
+/public_html/production/assets/img/uploads/_slideShowLarge/DSCF2212_2.JPG
+/public_html/production/assets/img/uploads/_slideShowSmall/DSCF2212_2.JPG
