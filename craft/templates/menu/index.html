@@ -43,7 +43,7 @@
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
       <div class="col-9 menu-items">
-        
+
         {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
           {% set entries = craft.entries.section('menu') %}
             {% set foods = entries.relatedTo([
