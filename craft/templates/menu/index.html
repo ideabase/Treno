@@ -53,14 +53,14 @@
           ]) %}
           {% if foods | length %}
           <div id="{{ foodcat.title }}" class="food-item">
-          <h2>{{ foodcat.title }}</h2>
+          <h2>{{ foodcat.title }} <span>({{foodcat.englishTranslation}})</span></h2>
             {% for food in foods %}
               <div class="col-4">
-                <p class="menu-title">{{ food.title }}</p>
+                <h3 class="menu-title">{{ food.title }}</h3>
+                <p class="menu-price">{{ food.foodPrice }}</p>
                 {% for option in food.foodSpecifications %}
                 <h6>{{option.label}}</h6>
                 {% endfor %}
-                <p class="menu-price">{{ food.foodPrice }}</p>
                 <p>{{ food.foodDescription }}</p>
               </div>
             {% endfor %}

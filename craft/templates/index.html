@@ -75,22 +75,31 @@
  		{% endfor %}
 
 
-
+    {% set bool = false %}
     {% set today = "now"|date("l") %}
+    {% for entry in craft.entries.section('menu') %}
+      {% for date in entry.specialDate %}
+        {% if date == today %}
+          {% set bool = true %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
 
 
+
+        {% if bool == true %}
 		<a class="col-6 col-m-12 about_specials" href="{{ url('menu') }}">
-            <h2>{{ today }}'s Specials</h2>
+      <h2>{{ today }}'s Specials</h2>
             {% for entry in craft.entries.section('menu') %}
               {% for date in entry.specialDate %}
                 {% if date == today %}
               <p class="event_title">{{ entry.title }} </p>
               <p>{{ entry.foodDescription }}</p>
               <p class="event_price">{{ entry.foodPrice }}</p>
-              {% endif %}
+                {% endif %}
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
-
+        {% endif %}
 		</a>
 		</div>
     <div class="overlay" onClick="style.pointerEvents='none'"></div>
