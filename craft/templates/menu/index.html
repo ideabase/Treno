@@ -53,7 +53,12 @@
           ]) %}
           {% if foods | length %}
           <div id="{{ foodcat.title }}" class="food-item">
-          <h2>{{ foodcat.title }} <span>({{foodcat.englishTranslation}})</span></h2>
+            <!-- Displays english translation if exists !-->
+          <h2>{{ foodcat.title }}
+            {% if foodcat.englishTranslation | length %}
+            <span>({{foodcat.englishTranslation}})</span>
+            {%endif%}
+          </h2>
             {% for food in foods %}
               <div class="col-4">
                 <h3 class="menu-title">{{ food.title }}</h3>
@@ -104,4 +109,6 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<h4>{{entry.menuDisclaimer}}</h4>
 {% endblock %}

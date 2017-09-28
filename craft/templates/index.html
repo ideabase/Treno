@@ -76,6 +76,7 @@
 
 
     {% set bool = false %}
+
     {% set today = "now"|date("l") %}
     {% for entry in craft.entries.section('menu') %}
       {% for date in entry.specialDate %}
