@@ -58,6 +58,13 @@
             {% if foodcat.englishTranslation | length %}
             <span>({{foodcat.englishTranslation}})</span>
             {%endif%}
+
+          {% if foodcat.descriptionBlurb | length %}
+          </h2>{{foodcat.descriptionBlurb}}</h2>
+          {%endif%}
+
+
+
           </h2>
             {% for food in foods %}
               <div class="col-4">
