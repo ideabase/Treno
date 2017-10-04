@@ -1,3 +1,4 @@
+{% cache globally %}
 <footer class="col-12 col-m-12">
 	<div class="col-10 col-m-12 footer-container">
 		<div class="col-4 col-m-4 location">
@@ -18,8 +19,23 @@
 				{% endfor %}
 			{% endif %}
 		</div>
+		<!-- Social Media Block !-->
+		{% if footer.socialMedia | length >= 1 %}
+			<div class="social-media">
+			<h2 class = "contact-name">Social Media</h2>
+				<div class="social-media__icons">
+					{% for block in footer.socialMedia %}
+						 <a class="social-media__icon {{ block.socialName }}" href= "{{block.address}}">{{ block.socialName }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+		</div>
+		<!-- End Social Media Block !-->
+
 		<div class="col-12 col-m-12 copyright">
 			<p>&copy; {{ footer.copyRightText }}</p>
 		</div>
 	</div>
 </footer>
+{% endcache %}
