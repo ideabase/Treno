@@ -26,11 +26,9 @@
 	color: $medium-gray;
 	display: block;
 	padding: 2em 1em;
+	width: 100%;
 	h2:hover {
 		color:#ffffff;
-	}
-	@media only screen and (max-width: 599px) {
-		width: 100%;
 	}
 }
 
@@ -45,11 +43,9 @@
 	display: block;
 	min-height: 300px;
 	padding: 2em 1em;
+	width: 100%;
 	h2:hover {
 		color: $gold;
-	}
-	@media only screen and (max-width: 599px) {
-		width: 100%;
 	}
 }
 

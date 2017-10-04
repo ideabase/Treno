@@ -15,6 +15,10 @@
 
 {% extends "_layout" %}
 
+{% block header %}
+    {% include '_includes/_feature.html' %}
+{% endblock %}
+
 {% block content %}
 	<article>
 		<h1>{{ entry.title }}</h1>
