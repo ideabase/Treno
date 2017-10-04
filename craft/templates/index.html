@@ -19,7 +19,7 @@
 
 {% extends "_layout" %}
 {% block header %}
-
+{% cache %}
 	<style type="text/css">
 		{% for asset in entry.featureImage %}
 		.header-bckg {
@@ -48,10 +48,12 @@
 			</div>
 		</div>
 	</div>
+  {% endcache %}
 {% endblock %}
+
 {% block content %}
 
-
+{% cache %}
 	<div class="col-12 col-m-12 about_intro">
 		<h2>About</h2>
 		{{ entry.body }}
@@ -113,5 +115,5 @@
 				{% endfor %}
 			{% endfor %}
 		</div>
-
+    {% endcache %}
 {% endblock %}
