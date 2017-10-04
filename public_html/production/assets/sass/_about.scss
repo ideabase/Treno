@@ -1,22 +1,25 @@
 .about_intro {
 	display:inline-block;
-	@media only screen and (max-width: 599px) {
-		padding-top: 5%;
-	}
+	max-width: 800px;
+	padding: 0 1em 2em 1em;
+	margin-bottom: 2em;
 }
 
 
 .about_intro p {
 	text-align: left;
-	margin: 50px 170px 70px 170px;
 	line-height: 32px;
+	font-family: $serif;
+	font-size: 1.4em;
+	font-weight: 400;
 	@media only screen and (max-width: 599px) {
 		margin: 35px 50px;
+		font-size: 1.2em;
 	}
 }
 
 .about_intro h2 {
-	margin-top: 6%;
+	margin-top:3em;
 	text-transform: uppercase;
 }
 

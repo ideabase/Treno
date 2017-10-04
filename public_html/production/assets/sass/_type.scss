@@ -5,7 +5,7 @@ h1 {
 	font-size: 4.5em;
 	font-weight: normal;
 	text-align: center;
-	
+
 
 	&:after {
 		content: "";
@@ -22,8 +22,8 @@ h2 {
 	font-Family: $sans;
 	font-weight: normal;
 	text-align: center;
-	font-size: 2em;
-	
+	font-size: 1.9em;
+	font-weight: 600;
 
 	&:after {
 		content: "";
@@ -32,7 +32,7 @@ h2 {
 		height: 3px;
 		background-color: $gold;
 		margin: 0 auto;
-		margin-top: .10em;
+		margin-top: .3em;
 	}
 }
 h3 {
@@ -76,5 +76,3 @@ a {
 	color: $gold;
 	text-decoration: none;
 }
-
-
