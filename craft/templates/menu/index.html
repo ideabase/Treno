@@ -14,7 +14,7 @@
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
       {% for category in craft.categories.group('menuType') %}
-        <a data-tab="{{ category.title }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
+        <a data-tab="{{ category.slug }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
       {% endfor %}
   </div>
 
@@ -23,7 +23,7 @@
 
 {% for category in craft.categories.group('menuType') %}
 
-    <section id="{{ category.title }}" class="meal-container">
+    <section id="{{ category.slug }}" class="meal-container">
       <!-- Menu that lists the food categories -->
       <div class="scroll-menu-side col-3 meal-nav">
         {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
