@@ -22,7 +22,6 @@
 		<!-- Social Media Block !-->
 		{% if footer.socialMedia | length >= 1 %}
 			<div class="social-media">
-			<h2 class = "contact-name">Social Media</h2>
 				<div class="social-media__icons">
 					{% for block in footer.socialMedia %}
 						 <a class="social-media__icon {{ block.socialName }}" href= "{{block.address}}">{{ block.socialName }}</a>
