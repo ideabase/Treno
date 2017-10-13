@@ -9,14 +9,15 @@
 	border: 2px solid $gold;
 	display: inline-table;
 	text-transform: uppercase;
-	width: 15%;
+	width: 100%;
 	margin: 1%;
 	cursor: pointer;
-	@media only screen and (min-width: 242px) {
-		padding: 3% 15%;
-	}
+	padding: 4% 15%;
 	@media only screen and (min-width: 654px) {
 		padding: 2% 5%;
+	}
+	@media screen and (min-width: 900px) {
+		width: inherit;
 	}
 	&.active {
 		background-color: $gold;
@@ -33,7 +34,7 @@
 	}
 }
 
-#brunch:active, #lunch:active, #dinner:active, #specials:active {
+.menu-btn .active {
 	background-color: $gold;
 	a {
 		color: #ffffff!important;
@@ -47,8 +48,12 @@
 }
 
 .menu-btn {
-	margin: 0% 5% 10% 5%;
+	margin: 0% 5% 2em 5%;
 	display: block;
+	@media screen and (min-width: 900px) {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .breakline {
@@ -56,13 +61,7 @@
 	margin: 3% 9% 10% 9%;
 }
 
-#m-menu-container {
-    height: 80px;
-    overflow: hidden;
-    @media only screen and (min-width: 654px) {
-		display: none;
-	}
-}
+
 #menu-modules {
     height:95px; /* 40px - more place for scrollbar, is hidden under parent box */
     padding:5px;
@@ -87,9 +86,7 @@
 
 .meal-nav {
 	text-align: left;
-	padding-left: 5%;
-	float: left;
-	display: none;
+	display: block;
 }
 
 .dinner-nav {
@@ -142,30 +139,41 @@
 }
 
 
-.dinner-nav a, .meal-nav a {
-	display: inline-block;
+.meal-nav a {
+	display: block;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin: 2%;
+	text-align: left;
 }
 
 .dinner-menu, .menu-items {
 	display: inline-block;
-	margin-left: 24%;
 		@media only screen and (max-width: 767px) {
 		padding: 7%;
 		margin: 0px auto;
 	}
 }
 
-.dinner-appetizers, .dinner-sides, .dinner-entrees, .dinner-desserts, .food-item {
+.menu-items h2 {
+	@media only screen and (min-width: 800px) {
+		text-align:left;
+	}
+}
+
+.menu-items h2:after {
+	margin: 0;
+}
+
+.food-item {
 	margin: 0;
 	text-align: left;
-	float: left;
-	content: "";
-	display: table;
-	clear: both;
 	width: 100%;
+	@media only screen and (min-width: 900px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 	h2 {
 		text-align: left;
 		margin: 0% 0% 2% 0%;
@@ -179,9 +187,11 @@
 	}
 	.col-4 {
 		display: inline-block;
-		margin-right: 10%;
-		@media only screen and (max-width: 767px) {
-			margin-right: 0%;
+		@media only screen and (min-width: 768px) {
+			width: 100%;
+		}
+		@media only screen and (min-width: 900px) {
+			width: 45%;
 		}
 	}
 }
@@ -207,17 +217,29 @@
 
 .meal-container {
 	max-height: 0;
+	opacity: 0;
 	overflow: hidden;
-	transition: .3s max-height ease-in-out;
+	transition: .4s opacity ease-in-out;
 	position:relative;
 }
 
 .meal-container.active {
 	max-height: 500em;
+	opacity: 1;
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
 }
 
 .meal-container.active .meal-nav {
-	display: block;
+	@media screen and (min-width: 768px) {
+		display: block;
+		margin-left: 2em;
+	}
+}
+
+.sticky-wrapper {
+	width: 25%;
 }
 
 .dinner-content {
@@ -228,4 +250,13 @@
 	text-align:center;
 	font-size:0.7em;
 	padding-left:0px;
+}
+
+.menu_disclaimer {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em 2em 3em 2em;
+	font-size: .8em;
+	color: $medium-gray;
+	text-align: left;
 }

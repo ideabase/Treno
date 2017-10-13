@@ -4,7 +4,6 @@
     {% include '_includes/_feature.html' %}
 {% endblock %}
 {% block content %}
-  <!--<div style="height:371px; background-color: gray;"></div>-->
   <h1>{{ entry.title }}</h1>
 
   <div class="col-12 col-m-12 about_intro">
@@ -25,7 +24,7 @@
 
     <section id="{{ category.slug }}" class="meal-container">
       <!-- Menu that lists the food categories -->
-      <div class="scroll-menu-side col-3 meal-nav">
+      <div class="sticky-container scroll-menu-side meal-nav">
         {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
            {% set entries = craft.entries.section('menu') %}
             {% set foods = entries.relatedTo([
@@ -34,15 +33,13 @@
             { targetElement: foodmenu }
           ]) %}
         {% if foods | length %}
-        <div  class="col-3 col-m-3">
-          <a href="#{{foodmenu.title}}">{{foodmenu.title}}</a>
-        </div>
+          <a href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
       {% endif %}
         {% endfor %}
       </div>
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
-      <div class="col-9 menu-items">
+      <div class="col-8 menu-items">
 
         {% for foodcat in craft.categories.group('foodCategory').relatedTo() %}
           {% set entries = craft.entries.section('menu') %}
@@ -52,8 +49,6 @@
             { targetElement: foodcat }
           ]) %}
           {% if foods | length %}
-          <div id="{{ foodcat.title }}" class="food-item">
-            <!-- Displays english translation if exists !-->
           <h2>{{ foodcat.title }}
             {% if foodcat.englishTranslation | length %}
             <span>({{foodcat.englishTranslation}})</span>
@@ -61,11 +56,9 @@
             {% if foodcat.descriptionBlurb | length %}
             </h2>{{foodcat.descriptionBlurb}}</h2>
             {%endif%}
-
-
-
-
           </h2>
+          <div id="{{ foodcat.slug }}" class="food-item">
+            <!-- Displays english translation if exists !-->
             {% for food in foods %}
               <div class="col-4">
                 <h3 class="menu-title">{{ food.title }}</h3>
@@ -85,39 +78,5 @@
         </div>
       </section>
 {% endfor %}
-
-{# dropdown #}
-{# <div class="col-12 m-dinner-nav">
-  <div class="breakline"></div>
-  <div class="dropdown">
-    <button onclick="muFunction()" class="dripbtn">Select</button>
-      <div id="myDropdown" class="dropdown-content">
-        {% for category in craft.categories.group('foodCategory') %}
-          <a href="{{ category.url }}">{{ category.title }}</a>
-        {% endfor %}
-      </div>
-  </div>
-</div> #}
-
-<script>
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
-<h5>{{entry.menuDisclaimer}}</h5>
+<div class="menu_disclaimer">{{entry.menuDisclaimer}}</div>
 {% endblock %}
