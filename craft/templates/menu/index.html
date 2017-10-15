@@ -24,7 +24,8 @@
 
     <section id="{{ category.slug }}" class="meal-container">
       <!-- Menu that lists the food categories -->
-      <div class="sticky-container scroll-menu-side meal-nav">
+      <a class="meal-nav-trigger">Browse by Type</a>
+      <div id="meal-nav" class="sticky-container scroll-menu-side meal-nav">
         {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
            {% set entries = craft.entries.section('menu') %}
             {% set foods = entries.relatedTo([
@@ -49,7 +50,7 @@
             { targetElement: foodcat }
           ]) %}
           {% if foods | length %}
-          <h2>{{ foodcat.title }}
+          <h2 id="{{ foodcat.slug }}">{{ foodcat.title }}
             {% if foodcat.englishTranslation | length %}
             <span>({{foodcat.englishTranslation}})</span>
             {%endif%}
@@ -57,7 +58,7 @@
             </h2>{{foodcat.descriptionBlurb}}</h2>
             {%endif%}
           </h2>
-          <div id="{{ foodcat.slug }}" class="food-item">
+          <div  class="food-item">
             <!-- Displays english translation if exists !-->
             {% for food in foods %}
               <div class="col-4">

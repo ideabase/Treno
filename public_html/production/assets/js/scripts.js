@@ -306,6 +306,14 @@ function WidthChange(mq) {
   }
 }
 
+var $menu = $('#meal-nav'),$menulink = $('.meal-nav-trigger');
+
+$menulink.click(function() {
+  $menulink.toggleClass('active');
+  $menu.toggleClass('active');
+  return false;
+});
+
 // New Show/Hide Menu Items //
 
   $('.menu-btn a').click(function(){
@@ -316,6 +324,7 @@ function WidthChange(mq) {
 
 		$(this).addClass('active');
 		$("#"+tab_id).addClass('active');
+
 	});
 
 
