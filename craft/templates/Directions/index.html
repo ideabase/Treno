@@ -9,9 +9,9 @@
 	<h1>{{ entry.title }}</h1>
 	<div class="directions-half-grid">
 		<div class="col-4 col-m-12 treno-address">
-			<h3>{{footer.basicText}}</h3>
+			<h3>{{footer.basicText}}</h3> <!-- Phone Number !-->
 
-	<p class="btn-primary"><a href="https://www.google.com/maps/@41.1529328,-81.3591974,18z">Google Maps</a></p>
+	<p class="btn-primary"><a href="{{ entry.googleUrl }}">View Map</a></p>
 	</div>
 
 	<div class="col-4 col-m-12 treno-parking">
@@ -22,11 +22,13 @@
 			<li>{{ entry.parkingInformation3 }}</li>
 		</ol>
 	</div>
+  {% if entry.valetInformation|length %}
 	<div class="col-4 col-m-12 treno-valet">
 		<p class="parking-title">Valet</p>
 		<p class="valet-price">{{ entry.valetPrice }}</p>
 		<p>{{ entry.valetInformation }}</p>
 	</div>
+  {%endif%}
 </div>
 
 

@@ -4,12 +4,13 @@
     {% include '_includes/_feature.html' %}
 {% endblock %}
 {% block content %}
-  <h1>{{ entry.title }}</h1>
+  <h1 id="top">{{ entry.title }}</h1>
 
   <div class="col-12 col-m-12 about_intro">
     {{entry.body}}
   </div>
 
+<!-- Menu Buttons -->
   <div class="menu-btn">
     {% set category = craft.categories.group('menuCategory') %}
       {% for category in craft.categories.group('menuType') %}
@@ -34,9 +35,10 @@
             { targetElement: foodmenu }
           ]) %}
         {% if foods | length %}
-          <a href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
+          <a class="meal-nav__top" href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
       {% endif %}
         {% endfor %}
+        <a href="#top">Back to Top</a>
       </div>
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
@@ -76,8 +78,9 @@
           </div>
            {% endif %}
           {% endfor %}
+          <div class="menu_disclaimer"><h6>{{footer.menuDisclaimer}}</h6></div>
         </div>
       </section>
 {% endfor %}
-<div class="menu_disclaimer">{{entry.menuDisclaimer}}</div>
+
 {% endblock %}
