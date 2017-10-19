@@ -33,9 +33,11 @@
 .reservation-room {
 	background-color: #f5f5f5;
 	padding: 5% 0%;
+	margin-top: 2em;
 	@media screen and (min-width: 768px) {
 		background-color: white;
 		padding: 0 8% 0 0;
+		margin-top: 0;
 	}
 }
 
