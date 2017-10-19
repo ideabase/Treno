@@ -3,7 +3,6 @@ footer {
 	font-family: $serif;
 	position: absolute;
 	color: white;
-	padding-top: 1em;
 	padding-bottom: 2em;
 }
 
@@ -50,4 +49,11 @@ footer {
 		text-align: center;
 	}
 
+}
+
+.social-media__icon {
+	margin-top: 3em;
+	margin-bottom: 2em;
+	display: block;
+	text-transform: uppercase;
 }

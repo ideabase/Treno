@@ -38,7 +38,7 @@
 	color: $dark-gray;
 }
 
-.nav-list.active.logo-bkg a {
+.nav-list.logo-bkg a {
 	border-bottom: none;
 }
 
@@ -46,8 +46,7 @@
 	a {
 		background-image: url("/production/assets/img/uploads/Treno-Logo-01.svg");
 	  background-repeat: no-repeat;
-	  width: 65px;
-	  height: 46px;
+	  width: 80px;
 	  position: relative;
 	  top: 11px;
 	  margin: 0px auto;

@@ -1,7 +1,7 @@
 .about_intro {
 	display:inline-block;
 	max-width: 800px;
-	padding: 0 1em 2em 1em;
+	padding: 0 1.5em 2em 1.5em;
 	margin-bottom: 1em;
 }
 
@@ -13,7 +13,7 @@
 	font-size: 1.4em;
 	font-weight: 400;
 	@media only screen and (max-width: 599px) {
-		margin: 35px 50px;
+		margin: 35px 0;
 		font-size: 1.2em;
 	}
 }
@@ -23,15 +23,26 @@
 	text-transform: uppercase;
 }
 
+.about_events h2, .about_specials h2 {
+	transition: .3s color ease-in-out;
+}
+
 .about_events {
 	background-color: $gold;
 	position: relative;
 	color: $medium-gray;
 	display: block;
-	padding: 2em 1em;
+	padding: 4em 1em;
 	width: 100%;
-	h2:hover {
-		color:#ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .3s background-color ease-in-out;
+	&:hover {
+		background-color: lighten($gold, 5%);
+		h2 {
+			color:#ffffff;
+		}
 	}
 }
 
@@ -47,8 +58,15 @@
 	min-height: 300px;
 	padding: 2em 1em;
 	width: 100%;
-	h2:hover {
-		color: $gold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .3s background-color ease-in-out;
+	&:hover {
+		background-color: lighten(black, 95%);
+		h2 {
+			color:$gold;
+		}
 	}
 }
 
@@ -67,14 +85,14 @@
 }
 
 .half-grid p {
-	margin: 7% 25% 7% 25%;
+	margin: 1em 25% 1em 25%;
 	@media only screen and (max-width: 599px) {
-		margin: 10% 13% 10% 13%;
+		margin: 2em 13% 2em 13%;
 	}
 }
 
 .half-grid h1, .half-grid h2 {
-	margin-top: 2em;
+	margin-top: 0;
 	text-transform: uppercase;
 }
 

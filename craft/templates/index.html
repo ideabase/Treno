@@ -65,14 +65,18 @@
 
 		{% for entry in craft.entries.section('news').currentLightswitch(1).limit(1) %}
       {% if entry | length %}
+
 			<a class="about_events" href="{{ entry.url }}">
+        <div class="half-grid__contents">
 			<h2>Events</h2>
 			<p class="event_title">{{ entry.title }}</p>
 			<p class="event_date">{{ entry.eventDate.format('F d, Y') }}</p>
 			{% set paragraphs = entry.body|split('</p>') %}
 			{% set firstParagraph = paragraphs|first ~ '</p>' %}
 			<p>{{ firstParagraph|raw }}</p>
+        </div>
 			</a>
+
       {% endif %}
  		{% endfor %}
 
@@ -92,6 +96,7 @@
 
         {% if bool == true %}
 		<a class="about_specials" href="{{ url('menu') }}">
+      <div class="half-grid__contents">
       <h2>{{ today }}'s Specials</h2>
             {% for entry in craft.entries.section('menu') %}
               {% for date in entry.specialDate %}
@@ -103,6 +108,7 @@
               {% endfor %}
             {% endfor %}
         {% endif %}
+      </div>
 		</a>
 		</div>
     <div class="overlay" onClick="style.pointerEvents='none'"></div>
