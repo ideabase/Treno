@@ -26,10 +26,10 @@
 		{# having trouble looping items while putting them in a table #}
 		{% include '_includes/_gallery.html' %}
 
-		<div class="col-12 col-m-12">
+		<div class="col-12 col-m-12 our-team">
 			<h2>Our Team</h2>
 		</div>
-		<div class="col-12 col-m-12">
+		<div class="col-12 col-m-12 ">
 			<div class="col-6 col-m-12 chef-img">
 			{% for entry in craft.entries.section('profiles') %}
 				{% for image in entry.teamMemberPhoto %}

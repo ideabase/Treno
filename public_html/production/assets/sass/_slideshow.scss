@@ -23,12 +23,12 @@
     margin-top: 0;
     margin-bottom: 0;
     min-width: 250px;
-    border: 2px solid $gold;
+    border: 2px solid $light-gray;
     background-color: rgba(255,255,255,.95);
-    padding: .75em .5em;
+    padding: 1em .75em;
     display: inline-block;
     z-index: 300;
-    transition: .3s background-color ease-in-out;
+    transition: .3s all ease-in-out;
     &:after {
       content: none;
     }
@@ -37,6 +37,7 @@
 
  .slideshow-menu h2:hover {
     background-color: #ffffff;
+    border-color: $medium-gray;
  }
 
 

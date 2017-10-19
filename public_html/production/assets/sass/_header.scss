@@ -6,8 +6,7 @@
 /* Landing Page Banner Image */
 
 .header-bckg {
-  background-color: white;
-  background-image: url("/production/assets/img/uploads/_featureImage/Welcome Building.svg");
+  background-color: gray;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: visible;
@@ -46,14 +45,19 @@
 	max-width: 400px;
 	left: auto;
 	right: auto;
-	animation-duration: 1s;
-  animation-fill-mode: both;
-	animation-name: fadeInUp;
 	bottom: -3em;
+	opacity: 0;
 	@media screen and (min-width: 1000px) {
 		margin-left:17%;
-		bottom: -4em;
+		bottom: -4.5em;
 	}
+}
+
+.fadeUp {
+	opacity: 1;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-name: fadeInUp;
 }
 
 
@@ -93,7 +97,6 @@
 
 .pageTitle h3 {
 	color: white;
-	text-transform: uppercase;
 	margin: 5% 0% 10px 0%;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 
@@ -102,7 +105,7 @@
 		display: block;
 		width: 30px;
 		height: 5px;
-		background-color: $gold;
+		background-color: white;
 		margin: 0 auto;
 		margin-top: .5em;
 		@media only screen and (min-width:600px) {

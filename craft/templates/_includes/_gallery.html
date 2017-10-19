@@ -1,7 +1,7 @@
 <div class="col-12 col-m-12 slideshow-container">
 	{% if entry.slideShowLink | length %}
 		{% for link in entry.slideShowLink %}
-			<a class= "slideshow-menu" href="{{ link.url }}"><h2>View Our {{ link.title }}</h2></a>
+			<a class= "slideshow-menu" href="{{ link.url }}"><h2>View {{ link.title }}</h2></a>
 		{% endfor %}
 	{% endif %}
 

@@ -1,3 +1,7 @@
+main {
+	min-height: 500px;
+}
+
 .about_intro {
 	display:inline-block;
 	max-width: 800px;
@@ -96,6 +100,10 @@
 	text-transform: uppercase;
 }
 
+.our-team {
+	margin-top: 3em;
+}
+
 .about_events h2:after {
 		content: "";
 		display: block;
@@ -103,7 +111,7 @@
 		height: 3px;
 		background-color: white;
 		margin: 0 auto;
-		margin-top: .10em;
+		margin-top: .5em;
 	}
 .map-container {
   background-color: white;

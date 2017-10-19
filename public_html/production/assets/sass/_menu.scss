@@ -48,7 +48,7 @@
 }
 
 .menu-btn {
-	margin: 0% 5% 2em 5%;
+	margin: 0% 5% 3em 5%;
 	display: block;
 	@media screen and (min-width: 900px) {
 		display: flex;
@@ -106,7 +106,7 @@
 	font-size: .9em;
 	margin-bottom:1em;
 	&:after {
-		content: "^";
+		content: "";
 		display: inline;
 		width: 10px;
 		height: 10px;
@@ -158,8 +158,22 @@
 	font-size: 1.5em;
 	margin: 2%;
 	text-align: center;
+	word-wrap: break-word;
 	@media screen and (min-width: 768px) {
 		text-align: left;
+	}
+}
+
+.meal-nav .meal-nav__top {
+	display: none;
+	@media screen and (min-width: 768px) {
+		display: block;
+		margin-top: 2em;
+		font-size: 1.1em;
+		&:after {
+			content: "^";
+			padding-left: 1em;
+		}
 	}
 }
 
@@ -177,6 +191,25 @@
 
 .menu-items h2:after {
 	margin: 0.5em 0;
+}
+
+.food-item h6 {
+	display: inline-block;
+	background-color: gray;
+	text-transform: uppercase;
+	padding: .5em 1em;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	color: white;
+	&.vegetarian {
+		background-color: #50764E;
+	}
+	&.glutenFreeAvailableUponRequest {
+		background-color: #3C3434;
+	}
+	&.glutenFree {
+		background-color: #784141;
+	}
 }
 
 .food-item {
@@ -198,9 +231,11 @@
 	}
 	p {
 		text-align: left;
+		margin-top: 0;
 	}
 	.col-4 {
 		display: inline-block;
+		margin-bottom: 2em;
 		@media only screen and (min-width: 768px) {
 			width: 100%;
 		}
@@ -208,6 +243,15 @@
 			width: 45%;
 		}
 	}
+}
+
+.food-category-description {
+	margin-bottom: 1.5em;
+	display: block;
+	p {
+	text-align: left;
+	font-style: italic;
+}
 }
 
 .menu-title {
@@ -238,7 +282,7 @@
 }
 
 .meal-container.active {
-	max-height: 500em;
+	max-height: 600em;
 	opacity: 1;
 	@media screen and (min-width: 768px) {
 		display: flex;
@@ -255,6 +299,7 @@
 		display: block;
 		margin-left: 2em;
 		margin-top: 6em;
+		padding-right: 3em;
 	}
 }
 
@@ -276,7 +321,7 @@
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 1em 2em 3em 2em;
-	font-size: .8em;
+	font-size: 1em;
 	color: $medium-gray;
 	text-align: left;
 }

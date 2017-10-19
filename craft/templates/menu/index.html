@@ -18,9 +18,6 @@
       {% endfor %}
   </div>
 
-{#scroll menu#}
-
-
 {% for category in craft.categories.group('menuType') %}
 
     <section id="{{ category.slug }}" class="meal-container">
@@ -35,10 +32,10 @@
             { targetElement: foodmenu }
           ]) %}
         {% if foods | length %}
-          <a class="meal-nav__top" href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
+          <a  href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
       {% endif %}
         {% endfor %}
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="meal-nav__top">Back to Top</a>
       </div>
       <!-- End food categories menu -->
       <!-- List out each menu item organized by category -->
@@ -55,9 +52,9 @@
           <h2 id="{{ foodcat.slug }}">{{ foodcat.title }}
             {% if foodcat.englishTranslation | length %}
             <span>({{foodcat.englishTranslation}})</span>
-            {%endif%}
+            {%endif%}</h2>
             {% if foodcat.descriptionBlurb | length %}
-            </h2>{{foodcat.descriptionBlurb}}</h2>
+            <div class="food-category-description">{{foodcat.descriptionBlurb}}</div>
             {%endif%}
           </h2>
           <div  class="food-item">
@@ -68,10 +65,10 @@
                 <p class="menu-price">{{ food.foodPrice }}</p>
                 {% if food.foodSpecifications | length %}
                 {% for option in food.foodSpecifications %}
-                <h6>{{option.label}}</h6>
+                <h6 class="{{option.value}}">{{option.label}}</h6>
                 {% endfor %}
                 {% endif %}
-                <p>{{ food.foodDescription }}</p>
+                {{ food.foodDescription }}
               </div>
             {% endfor %}
 
