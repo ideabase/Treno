@@ -1,6 +1,6 @@
 {% for asset in entry.featureImage %}
 	<picture>
 		<source srcset="{{ asset.url('featureImageShort') }}" media="(min-width: 800px)">
-		<img src="{{ asset.url('featureImageSmall') }}" alt="asset.title" />
+		<img class="feature-image-small" src="{{ asset.url('featureImageSmall') }}" alt="asset.title" />
 	</picture>
 {% endfor %}

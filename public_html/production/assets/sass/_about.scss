@@ -81,6 +81,11 @@ main {
 	font-size: 1.25em;
 }
 
+.feature-image-small {
+	width: 100%
+
+}
+
 .half-grid {
 	display: flex;
 	@media only screen and (max-width: 599px) {
