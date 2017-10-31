@@ -1,9 +1,16 @@
 {% extends "_layout" %}
 {% block header %}
-    <!--<div class="overlay" onClick="style.pointerEvents='none'"></div> -->
-    <div class="overlay" onClick="style.pointerEvents='none'"></div>
-    <div id="map" class="col-12 col-m-12 map-container" style="height:500px">
-		</div>
+
+
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <div id="map" class="col-12 col-m-12 map-container" onClick="location.href='{{'directions'}}'">
+      </div>
+      <div class="circle" style="pointer-events: none">
+        {% for asset in ui.mapCircle %}
+            <img src="{{ asset.url }}" alt="circle" />
+        {% endfor %}
+</div>
+
 {% endblock %}
 {% block content %}
 	<h1>{{ entry.title }}</h1>
