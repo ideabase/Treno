@@ -20,9 +20,15 @@
 	<div class="col-4 col-m-12 treno-parking">
 		<p class="parking-title">Parking</p>
 		<ol>
-			<li>{{ entry.parkingInformation }}</li>
-			<li>{{ entry.parkingInformation2 }}</li>
-			<li>{{ entry.parkingInformation3 }}</li>
+      {% if entry.parkingInformation | length %}
+			   <li>{{ entry.parkingInformation }}</li>
+      {%endif%}
+      {% if entry.parkingInformation2 | length %}
+			   <li>{{ entry.parkingInformation2 }}</li>
+      {%endif%}
+      {% if entry.parkingInformation3 | length %}
+			   <li>{{ entry.parkingInformation3 }}</li>
+      {%endif%}
 		</ol>
 	</div>
   {% if entry.valetInformation|length %}
