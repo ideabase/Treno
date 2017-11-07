@@ -66,7 +66,7 @@
 				    </li>
 				{% endmacro %}
 
-			<ul class="col-12 nav-container" id="nav-container">
+			<ul class="col-12 nav-container {% if currentUser %}loggedIn{%endif%}" id="nav-container">
 				<div class="col-9 nav-alignment">
 				        {% for node in nav %}
 				            {{ _self.addNodeToNavigation(node, loop.index) }}
