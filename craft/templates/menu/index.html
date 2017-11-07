@@ -19,7 +19,7 @@
           { targetElement: category }
           ]) %}
     {% if foods | length %}
-      <a data-tab="{{ category.slug }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
+      <a href="#menu-move" data-tab="{{ category.slug }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
     {% endif %}
   {% endfor %}
   </div>
@@ -27,6 +27,7 @@
 {% for category in craft.categories.group('menuType') %}
     <section id="{{ category.slug }}" class="meal-container">
       <!-- Menu that lists the food categories -->
+
       <a class="meal-nav-trigger">Browse by Type</a>
       <div id="meal-nav" class="sticky-container scroll-menu-side meal-nav">
         {% for foodmenu in craft.categories.group('foodCategory').relatedTo() %}
@@ -38,6 +39,7 @@
           ]) %}
         {% if foods | length %}
           <a  href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
+          <span id="menu-move"></span>
       {% endif %}
         {% endfor %}
         <a href="#top" class="meal-nav__top">Back to Top</a>
