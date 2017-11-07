@@ -19,7 +19,7 @@
           { targetElement: category }
           ]) %}
     {% if foods | length %}
-      <a href="#menu-move" data-tab="{{ category.slug }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
+      <a href="#meal-nav" data-tab="{{ category.slug }}" class="col-3 col-m-12 menu-button__single">{{ category.title }}</a>
     {% endif %}
   {% endfor %}
   </div>
@@ -39,7 +39,7 @@
           ]) %}
         {% if foods | length %}
           <a  href="#{{foodmenu.slug}}">{{foodmenu.title}}</a>
-          <span id="menu-move"></span>
+
       {% endif %}
         {% endfor %}
         <a href="#top" class="meal-nav__top">Back to Top</a>
