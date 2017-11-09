@@ -48,12 +48,6 @@ Craft.TagSelectInput = Craft.BaseElementSelectInput.extend(
 
 		this.addListener(this.$addTagInput, 'textchange', $.proxy(function()
 		{
-			var val = this.$addTagInput.val();
-			if (val !== (val = val.trim()))
-			{
-				this.$addTagInput.val(val).data('garnish-textchange-value', val);
-			}
-
 			if (this.searchTimeout)
 			{
 				clearTimeout(this.searchTimeout);
@@ -147,6 +141,12 @@ Craft.TagSelectInput = Craft.BaseElementSelectInput.extend(
 
 			Craft.postActionRequest('tags/searchForTags', data, $.proxy(function(response, textStatus)
 			{
+				// Just in case
+				if (this.searchMenu)
+				{
+					this.killSearchMenu();
+				}
+
 				this.$spinner.addClass('hidden');
 
 				if (textStatus == 'success')
