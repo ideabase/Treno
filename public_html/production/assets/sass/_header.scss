@@ -1,6 +1,10 @@
 .header-container {
 	display: grid;
+	overflow: hidden;
 	position: relative;
+	@media screen and (min-width: 1000px) {
+		overflow: visible;
+	}
 }
 
 /* Landing Page Banner Image */
@@ -9,7 +13,6 @@
   background-color: gray;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: visible;
   height: 35em;
   z-index: 1;
   animation-duration: 1s;
@@ -45,7 +48,7 @@
 	max-width: 400px;
 	left: auto;
 	right: auto;
-	bottom: -3em;
+	bottom: 0;
 	opacity: 0;
 	@media screen and (min-width: 1000px) {
 		margin-left:17%;
