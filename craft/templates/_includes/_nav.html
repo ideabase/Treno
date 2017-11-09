@@ -1,3 +1,12 @@
+<!-- Sets the background logo for small screens -->
+<style type="text/css">
+  {% for asset in header.logo %}
+  .logo-bkg a {
+    background-image: url({{ asset.url }});
+  }
+  {% endfor %}
+</style>
+
 {% set nav = craft.amNav.getNavRaw("mainMenu") %}
   {% macro addNodeToNavigation(node, index) %}
       {%- set nodeClasses = ['nav-list'] -%}

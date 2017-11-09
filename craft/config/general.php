@@ -10,22 +10,22 @@
 return array(
   '*' => array(
 	       'extraAllowedFileExtensions' => 'eps',
-         'siteUrl' => 'https://trenokent.com/production',
+         'siteUrl' => 'https://trenokent.com',
          'enableCsrfProtection' => true,
          'omitScriptNameInUrls' => true,
          'cpTrigger' => 'admin',
          'enableCsrfProtection' => true,
          'environmentVariables' => array(
            'basePath' => '',
-           'baseUrl'  => 'https://trenokent.com/production',
+           'baseUrl'  => 'https://trenokent.com',
         )
 	),
 	'treno.web' => array(
 	    'devMode' => true,
-      'siteUrl' => 'http://treno.web/production',
+      'siteUrl' => 'http://treno.web',
       'environmentVariables' => array(
         'basePath' => '',
-        'baseUrl'  => 'http://treno.web/production',
+        'baseUrl'  => 'http://treno.web',
       )
 	)
 );

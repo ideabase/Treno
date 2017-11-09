@@ -1,0 +1,105 @@
+
+.treno-address, .treno-parking, .treno-valet {
+	position: relative;
+	float: left;
+	margin-bottom: 8%
+}
+
+.directions-half-grid {
+	content: "";
+	display: table;
+	clear: both;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.parking-title {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $gold;
+}
+
+.treno-parking p, .treno-valet p {
+	text-align: left;
+	margin: 2em 12% 1em 12%;
+}
+
+.treno-parking li {
+	text-align: left;
+	margin: 5% 12% 5% 4%;
+}
+
+.treno-address h3 {
+	color: $dark-gray;
+	margin: 0;
+	font-size: 2em;
+	line-height: 40px;
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
+}
+
+.treno-address {
+	padding:0 1em;
+	text-align:center;
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
+}
+
+.treno-parking {
+	border-left: 1px solid #bab9b9;
+}
+
+.treno-parking ol {
+	list-style: none;
+	counter-reset: li;
+}
+
+.treno-parking li::before {
+	content: counter(li);
+	color: $gold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.treno-parking li {
+	counter-increment: li;
+}
+
+.treno-parking h4, .treno-valet h4{
+	text-transform: uppercase;
+	text-align: left;
+	margin-left: 9%;
+}
+
+.btn-primary {
+	border: 2px solid $gold;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: left;
+	padding: 1em 2em;
+	margin-top: 2em;
+		color: $dark-gray;
+		font-weight: 600;
+		transition: .3s all ease-in-out;
+}
+
+.btn-primary:hover {
+	background-color: $gold;
+		color: #ffffff;
+}
+
+
+.valet-price {
+	color: $gold;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+.phone {
+	font-size: 3em;
+	color: $dark-gray;
+}

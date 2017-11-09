@@ -1,0 +1,59 @@
+footer {
+	background-color: $medium-gray;
+	font-family: $serif;
+	position: absolute;
+	color: white;
+	padding-bottom: 2em;
+}
+
+.footer-container, .copyright {
+	margin: 0 auto;
+
+}
+
+.location p, .contact p, .hours p {
+	margin: 0 auto;
+	color: white;
+	text-transform: none;
+	line-height: 150%;
+	text-align: left;
+	@media only screen and (max-width: 599px) {
+		text-align: center;
+	}
+}
+
+.location h4, .contact h4, .hours h4 {
+	margin: 3% 0% 5% 0%;
+}
+
+.copyright {
+	float: left;
+}
+
+.copyright p {
+	text-align: center;
+	color: white;
+	margin: 0px auto;
+}
+
+.location, .contact, .hours {
+	position: relative;
+	float: left;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 2em 0% 2em 10%;
+	@media only screen and (max-width: 599px) {
+		padding: 0;
+		padding-top: 3%;
+		padding-bottom: 5%;
+		text-align: center;
+	}
+
+}
+
+.social-media__icon {
+	margin-top: 3em;
+	margin-bottom: 2em;
+	display: block;
+	text-transform: uppercase;
+}
