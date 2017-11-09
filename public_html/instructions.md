@@ -31,3 +31,5 @@ Grunt will do the following:
 * Combine and compress all JavaScript files
 * Autobuild the Pattern Lab files (if needed)
 * Autorefresh the browser when HTML or CSS files are updated
+
+Test
