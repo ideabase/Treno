@@ -188,7 +188,7 @@ main {
 	position: relative;
 	overflow: hidden;
   clear: left;
-	padding-bottom: 2.5em;
+	padding-bottom: 4.5em;
 }
 
 .news-carousel {
@@ -201,13 +201,26 @@ main {
 
 
 .article-module {
-    display:inline-block;
-    margin: 1% 8% 8% 0%;
+	display: block;
+	max-width: 700px;
+	margin: 0 auto;
     white-space: normal;
-    vertical-align: text-top;
     p {
     	text-align: left;
     }
+}
+
+article {
+	padding: 2em;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.news-title {
+	font-size: 2em;
+	@media screen and (min-width: 700px) {
+		font-size: 3em;
+	}
 }
 
 #gradient {
