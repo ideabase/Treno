@@ -23,8 +23,11 @@ main {
 }
 
 .about_intro h2 {
-	margin-top:3em;
+	margin-top:2em;
 	text-transform: uppercase;
+	@media only screen and (min-width: 700px) {
+		margin-top:3em;
+	}
 }
 
 .about_events h2, .about_specials h2 {
@@ -42,10 +45,13 @@ main {
 	align-items: center;
 	justify-content: center;
 	transition: .3s background-color ease-in-out;
+	h2:after {
+		transition: .3s all ease-in-out;
+	}
 	&:hover {
 		background-color: lighten($gold, 5%);
-		h2 {
-			color:#ffffff;
+		h2:after {
+	      width: 40px;
 		}
 	}
 }
@@ -66,10 +72,13 @@ main {
 	align-items: center;
 	justify-content: center;
 	transition: .3s background-color ease-in-out;
+	h2:after {
+		transition: .3s all ease-in-out;
+	}
 	&:hover {
 		background-color: lighten(black, 95%);
-		h2 {
-			color:$gold;
+		h2:after {
+	      width: 40px;
 		}
 	}
 }
@@ -177,7 +186,7 @@ main {
 .news-carousel {
 	position: relative;
     height: 100%;
-  	padding: 5% 10% 0 10%;
+  	padding: 2em 10% 0 10%;
   	text-align: left;
     white-space:nowrap;
 }
