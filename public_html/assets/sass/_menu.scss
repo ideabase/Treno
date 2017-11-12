@@ -99,18 +99,25 @@
 .meal-nav-trigger {
 	cursor: pointer;
 	padding-right: 25px;
-	background-color: $medium-gray;
-	color: white;
+	text-transform: uppercase;
+	color: $dark-gray;
+	font-weight: bold;
 	padding: 1em 1.25em;
 	display: inline-block;
 	font-size: .9em;
-	margin-bottom:1em;
 	&:after {
 		content: "";
-		display: inline;
-		width: 10px;
-		height: 10px;
+		background-image: url("../img/ui/down-arrow.svg");
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		display: inline-block;
+		color: $gold;
+		position: relative;
+		top:7px;
+		width: 20px;
+		height: 20px;
 		right: 0;
+		margin-left: 5px;
 	}
 	@media only screen and (min-width: 768px) {
 		display: none;
@@ -159,6 +166,10 @@
 	margin: 2%;
 	text-align: center;
 	word-wrap: break-word;
+	transition: .3s color ease-in-out;
+	&:hover, &:focus {
+		color: $dark-gray;
+	}
 	@media screen and (min-width: 768px) {
 		text-align: left;
 	}
@@ -170,9 +181,21 @@
 		display: block;
 		margin-top: 2em;
 		font-size: 1.1em;
-		&:after {
-			content: "^";
-			padding-left: 1em;
+		position: relative;
+		&:before {
+			content: "";
+			background-image: url("../img/ui/down-arrow.svg");
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			display: inline-block;
+			color: $gold;
+			transform: rotate(180deg);
+			position: relative;
+			top:0;
+			width: 15px;
+			height: 15px;
+			right: 0;
+			margin-right: 5px;
 		}
 	}
 }
