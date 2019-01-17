@@ -102,6 +102,12 @@ main {
 	width: 60%;
 }
 
+@media screen and (max-width: 600px) {
+	.feature-image-small{
+		width: 75%;
+	}
+}
+
 .half-grid {
 	display: flex;
 	@media only screen and (max-width: 599px) {
